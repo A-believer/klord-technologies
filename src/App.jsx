@@ -1,0 +1,55 @@
+import { Route, Routes } from "react-router";
+import Layout from "./components/layout/layout";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Products from "./pages/products";
+import HealthcareSoftware from "./pages/solutions/healthcare-software";
+import EnterpriseSoftware from "./pages/solutions/enterprise-software";
+import PublicSoftwareTechnology from "./pages/solutions/public-software-technology";
+import CustomSoftwareDevelopment from "./pages/solutions/custom-software-development";
+import Portfolio from "./pages/portfolio";
+import Contact from "./pages/contact";
+import Resources from "./pages/resources";
+import Faqs from "./pages/faqs";
+import TermsOfService from "./pages/terms-of-service";
+import PrivacyPolicy from "./pages/privacy-policy";
+import GetStarted from "./pages/get-started";
+import PrivacyAndTerms from "./components/layout/privacy-and-terms";
+
+const App = () => {
+	return (
+		<Routes>
+			<Route path='/' element={<Layout />}>
+				<Route index element={<Home />} />
+				<Route path='/products' element={<Products />} />
+				<Route path='/healthcare-software' element={<HealthcareSoftware />} />
+				<Route path='/enterprise-software' element={<EnterpriseSoftware />} />
+				<Route
+					path='/public-software-technology'
+					element={<PublicSoftwareTechnology />}
+				/>
+				<Route
+					path='/custom-software-development'
+					element={<CustomSoftwareDevelopment />}
+				/>
+				<Route path='/contact' element={<Contact />} />
+				<Route path='/portfolio' element={<Portfolio />} />
+				<Route path='/resources' element={<Resources />} />
+				<Route path='/faqs' element={<Faqs />} />
+
+				<Route
+					path='/terms-of-service'
+					element={<PrivacyAndTerms page='terms-of-service' />}
+				/>
+				<Route
+					path='/privacy-policy'
+					element={<PrivacyAndTerms page='privacy-policy' />}
+				/>
+
+				<Route path='/about' element={<About />} />
+			</Route>
+			<Route path='/get-started' element={<GetStarted />} />
+		</Routes>
+	);
+};
+export default App;
