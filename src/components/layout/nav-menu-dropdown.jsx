@@ -106,7 +106,7 @@ function MobileMenu() {
 					)
 				)}
 			</ul>
-			<div className='block lg:hidden '>
+			<div className='block lg:hidden space-y-4'>
 				<Link
 					className='block py-2.5 px-[18px] hover:border rounded-[30px] transition-all duration-500 text-center'
 					to='/contact'>

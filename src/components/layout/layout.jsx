@@ -4,10 +4,10 @@ import Navbar from "./navbar";
 import LiveChat from "./live-chat";
 import { Toaster } from "react-hot-toast";
 
-const Layout = () => {
+const  Layout = () => {
 	return (
 		
-		<main className='relative w-full min-h-screen bg-white'>
+		<main className='relative w-full h-full bg-white'>
 			<Toaster/>
 			<LiveChat />
 				<Navbar />
