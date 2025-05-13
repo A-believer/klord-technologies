@@ -8,6 +8,7 @@ const GsFormThree = () => {
 		data,
 		setData,
 		toggleCurrentLevelCompletion,
+		currentLevel,
 		setCurrentLevel,
 		levels,
 	} = useContext(GetStartedContext);
@@ -70,7 +71,7 @@ const GsFormThree = () => {
 			toggleCurrentLevelCompletion();
 
 			const nextLevel = levels.find(
-				(level) => level.title === "Wrap-Up"
+				(level) => level.id === currentLevel + 1
 			);
 			if (nextLevel) {
 				setCurrentLevel(nextLevel.id);

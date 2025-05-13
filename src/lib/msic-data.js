@@ -580,4 +580,31 @@ const quickPrompts = [
 	},
 ];
 
-export { faqs, privacypolicy, termsOfService, quickPrompts };
+const levelData = [
+	{
+		id: 1,
+		title: "Personal Info",
+		desc: "Please provide your name and email",
+		isCompleted: false,
+	},
+	{
+		id: 2,
+		title: "Your Organization",
+		desc: "A few details about your company",
+		isCompleted: false,
+	},
+	{
+		id: 3,
+		title: "What You're Looking For",
+		desc: "Start collaborating with your team",
+		isCompleted: false,
+	},
+	{
+		id: 4,
+		title: "Wrap-Up",
+		desc: "Share posts to your social accounts",
+		isCompleted: false,
+	},
+];
+
+export { faqs, privacypolicy, termsOfService, quickPrompts, levelData };

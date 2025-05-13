@@ -56,8 +56,10 @@ const GsFormFour = () => {
 			setData(updatedData);
 			toggleCurrentLevelCompletion();
 
+
 			// Here you would typically submit the form data to your backend
 			console.log("Form submitted successfully:", updatedData);
+			setCurrentLevel(5);
 			
 			// You could redirect to a thank you page or show a success message
 			// For now, we'll just log the data

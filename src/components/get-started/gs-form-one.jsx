@@ -8,6 +8,7 @@ const GsFormOne = () => {
 		data,
 		setData,
 		toggleCurrentLevelCompletion,
+		currentLevel,
 		setCurrentLevel,
 		levels,
 	} = useContext(GetStartedContext);
@@ -79,7 +80,7 @@ const GsFormOne = () => {
 			toggleCurrentLevelCompletion();
 
 			const nextLevel = levels.find(
-				(level) => level.title === "Your Organization"
+				(level) => level.id === currentLevel + 1
 			);
 			if (nextLevel) {
 				setCurrentLevel(nextLevel.id);

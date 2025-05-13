@@ -8,6 +8,7 @@ const GsFormTwo = () => {
 		data,
 		setData,
 		toggleCurrentLevelCompletion,
+		currentLevel,
 		setCurrentLevel,
 		levels,
 	} = useContext(GetStartedContext);
@@ -72,10 +73,10 @@ const GsFormTwo = () => {
 			toggleCurrentLevelCompletion();
 
 			const nextLevel = levels.find(
-				(level) => level.title === "What You're Looking For"
+				(level) => level.id === currentLevel + 1
 			);
 			if (nextLevel) {
-				setCurrentLevel(nextLevel.title);
+				setCurrentLevel(nextLevel.id );
 			}
 		}
 	};
