@@ -24,7 +24,7 @@ const Hero = () => {
 				</Link>
 				<Link
 					to={"/products"}
-					className='text-[#01588E] hover:text-white border border-[#01588E] bg-white hover:bg-[#01588E] py-2.5 px-[30px] md:w-fit w-full rounded-[55px] text-base/6 font-medium cursor-pointer text-center  shadow-lg shadow-gray-400 h-fit hover:translate-1 transition-all duration-500'>
+					className='text-[#01588E] hover:text-white border border-[#01588E] bg-white hover:bg-[#01588E] py-2.5 px-[30px] md:w-fit w-full rounded-[55px] text-base/6 font-medium cursor-pointer text-center h-fit hover:translate-1 transition-all duration-500'>
 					View Products
 				</Link>
 			</div>
