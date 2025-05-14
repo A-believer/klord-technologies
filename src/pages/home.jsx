@@ -9,6 +9,7 @@ import jacob from "../assets/imgs/jacob.png";
 import bessie from "../assets/imgs/bessie.png";
 import jane from "../assets/imgs/jane.png";
 import Testimonials from "../components/home/testimonials";
+import Experience from "../components/home/experience";
 
 const testimonials = [
 	{
@@ -61,6 +62,7 @@ const Home = () => {
 			<WhatWeBuild />
 			<StandOut />
 			<Testimonials testimonials={testimonials} />
+			<Experience />
 		</>
 	);
 };

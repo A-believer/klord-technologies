@@ -4,7 +4,7 @@ import nexalifecaregif from "../../assets/lottiefiles/home-nexalifecare.json";
 import { Link } from "react-router";
 import { ChevronRight, Plus } from "lucide-react";
 import Lottie from "lottie-react";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const ourSolutions = [
