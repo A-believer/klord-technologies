@@ -10,6 +10,7 @@ import bessie from "../assets/imgs/bessie.png";
 import jane from "../assets/imgs/jane.png";
 import Testimonials from "../components/home/testimonials";
 import Experience from "../components/home/experience";
+import Newsletter from "../components/home/newsletter";
 
 const testimonials = [
 	{
@@ -63,6 +64,7 @@ const Home = () => {
 			<StandOut />
 			<Testimonials testimonials={testimonials} />
 			<Experience />
+			<Newsletter />
 		</>
 	);
 };
