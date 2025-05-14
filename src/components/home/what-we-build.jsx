@@ -34,7 +34,9 @@ const WhatWeBuild = () => {
 
 	// Refs and inView for each card
 	const cardRefs = ourSolutions.map(() => useRef(null));
-	const cardInViews = cardRefs.map(ref => useInView(ref, { amount: 1, once: false }));
+	const cardInViews = cardRefs.map((ref) =>
+		useInView(ref, { amount: 1, once: false })
+	);
 
 	// Find the first card in view
 	const currentInViewIndex = cardInViews.findIndex(Boolean);
@@ -43,11 +45,14 @@ const WhatWeBuild = () => {
 		<section ref={sectionRef}>
 			<motion.div
 				initial={{ opacity: 0, y: 40 }}
-				animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0.7, y: 40 }}
+				animate={
+					isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0.7, y: 40 }
+				}
 				transition={{ duration: 0.7, ease: "easeOut" }}
 				className='py-16 max-w-[1440px] mx-auto w-[90%] md:space-y-16 space-y-10 font-sora'>
 				<h1 className='heading'>What We Build</h1>
 				<div className='font-inter flex items-start justify-between gap-x-[30px]'>
+					
 					{/* Sticky left column */}
 					<div
 						className='space-y-2.5 md:flex hidden flex-col items-start sticky top-[120px] z-30 h-fit'
@@ -60,7 +65,7 @@ const WhatWeBuild = () => {
 								style={{ pointerEvents: "none" }} // disables click, since this is just for display
 							>
 								{currentInViewIndex === index ? (
-									<ChevronRight color='#FF5F0F' className="mr-1" />
+									<ChevronRight color='#FF5F0F' className='mr-1' />
 								) : null}
 								{sol.name}
 							</button>
@@ -72,12 +77,7 @@ const WhatWeBuild = () => {
 							<motion.div
 								ref={cardRefs[index]}
 								key={index + 1}
-								initial={{ opacity: 0, y: 60, x: 60 }}
-								whileInView={{ opacity: 1, y: 0, x: 0 }}
-								viewport={{ once: false, amount: 0.5 }}
-								transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-								className='p-2.5 bg-[#F5F7F9] w-full rounded-[34px] space-y-[22px]'
-							>
+								className='p-2.5 bg-[#F5F7F9] w-full rounded-[34px] space-y-[22px]'>
 								<div className='flex md:flex-row flex-col items-start md:gap-[30px] gap-5'>
 									<div className='rounded-[24.732px] max-w-[492px] w-full overflow-hidden'>
 										<Lottie

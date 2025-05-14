@@ -210,6 +210,13 @@ const LiveChat = () => {
 									placeholder={"Enter company name..."}
 									error={formErrors.companyName}
 								/>
+								<InputComp
+									name={"postion"}
+									label={"Position"}
+									type={"text"}
+									placeholder={"Enter position at company..."}
+									error={formErrors.position}
+								/>
 							</div>
 							<button
 								type='submit'

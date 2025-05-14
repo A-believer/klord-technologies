@@ -10,8 +10,8 @@
   @apply max-w-[1440px] mx-auto md:w-[86.5%] w-full;
 }
 
-.container {
-  @apply max-w-[1440px] mx-auto md:w-[90%] w-full;
+.contain {
+  @apply max-w-[1440px] mx-auto w-[90%];
 }
 
 .heading {
@@ -28,5 +28,14 @@
 
 .flex-start {
   @apply flex justify-start items-start;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;     
 }
 
