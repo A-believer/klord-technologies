@@ -126,7 +126,7 @@ const LiveChat = () => {
 						<form ref={formRef} onSubmit={handleSubmit} className='space-y-4'>
 							<div className='space-y-2'>
 								<h4 className='font-sora text-black text-2xl/8 font-semibold'>
-									Welcome to K-Lord Technology
+									Welcome to K-Lord Technologies
 								</h4>
 								<p className=''>
 									We're currently offline. Leave us a message and we'll respond
