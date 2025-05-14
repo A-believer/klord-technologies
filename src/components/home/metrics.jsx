@@ -50,7 +50,7 @@ const Metrics = () => {
 			ref={sectionRef}
 			className='py-16 max-w-[1440px] mx-auto w-[90%] md:space-y-16 space-y-10 font-sora'
 		>
-			<h1 className='max-w-[850px] w-full mx-auto text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-center'>
+			<h1 className='max-w-[850px] w-full mx-auto heading'>
 				Trusted by{" "}
 				<span className='text-[#F15533]'>Leading Healthcare Providers</span> and{" "}
 				<span className='text-[#F15533]'>Enterprises</span>

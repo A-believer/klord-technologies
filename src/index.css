@@ -14,6 +14,10 @@
   @apply max-w-[1440px] mx-auto md:w-[90%] w-full;
 }
 
+.heading {
+  @apply font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-center
+}
+
 .flex-center {
   @apply flex justify-center items-center;
 }
