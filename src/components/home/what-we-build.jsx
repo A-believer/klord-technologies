@@ -78,11 +78,11 @@ const WhatWeBuild = () => {
 								key={index + 1}
 								className='p-2.5 bg-[#F5F7F9] w-full rounded-[34px] space-y-[22px]'>
 								<div className='flex md:flex-row flex-col items-start md:gap-[30px] gap-5'>
-									<div className='rounded-[24.732px] max-w-[492px] w-full overflow-hidden'>
+									<div className='rounded-[24.732px] max-w-[492px] w-fit overflow-hidden aspect-video'>
 										<Lottie
 											animationData={sol.gif}
 											loop={true}
-											className='w-full object-cover rounded-[24.732px]'
+											className='w-full object-cover rounded-[24.732px] aspect-auto'
 										/>
 									</div>
 									<div className='space-y-4 pt-5'>
