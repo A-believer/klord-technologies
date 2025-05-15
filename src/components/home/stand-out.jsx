@@ -3,9 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "react-router";
 
-
-
-const StandOut = ({data, ctaLink, ctaText}) => {
+const StandOut = ({ data, ctaLink, ctaText }) => {
 	const scrollRef = useRef(null);
 
 	const scroll = (direction) => {
@@ -28,7 +26,7 @@ const StandOut = ({data, ctaLink, ctaText}) => {
 					{ctaText && (
 						<Link
 							to={ctaLink}
-							className='bg-[#01588E] rounded-[55px] lg:w-fit w-full py-2.5 px-[30px] text-white text-center shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]'>
+							className='bg-[#01588E] hover:bg-[#014c8e] transition-all duration-500 rounded-[55px] lg:w-fit w-full py-2.5 px-[30px] text-white text-center shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]'>
 							{ctaText}
 						</Link>
 					)}

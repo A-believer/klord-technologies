@@ -22,14 +22,20 @@ const App = () => {
 			<Route path='/' element={<Layout />}>
 				<Route index element={<Home />} />
 				<Route path='/products' element={<Products />} />
-				<Route path='/healthcare-software' element={<HealthcareSoftware />} />
-				<Route path='/enterprise-software' element={<EnterpriseSoftware />} />
 				<Route
-					path='/public-software-technology'
+					path='/solutions/healthcare-software'
+					element={<HealthcareSoftware />}
+				/>
+				<Route
+					path='/solutions/enterprise-software'
+					element={<EnterpriseSoftware />}
+				/>
+				<Route
+					path='/solutions/public-software-technology'
 					element={<PublicSoftwareTechnology />}
 				/>
 				<Route
-					path='/custom-software-development'
+					path='/solutions/custom-software-development'
 					element={<CustomSoftwareDevelopment />}
 				/>
 				<Route path='/contact' element={<Contact />} />

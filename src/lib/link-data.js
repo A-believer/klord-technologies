@@ -42,22 +42,22 @@ const navlinks = [
 		dropdownMenu: [
 			{
 				title: "Healthcare",
-				path: "/healthcare-software",
+				path: "/solutions/healthcare-software",
 				icon: health,
 			},
 			{
 				title: "Enterprise",
-				path: "/enterprise-software",
+				path: "/solutions/enterprise-software",
 				icon: briefcase,
 			},
 			{
 				title: "Public Sector",
-				path: "/public-software-technology",
+				path: "/solutions/public-software-technology",
 				icon: workHistory,
 			},
 			{
 				title: "Custom Software Solutions",
-				path: "/custom-software-development",
+				path: "/solutions/custom-software-development",
 				icon: gridView,
 			},
 		],

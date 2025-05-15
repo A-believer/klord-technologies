@@ -23,7 +23,7 @@ const Newsletter = () => {
 					<h3 className='text-[#F5F7F9] text-[32px]/[52.8px] font-semibold font-sora tracking-[-2.4px]'>
 						Stay Ahead with K-Lord Insights
 					</h3>
-					<p className='font-inter text-[#F5F7F9] text-2xl/8 tracking-[0.96px] font-medium'>
+					<p className='font-inter text-[#F5F7F9] text-2xl/8 tracking-[0.96px] font-normal'>
 						Sign up for tips, insights, and updates on tech, innovation, and
 						digital transformation.
 					</p>

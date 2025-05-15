@@ -11,7 +11,7 @@
 }
 
 .contain {
-  @apply max-w-[1440px] mx-auto w-[90%];
+  @apply max-w-[1440px] mx-auto w-[86.5%];
 }
 
 .heading {
