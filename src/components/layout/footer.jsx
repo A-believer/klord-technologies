@@ -13,7 +13,7 @@ const Footer = () => {
 	};
 	return (
 		<footer className='bg-[#00090F] md:py-20 py-10 text-[#FFFEF5] text-[15px]/[22.5px] tracking-[-0.45px] font-medium font-inter'>
-			<div className='max-w-[1440px] w-[90%] mx-auto'>
+			<div className='max-w-[1440px] w-[86.5%] mx-auto'>
 				<div className='md:flex justify-between items-center space-y-10'>
 					<div className='md:space-y-12 space-y-8'>
 						<img
@@ -23,7 +23,8 @@ const Footer = () => {
 						/>
 						<p className='text-lg/[25px] font-medium tracking-[-0.18px] md:block hidden'>
 							The next big thing starts here; reach out and let’s get creating!
-							<br className='md:flex hidden'/> reach out and let’s get creating!
+							<br className='md:flex hidden' /> reach out and
+							let’s get creating!
 						</p>
 					</div>
 					<div className='space-y-6'>
@@ -110,7 +111,8 @@ const Footer = () => {
 						</div>
 						<p className='text-lg/[25px] font-medium tracking-[-0.18px] block md:hidden'>
 							The next big thing starts here; reach out and let’s get creating!
-							<br className='md:flex hidden'/> reach out and let’s get creating!
+							<br className='md:flex hidden' /> reach out and
+							let’s get creating!
 						</p>
 					</div>
 				</div>

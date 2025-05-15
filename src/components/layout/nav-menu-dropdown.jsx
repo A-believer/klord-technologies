@@ -16,9 +16,9 @@ function DropDownMenu({ dropdownMenu, setIsCurrentDropdown }) {
 						className='w-full flex gap-4 items-start'>
 						<img src={item.icon} alt='' className='w-6 h-6' />
 						<div>
-							<p className='text-base/6 tracking-[-0.24px]'>{item.title}</p>
+							<p className='text-base/6 tracking-[-0.24px] hover:font-semibold'>{item.title}</p>
 							{item.des && (
-								<p className='text-[#707070] font-inter text-sm/5'>
+								<p className='text-[#707070] font-inter text-sm/5 hover:underline'>
 									{item.des}
 								</p>
 							)}

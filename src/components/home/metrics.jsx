@@ -48,8 +48,7 @@ const Metrics = () => {
 	return (
 		<section
 			ref={sectionRef}
-			className='py-16 max-w-[1440px] mx-auto w-[90%] md:space-y-16 space-y-10 font-sora'
-		>
+			className='py-16 max-w-[1440px] mx-auto w-[86.5%] md:space-y-16 space-y-10 font-sora'>
 			<h1 className='max-w-[850px] w-full mx-auto heading'>
 				Trusted by{" "}
 				<span className='text-[#F15533]'>Leading Healthcare Providers</span> and{" "}
