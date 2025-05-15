@@ -19,7 +19,7 @@ const Testimonials = ({ testimonials }) => {
 								key={idx}
 								src={img}
 								alt={`client ${idx + 1}`}
-								className='w-12 h-12 rounded-full border-4 border-white object-cover'
+								className='w-[52px] h-[52px] rounded-[20px] border-4 border-white object-cover'
 							/>
 						))}
 					</div>
@@ -38,15 +38,19 @@ const Testimonials = ({ testimonials }) => {
 								<i>"</i>
 							</p>
 						</div>
-						<div className='flex items-center gap-x-3.5'>
+						<div className='flex items-center gap-x-3.5 px-5'>
 							<img
 								src={testimonial.image}
 								alt={testimonial.name}
 								className='w-[61px] h-[61px]'
 							/>
-							<div className="font-inter gap-1">
-								<p className="text-lg/[25.2px] tracking-[-0.18px]">{testimonial.name}</p>
-								<p className="opacity-70 text-sm/4 font-bold tracking-[-0.55px] uppercase text-wrap">{testimonial.position}</p>
+							<div className='font-inter gap-1'>
+								<p className='text-lg/[25.2px] tracking-[-0.18px]'>
+									{testimonial.name}
+								</p>
+								<p className='opacity-70 text-sm/4 font-bold tracking-[-0.55px] uppercase text-wrap'>
+									{testimonial.position}
+								</p>
 							</div>
 						</div>
 					</div>

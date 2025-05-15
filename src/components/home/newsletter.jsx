@@ -31,7 +31,7 @@ const Newsletter = () => {
 				<form className='max-w-[585px] w-full p-5 space-y-4 bg-[#0A0A0A] shadow-[0px_4px_40.4px_16px_rgba(0,0,0,0.25)] text-base rounded-[30px]'>
 					<div>
 						<input
-							className='border border-[#D0D5DD] rounded-[20px] placeholder:text-[#999999] px-3 py-4 text-white w-full bg-[#888888]/10'
+							className='border border-[#888888]/10 rounded-[20px] placeholder:text-[#999999] px-3 py-4 text-white w-full bg-[#888888]/10'
 							type='text'
 							name='name'
 							id='name'
@@ -41,7 +41,7 @@ const Newsletter = () => {
 					</div>
 					<div>
 						<input
-							className='border border-[#D0D5DD] rounded-[20px] placeholder:text-[#999999] px-3 py-4 text-white w-full bg-[#888888]/10'
+							className='border border-[#888888]/10 rounded-[20px] placeholder:text-[#999999] px-3 py-4 text-white w-full bg-[#888888]/10'
 							type='email'
 							name='email'
 							id='email'
