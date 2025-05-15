@@ -27,7 +27,7 @@ const Experience = () => {
 			<motion.div
 				initial={{ opacity: 0, y: 40 }}
 				animate={
-					isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0.7, y: 40 }
+					isSectionInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 40 }
 				}
 				transition={{ duration: 0.7, ease: "easeOut" }}
 				className='flex md:items-end justify-between md:flex-row flex-col w-full gap-y-10 md:mb-28 mb-20'>

@@ -11,6 +11,7 @@ import jane from "../assets/imgs/jane.png";
 import Testimonials from "../components/home/testimonials";
 import Experience from "../components/home/experience";
 import Newsletter from "../components/home/newsletter";
+import { standOutData } from "../lib/product-data";
 
 const testimonials = [
 	{
@@ -61,7 +62,7 @@ const Home = () => {
 			<Hero />
 			<Metrics />
 			<WhatWeBuild />
-			<StandOut />
+			<StandOut data={standOutData} />
 			<Testimonials testimonials={testimonials} />
 			<Experience />
 			<Newsletter />

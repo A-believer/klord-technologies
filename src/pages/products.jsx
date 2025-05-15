@@ -1,6 +1,9 @@
 import HeroComp from "../common/hero-comp";
 import Seo from "../common/seo";
 import bgSrc from "../assets/imgs/products-bg.png";
+import ProductsView from "../components/products/products-view";
+import StandOut from "../components/home/stand-out";
+import { whyChooseData } from "../lib/product-data";
 
 const Products = () => {
 	return (
@@ -17,7 +20,12 @@ const Products = () => {
 				paragraph='At K-Lord Technologies, we design and deliver intelligent digital platforms that solve real-world challenges. From healthcare to enterprise collaboration and business operations, our products are built to help you scale fast, stay compliant, and drive meaningful results.'
 				bgSrc={bgSrc}
 			/>
-			
+			<ProductsView />
+			<StandOut
+				data={whyChooseData}
+				ctaLink={"/get-started"}
+				ctaText={"Talk to a Representative "}
+			/>
 		</>
 	);
 };
