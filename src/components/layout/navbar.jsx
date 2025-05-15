@@ -15,7 +15,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className='contain fixed md:top-8 top-0 left-0 right-0 bg-[#FAFAFA] md:rounded-[48px] z-50'>
+		<nav className='max-w-[1440px] md:w-[90%] mx-auto w-full fixed md:top-8 top-0 left-0 right-0 bg-[#FAFAFA] md:rounded-[48px] z-50 shadow-lg'>
 			<div className='md:px-8 px-5 md:py-[18px] py-3 flex-between font-sora text-[#667085] text-base/6 relative w-full'>
 				<div className='flex item-center gap-x-10'>
 					<Link to='/'>
