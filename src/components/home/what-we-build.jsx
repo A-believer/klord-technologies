@@ -52,7 +52,6 @@ const WhatWeBuild = () => {
 				className='py-16 max-w-[1440px] mx-auto w-[90%] md:space-y-16 space-y-10 font-sora'>
 				<h1 className='heading'>What We Build</h1>
 				<div className='font-inter flex items-start justify-between gap-x-[30px]'>
-					
 					{/* Sticky left column */}
 					<div
 						className='space-y-2.5 md:flex hidden flex-col items-start sticky top-[120px] z-30 h-fit'
@@ -87,7 +86,7 @@ const WhatWeBuild = () => {
 										/>
 									</div>
 									<div className='space-y-4 pt-5'>
-										<h4 className='font-sora text-[26px]/tight font-semibold'>
+										<h4 className='font-sora text-[26px]/tight font-semibold text-[#F95607]'>
 											{sol.name}
 										</h4>
 										<p className='text-[15px]/[22px]'>{sol.des}</p>
@@ -95,7 +94,7 @@ const WhatWeBuild = () => {
 								</div>
 								<Link
 									to={sol.link}
-									className='font-inter text-xl/7 tracking-[-0.6px] flex items-center justify-between bg-white rounded-[30px] py-7 px-5 hover:scale-[98%] transition-all duration-700'>
+									className='font-inter text-xl/7 tracking-[-0.6px] flex items-center justify-between bg-white rounded-[30px] py-7 px-5 hover:scale-[98%] transition-all duration-700 text-[#01588E]'>
 									<span>Learn More</span> <Plus color='#0A0A0A' />
 								</Link>
 							</motion.div>
