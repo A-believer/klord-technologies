@@ -5,12 +5,12 @@ const CardSwitch = ({ header, data }) => {
 	const [currentCard, setCurrentCard] = useState(0);
 	const currentImage = data[currentCard].image;
 	return (
-		<section className='contain md:space-y-16 space-y-10'>
+		<section className='contain md:space-y-16 space-y-10 md:py-16 py-10'>
 			<h2 className='text-[#0F0F0F] font-inter font-semibold lg:tracking-[-2.4px] tracking-[-1px] lg:text-5xl/[64px] text-[32px]/[44px]'>
 				{header}
 			</h2>
 			<div className='grid lg:grid-cols-2 grid-cols-1 gap-x-20 gap-y-8'>
-				<div className='space-y-9'>
+				<div className='space-y-9 max-w-[531px] w-full'>
 					{data.map((card, index) => (
 						<div
 							key={index}
@@ -24,7 +24,7 @@ const CardSwitch = ({ header, data }) => {
 								onClick={() => setCurrentCard(index)}
 								className='cursor-pointer text-left text-[#0F0F0F] space-y-3'>
 								<h3
-									className={`font-sora text-2xl/[30px] font-semibold tracking-[-1.04px] ${
+									className={`transition-all duration-500 font-sora text-2xl/[30px] font-semibold tracking-[-1.04px] ${
 										index !== currentCard && "opacity-40 text-[26px]/8"
 									}`}>
 									{card.title}
@@ -34,9 +34,9 @@ const CardSwitch = ({ header, data }) => {
 										<motion.p
 											className='text-base/8 font-medium tracking-[-0.45px] opacity-80'
 											key={card.title}
-											initial={{ opacity: 0, y: -20 }}
+											initial={{ opacity: 0, y: -30 }}
 											animate={{ opacity: 1, y: 0 }}
-											exit={{ opacity: 0, y: -20 }}
+											exit={{ opacity: 0, y: -30 }}
 											transition={{ duration: 0.5, ease: "easeInOut" }}>
 											{card.desc}
 										</motion.p>
