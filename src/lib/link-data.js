@@ -25,13 +25,13 @@ const navlinks = [
 			{
 				title: "NexaLife Care",
 				des: "Smart Healthcare Referral & Clinic Management",
-				path: "/products#nexacare",
+				path: "/products#nexalifecare",
 				icon: health,
 			},
 			{
 				title: "Sharework Flow",
 				des: "Modular ERP for Agile, Growing Businesses",
-				path: "/products#sharework_flow",
+				path: "/products#shareworkflow",
 				icon: briefcase,
 			},
 		],
