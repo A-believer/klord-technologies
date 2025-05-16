@@ -1,4 +1,11 @@
+import CardSwitch from "../common/card-switch";
 import Seo from "../common/seo";
+import AboutUs from "../components/about/about-us";
+import Hero from "../components/about/hero";
+import OurApproach from "../components/about/our-approach";
+import OurTeam from "../components/about/our-team";
+import OurVision from "../components/about/our-vision";
+import { sectionI } from "../lib/about-data";
 
 const About = () => {
 	return (
@@ -11,7 +18,12 @@ healthcare, the public sector, SMEs, and enterprises. We specialize in scalable,
 compliant platforms that drive operational efficiency and growth.'
 				content=''
 			/>
-			<span>About</span>
+			<Hero />
+			<AboutUs />
+			<OurApproach />
+			<CardSwitch data={sectionI} header={"Key Industries We Serve"}  />
+			<OurVision />
+			<OurTeam />
 		</>
 	);
 };
