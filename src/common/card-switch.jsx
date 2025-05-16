@@ -29,14 +29,18 @@ const CardSwitch = ({ header, data }) => {
 									}`}>
 									{card.title}
 								</h3>
-								<AnimatePresence mode='wait'>
+								<AnimatePresence initial={false}>
 									{index === currentCard && (
 										<motion.p
 											className='text-base/8 font-medium tracking-[-0.45px] opacity-80'
 											key={card.title}
-											initial={{ opacity: 0, y: -30 }}
-											animate={{ opacity: 1, y: 0 }}
-											exit={{ opacity: 0, y: -30 }}
+											initial='collapsed'
+											animate='open'
+											exit='collapsed'
+											variants={{
+												open: { height: "auto", opacity: 1 },
+												collapsed: { height: 0, opacity: 0 },
+											}}
 											transition={{ duration: 0.5, ease: "easeInOut" }}>
 											{card.desc}
 										</motion.p>
@@ -53,9 +57,9 @@ const CardSwitch = ({ header, data }) => {
 						src={currentImage}
 						className='rounded-[18px]'
 						alt={data[currentCard]?.image}
-						initial={{ opacity: 0, x: 40 }}
+						initial={{ opacity: 0, x: -40 }}
 						animate={{ opacity: 1, x: 0 }}
-						exit={{ opacity: 0, x: -40 }}
+						exit={{ opacity: 0, x: 40 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
 					/>
 				</AnimatePresence>
