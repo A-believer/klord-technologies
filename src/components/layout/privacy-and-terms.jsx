@@ -1,11 +1,15 @@
 import { ChevronRight } from "lucide-react";
 import TermsOfService from "../../pages/terms-of-service";
 import PrivacyPolicy from "../../pages/privacy-policy";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const PrivacyAndTerms = ({ page }) => {
 	const [currenttPage, setCurrentPage] = useState(page);
+
+	useEffect(() => {
+		setCurrentPage(page);
+	}, [page]);
 
 	const pageVariants = {
 		initial: {

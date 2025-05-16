@@ -1,14 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ProductDetails from "./product-details";
 import { products } from "../../lib/product-data";
-// Add these imports:
 import { AnimatePresence, motion } from "framer-motion";
+import { useLocation } from "react-router";
 
 const ProductsView = () => {
 	const [currentProduct, setCurrentProduct] = useState("UrCalls");
+	const location = useLocation();
+	const namesRef = useRef(null);
+
+	// Set current product from hash and scroll to names
+	useEffect(() => {
+		if (location.hash) {
+			const hashName = decodeURIComponent(location.hash.replace("#", "")).toLowerCase();
+			const found = products.find(
+				(p) => p.name.replace(/\s+/g, "").toLowerCase() === hashName.replace(/\s+/g, "")
+			);
+			if (found) {
+				setCurrentProduct(found.name);
+				// Scroll to the names section
+				if (namesRef.current) {
+					namesRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+				}
+			}
+		}
+	}, [location.hash]);
+
 	return (
 		<section className='contain py-16 md:space-y-16 space-y-11'>
-			<div className='flex justify-center items-center gap-x-[18px] overflow-hidden overflow-x-scroll scrollbar-hide sm:px-0 px-32 '>
+			<div
+				ref={namesRef}
+				className='flex justify-center items-center gap-x-[18px] overflow-hidden overflow-x-scroll scrollbar-hide sm:px-0 px-32 '
+			>
 				{products.map((product) => (
 					<button
 						key={product.id}
