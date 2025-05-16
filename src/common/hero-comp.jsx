@@ -16,7 +16,7 @@ const HeroComp = ({
 				background: `url(${bgSrc})`,
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
-				backgroundPosition: "bottom",
+				backgroundPosition: "center",
 			}}
 			className='md:h-screen h-[105vh]'>
 			<div className='md:h-screen h-[105vh] bg-gradient-to-b from-black/5 to-black relative'>
@@ -26,7 +26,7 @@ const HeroComp = ({
 							initial={{ opacity: 0, y: 50 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.7, ease: "easeOut" }}
-							className={`${headerWidth} font-sora xl:text-[65px]/[75px] lg:text-[56px]/[64px] text-[35px]/10 font-semibold tracking-[-2px]`}>
+							className={`${headerWidth} font-sora xl:text-[65px]/[75px] lg:text-[56px]/[64px] text-[35px]/10 font-semibold tracking-[-3px]`}>
 							{header}
 						</motion.h1>
 						<div className='mt-5 flex lg:flex-row flex-col lg:justify-between lg:items-end w-full lg:gap-16 gap-7'>

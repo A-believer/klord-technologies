@@ -6,6 +6,12 @@
   --font-inter: "Inter", sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   @apply max-w-[1440px] mx-auto md:w-[86.5%] w-full;
 }

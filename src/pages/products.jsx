@@ -2,7 +2,7 @@ import HeroComp from "../common/hero-comp";
 import Seo from "../common/seo";
 import bgSrc from "../assets/imgs/products-bg.png";
 import ProductsView from "../components/products/products-view";
-import StandOut from "../components/home/stand-out";
+import StandOut from "../common/stand-out";
 import { whyChooseData } from "../lib/product-data";
 
 const Products = () => {

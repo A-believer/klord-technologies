@@ -3,12 +3,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "react-router";
 
-const StandOut = ({ data, ctaLink, ctaText }) => {
+const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 	const scrollRef = useRef(null);
 
 	const scroll = (direction) => {
 		if (scrollRef.current) {
-			const scrollAmount = 350; // Adjust based on card width + gap
+			const scrollAmount = 350;
 			scrollRef.current.scrollBy({
 				left: direction === "left" ? -scrollAmount : scrollAmount,
 				behavior: "smooth",
@@ -31,7 +31,7 @@ const StandOut = ({ data, ctaLink, ctaText }) => {
 						</Link>
 					)}
 				</div>
-
+				{desc && <>{desc}</>}
 				<div className='md:flex hidden items-center justify-end gap-x-2.5'>
 					<button
 						className='bg-[#F15533] rounded-[14px] w-[45px] h-[45px] flex items-center justify-center cursor-pointer'
@@ -52,11 +52,11 @@ const StandOut = ({ data, ctaLink, ctaText }) => {
 					<div
 						key={index}
 						className='shrink-0 p-10 pb-0 bg-[#F5F7F9] rounded-[30px] text-[#0F0F0F] min-w-[350px] max-w-[518px] w-full flex flex-col gap-y-[49px]'>
-						<div className='max-w-[300px] shrink-0'>
+						<div className='max-w-[300px] shrink-0 space-y-5'>
 							<h5 className=' font-sora text-[26px]/8 font-semibold'>
 								{item.header}
 							</h5>
-							<p>{item.des}</p>
+							<p className="text-[#0F0F0F] text-[15px]/normal tracking-[-0.45px] font-inter font-medium">{item.des}</p>
 						</div>
 						<img
 							src={item.image}
