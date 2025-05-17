@@ -22,7 +22,7 @@ const Footer = () => {
 							className='w-[201px] h-[76px] object-cover object-left'
 						/>
 						<p className='text-lg/[25px] font-medium tracking-[-0.18px] md:block hidden'>
-							The next big thing starts here; reach out and let’s get creating!
+							The next big thing starts here;
 							<br className='md:flex hidden' /> reach out and
 							let’s get creating!
 						</p>

@@ -27,13 +27,13 @@ const whyChooseKlordData = [
 		image: security,
 	},
 	{
-		header: "Scalable & Secure",
+		header: "Scalable",
 		des: "From startup to enterprise, our products grow with you",
 		image: scalable,
 	},
 	{
-		header: "Scalable from Day One",
-		des: "Whether you're 5 users or 50,000, our platforms grow with you.",
+		header: "Proven Impact",
+		des: "Our clients experience tangible improvements in productivity, customer satisfaction, and compliance.",
 		image: secure,
 	},
 ];
@@ -172,8 +172,8 @@ const portfolioData = [
 		],
 		results:
 			"Sharework Flow has helped businesses cut costs and improve operational efficiency, allowing them to focus on growth.",
-        ctaText: "Request a Consultation",
-        url: "/get-started"
+		ctaText: "Request a Consultation",
+		url: "/get-started",
 	},
 ];
 

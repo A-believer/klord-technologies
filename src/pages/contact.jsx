@@ -13,27 +13,33 @@ import imgIV from "../assets/imgs/contact-security.png";
 const cardData = [
 	{
 		id: 1,
-		title: "Custom-Built Solutions",
-		desc: "We specialize in developing tailored software for healthcare, public sector, enterprise, and SME clients.",
+		title: "Custom Solutions",
+		desc: "We create tailor-made software that suits your specific operational needs.",
 		image: imgI,
 	},
 	{
 		id: 2,
-		title: "Scalable Platforms",
-		desc: "Our solutions are built to scale with your organization, ensuring smooth growth.",
+		title: "Compliance-Focused",
+		desc: "Our solutions adhere to the highest industry standards, including HIPAA, SOC 2, GDPR, and more.",
 		image: imgII,
 	},
 	{
 		id: 3,
-		title: "Expert Support",
-		desc: "Our team provides ongoing support to help you succeed at every stage of your journey.",
+		title: "Security at the Core",
+		desc: "Data protection and user privacy are our top priorities, integrated into every stage of the development process.",
 		image: imgIII,
 	},
 	{
 		id: 4,
-		title: "Security & Compliance",
-		desc: "We ensure all solutions meet the highest standards of data security and regulatory compliance, including HIPAA, SOC 2, and GDPR.",
+		title: "Scalable & Future-Ready",
+		desc: "Our products are designed to grow with your organization, ensuring lasting impact.",
 		image: imgIV,
+	},
+	{
+		id: 5,
+		title: "Industry Expertise",
+		desc: "We understand the unique challenges of healthcare, public sector, and enterprise markets, bringing valuable insights to every project .",
+		image: imgII,
 	},
 ];
 
