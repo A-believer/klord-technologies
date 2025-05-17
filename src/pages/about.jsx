@@ -5,7 +5,7 @@ import Hero from "../components/about/hero";
 import OurApproach from "../components/about/our-approach";
 import OurTeam from "../components/about/our-team";
 import OurVision from "../components/about/our-vision";
-import { sectionI } from "../lib/about-data";
+import { sectionI, sectionII, sectionIII } from "../lib/about-data";
 
 const About = () => {
 	return (
@@ -20,9 +20,11 @@ compliant platforms that drive operational efficiency and growth.'
 			/>
 			<Hero />
 			<AboutUs />
+			<CardSwitch data={sectionI} header={"Key Industries We Serve"} />
 			<OurApproach />
-			<CardSwitch data={sectionI} header={"Key Industries We Serve"}  />
+			<CardSwitch data={sectionII} header={"Why Choose K-Lord Technologies?"} />
 			<OurVision />
+			<CardSwitch data={sectionIII} header={"Our Values"} />
 			<OurTeam />
 		</>
 	);

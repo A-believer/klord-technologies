@@ -193,13 +193,13 @@ const whyChooseData = [
 		image: security,
 	},
 	{
-		header: "Scalable & Secure",
-		des: "Boosting workflows, user experience, and ROI",
+		header: "Scalable from Day One",
+		des: "No matter the size of your team, our platforms grow with you.",
 		image: scalable,
 	},
 	{
-		header: "Scalable from Day One",
-		des: "Whether you're 5 users or 50,000, our platforms grow with you.",
+		header: " Industry-Specific Intelligence",
+		des: "Designed with deep insight into real-world workflows. ",
 		image: secure,
 	},
 ];
