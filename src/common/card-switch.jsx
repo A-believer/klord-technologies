@@ -6,11 +6,15 @@ const CardSwitch = ({ header, data, subtext }) => {
 	const currentImage = data[currentCard].image;
 	return (
 		<section className='contain md:space-y-16 space-y-10 md:py-16 py-10'>
-			<div className="space-y-4">
+			<div className='space-y-4'>
 				<h2 className='text-[#0F0F0F] font-inter font-semibold lg:tracking-[-2.4px] tracking-[-1px] lg:text-5xl/[64px] text-[32px]/[44px]'>
 					{header}
 				</h2>
-				{subtext && <p className="max-w-[922px] text-lg/8 tracking-[-0.18px] font-medium font-inter opacity-80">{subtext}</p>}
+				{subtext && (
+					<p className='max-w-[922px] text-lg/8 tracking-[-0.18px] font-medium font-inter opacity-80'>
+						{subtext}
+					</p>
+				)}
 			</div>
 
 			<div className='grid lg:grid-cols-2 grid-cols-1 gap-x-20 gap-y-8'>
@@ -21,8 +25,10 @@ const CardSwitch = ({ header, data, subtext }) => {
 							className='flex items-center gap-x-7 transition-all duration-500'>
 							<div
 								className={`${
-									index === currentCard ? "bg-[#FFD9CC] h-[104px]" : ""
-								}  w-[10px] rounded-[28px]`}
+									index === currentCard
+										? "bg-[#F95607] h-[104px]"
+										: ""
+								}  w-[10px] rounded-[28px] shrink-0`}
 							/>
 							<button
 								onClick={() => setCurrentCard(index)}
