@@ -18,9 +18,15 @@ const ProductsView = () => {
 			);
 			if (found) {
 				setCurrentProduct(found.name);
-				// Scroll to the names section
+				// Scroll to the names section with 150px offset from top
 				if (namesRef.current) {
-					namesRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+					const rect = namesRef.current.getBoundingClientRect();
+					const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+					const offset = 140;
+					window.scrollTo({
+						top: rect.top + scrollTop - offset,
+						behavior: "smooth"
+					});
 				}
 			}
 		}

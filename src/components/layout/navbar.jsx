@@ -27,12 +27,17 @@ const Navbar = () => {
 							navlink.dropdownMenu ? (
 								<li
 									className={`${
-										(navlink.path.includes("/products") ||
-											navlink.path.includes("/solutions")) &&
+										navlink?.path &&
+										(navlink?.path.includes("/products") ||
+											navlink?.path.includes("/solutions")) &&
 										""
 									} flex items-center gap-x-2 hover:underline cursor-pointer`}
 									key={index}>
-									{navlink.title}
+									{navlink.path ? (
+										<Link to={navlink?.path}>{navlink.title}</Link>
+									) : (
+										navlink.title
+									)}
 									<button
 										className='-hover:translate-0.5 transition-all duration-600'
 										onClick={() => {
