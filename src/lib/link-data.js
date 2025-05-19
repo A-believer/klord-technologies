@@ -38,7 +38,7 @@ const navlinks = [
 	},
 	{
 		title: "Solutions",
-		path: "/solutions",
+		
 		dropdownMenu: [
 			{
 				title: "Healthcare",
@@ -69,6 +69,10 @@ const navlinks = [
 	{
 		title: "Resources",
 		path: "/resources",
+	},
+	{
+		title: "Careers",
+		path: "/careers",
 	},
 	{
 		title: "About",
@@ -127,6 +131,7 @@ const footerlinks = {
 				},
 			],
 		},
+		{ name: "Careers", path: "/careers" },
 		{ name: "About", path: "/about" },
 		{ name: "Contact", path: "/contact" },
 		{ name: "FAQ", path: "/faqs" },

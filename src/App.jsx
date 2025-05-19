@@ -11,10 +11,9 @@ import Portfolio from "./pages/portfolio";
 import Contact from "./pages/contact";
 import Resources from "./pages/resources";
 import Faqs from "./pages/faqs";
-import TermsOfService from "./pages/terms-of-service";
-import PrivacyPolicy from "./pages/privacy-policy";
 import GetStarted from "./pages/get-started";
 import PrivacyAndTerms from "./components/layout/privacy-and-terms";
+import Career from "./pages/career";
 
 const App = () => {
 	return (
@@ -43,7 +42,8 @@ const App = () => {
 				<Route path='/resources' element={<Resources />} />
 				<Route path='/faqs' element={<Faqs />} />
 
-				<Route					path='/terms-of-service'
+				<Route
+					path='/terms-of-service'
 					element={<PrivacyAndTerms page='terms-of-service' />}
 				/>
 				<Route
@@ -52,6 +52,7 @@ const App = () => {
 				/>
 
 				<Route path='/about' element={<About />} />
+				<Route path='/careers' element={<Career />} />
 			</Route>
 			<Route path='/get-started' element={<GetStarted />} />
 		</Routes>
