@@ -2,8 +2,38 @@ import HeroComp from "../../common/hero-comp";
 import Seo from "../../common/seo";
 import bgSrc from "../../assets/imgs/healthcare-software-bg.png";
 import CardSwitch from "../../common/card-switch";
-import { addressSectionData } from "../../lib/solution-data";
+import {
+	addressSectionData,
+	devProcessData,
+	keyFeaturesData,
+} from "../../lib/solution-data";
 import Solutions from "../../components/solutions/healthcare-software/solutions";
+import CardGrey from "../../common/card-grey";
+import SlidingCards from "../../common/sliding-cards";
+import UseCases from "../../components/solutions/healthcare-software/use-cases";
+import Testimonials from "../../components/home/testimonials";
+import jolene from "../../assets/imgs/jolene.png";
+import ruben from "../../assets/imgs/ruben.png";
+import Cta from "../../components/solutions/healthcare-software/cta";
+
+const testimonials = [
+	{
+		name: "Dr. Jolene Smollette",
+		position: "Medical Director",
+		quote:
+			"K-Lord Technologies transformed our patient management with their custom software, enhancing efficiency and compliance.",
+		image: jolene,
+	},
+	{
+		name: "Ruben Daniels",
+		position: "CEO, HealthFirst Clinic",
+		quote:
+			"Their telehealth platform allowed us to expand our services and improve patient engagement significantly.",
+		image: ruben,
+	},
+];
+
+
 
 const HealthcareSoftware = () => {
 	return (
@@ -29,6 +59,14 @@ const HealthcareSoftware = () => {
 				}
 			/>
 			<Solutions />
+			<CardGrey
+				data={keyFeaturesData}
+				header={"Key Features of Our Solutions"}
+			/>
+			<SlidingCards data={devProcessData} />
+			<UseCases />
+			<Testimonials testimonials={testimonials} />
+			<Cta/>
 		</>
 	);
 };
