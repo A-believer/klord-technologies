@@ -13,11 +13,13 @@ const ProductDetails = ({ product }) => {
 				{product.desc}
 			</p>
 			<div
-				className={`grid ${
-					product.name === "NexaLife Care" && "lg:grid-cols-4"
-				} lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-8 lg:gap-y-16 gap-y-[30px]`}>
+				className={`flex flex-wrap justify-center ${
+					product.name === "NexaLife Care" ? "lg:[&>*]:w-1/4" : "lg:[&>*]:w-1/3"
+				} sm:[&>*]:w-1/2 [&>*]:w-full`}>
 				{product.cardContent.map((card, idx) => (
-					<Card key={idx} content={card} />
+					<div key={idx} className="px-4 lg:mb-16 mb-[30px]">
+						<Card content={card} />
+					</div>
 				))}
 			</div>
 			<p className='text-lg/10 font-bold font-inter tracking-[-0.18px]'>

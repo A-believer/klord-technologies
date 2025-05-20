@@ -1,6 +1,29 @@
 import HeroComp from "../../common/hero-comp";
 import Seo from "../../common/seo";
 import bgSrc from "../../assets/imgs/enterprise-software-bg.png";
+import ChallengeSolutions from "../../components/solutions/challenge-solutions";
+
+const c_s_data = {
+	header: "The Challenge vs. The K-Lord Solution",
+	challenges: {
+		paragraph:
+			"Disjointed systems, manual processes, and disconnected data create friction at scale. Off-the-shelf software often leads to workarounds, inefficiencies, and limited visibility.",
+		list: [
+			"Data silos block cross-department collaboration",
+			"Manual data entry leads to errors and delays",
+			"Generic software requires excessive workarounds",
+		],
+	},
+	solutions: {
+		paragraph:
+			"K-Lord Technologies builds unified enterprise systems designed around your goals. From strategy to deployment, our software connects your departments, automates core processes, and lays the foundation for smarter decisions and sustainable growth.",
+		list: [
+			"Single source of truth across all departments",
+			"Automated workflows eliminate repetitive tasks",
+			"Customized platforms that fit your exact needs",
+		],
+	},
+};
 
 const EnterpriseSoftware = () => {
 	return (
@@ -18,6 +41,12 @@ const EnterpriseSoftware = () => {
 				bgSrc={bgSrc}
 				ctaTextI='Transform Your Operations'
 				ctaTextII='Explore Our Work'
+			/>
+			
+			<ChallengeSolutions
+				challenges={c_s_data.challenges}
+				header={c_s_data.header}
+				solutions={c_s_data.solutions}
 			/>
 		</>
 	);
