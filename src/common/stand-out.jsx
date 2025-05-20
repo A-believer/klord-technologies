@@ -51,7 +51,7 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 				{data.map((item, index) => (
 					<div
 						key={index}
-						className='shrink-0 p-10 pb-0 bg-[#F5F7F9] rounded-[30px] text-[#0F0F0F] min-w-[350px] max-w-[518px] w-full flex flex-col gap-y-[49px]'>
+						className='shrink-0 p-10 pb-0 bg-[#F5F7F9] rounded-[30px] text-[#0F0F0F] min-w-[350px] max-w-[518px] w-full flex flex-col gap-y-4'>
 						<div className='max-w-[300px] shrink-0 space-y-5'>
 							<h5 className=' font-sora text-[26px]/8 font-semibold'>
 								{item.header}

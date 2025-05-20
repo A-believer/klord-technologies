@@ -25,8 +25,8 @@ const CardSwitch = ({ header, data, subtext }) => {
 							className='flex items-center gap-x-7 transition-all duration-500'>
 							<div
 								className={`${
-									index === currentCard ? "bg-[#F95607] h-full" : "h-0"
-								} transition-all duration-500 w-[10px] rounded-[28px] shrink-0`}
+									index === currentCard ? "bg-[#F95607] sm:h-[110px] h-[150px]" : ""
+								}  w-[10px] rounded-[28px] shrink-0`}
 							/>
 							<button
 								onClick={() => setCurrentCard(index)}

@@ -8,11 +8,11 @@ const CardGrey = ({ header, data }) => {
 				{data.map((item) => (
 					<div
 						key={item.id}
-						className='flex-[1_1_400px] max-w-[400px] bg-[#FAFAFA] border border-[#F5F5F5] rounded-[10px] p-[22px] pt-[30px]'>
-						<h4 className='text-black text-2xl/8 font-semibold tracking-[-1.04px] text-center'>
+						className='xl:flex-[1_1_350px] flex-[1_1_300px] max-w-[400px] bg-[#FAFAFA] border border-[#F5F5F5] rounded-[10px] p-[22px] pt-[30px]'>
+						<h4 className='text-black text-2xl/8 font-semibold tracking-[-1.04px] '>
 							{item.header}
 						</h4>
-						<p className='mt-3 mb-9 text-center'>{item.desc}</p>
+						<p className='mt-3 mb-9 text-left'>{item.desc}</p>
 						<img src={item.img} alt='' className='rounded-[13px] mx-auto' />
 					</div>
 				))}

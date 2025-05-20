@@ -118,7 +118,7 @@ const products = [
 		id: 3,
 		name: "Sharework Flow",
 		header: "Modular ERP for Agile, Growing Businesses",
-		imgSection: <ShareworkflowImg/>,
+		imgSection: <ShareworkflowImg />,
 		desc: "Sharework Flow is an all-in-one, flexible ERP solution packed with everything you need to run and grow your business. From HR to accounting, CRM to project management—Sharework helps unify your operations under one intelligent system.",
 		cardContent: [
 			{
@@ -161,49 +161,47 @@ const products = [
 const standOutData = [
 	{
 		header: "Tailored to Your Needs",
-		des: "No one-size-fits-all software",
+		des: "We begin by fully understanding your workflows and challenges. Then, we build software that adapts to your way of working, minimizing friction and enabling smoother operations. ",
 		image: need,
 	},
 	{
-		header: "Industry-Specific",
-		des: "Solutions for healthcare, government, and enterprise",
+		header: "Industry-Specific Expertise ",
+		des: "Specializing in healthcare, government, and enterprise sectors, we leverage deep domain knowledge to deliver solutions that meet your exact needs and regulatory demands. ",
 		image: specific,
 	},
 	{
-		header: "Real Results",
-		des: "Boosting workflows, user experience, and ROI",
+		header: "Delivering Real Results ",
+		des: "We focus on driving outcomes, not just features. Our clients benefit from improved efficiency, faster adoption, and meaningful business impact when partnering with us.",
 		image: results,
 	},
 	{
 		header: "Scalable & Secure",
-		des: "Built with growth and compliance in mind",
+		des: "Our platforms are designed to grow with your organization, from startups to large enterprises. Security and compliance are built in from day one, keeping your data safe and your business running reliably. ",
 		image: secure,
 	},
 ];
 
 const whyChooseData = [
-	{
-		header: "Custom-Fit Solutions",
-		des: "No bloat, no fluff—just the tools you need.",
-		image: solutions,
-	},
-	{
-		header: "Built-In Compliance & Security",
-		des: "Especially in healthcare, finance, and enterprise operations.",
-		image: security,
-	},
-	{
-		header: "Scalable from Day One",
-		des: "No matter the size of your team, our platforms grow with you.",
-		image: scalable,
-	},
-	{
-		header: " Industry-Specific Intelligence",
-		des: "Designed with deep insight into real-world workflows. ",
-		image: secure,
-	},
+    {
+        header: "Purpose-Built Solutions",
+        des: "Our modular platforms include exactly what you need; no unnecessary features or bloat. This keeps your tools straightforward, effective, and easy to use.",
+        image: solutions,
+    },
+    {
+        header: "Compliance and Security by Design",
+        des: "Compliance with HIPAA, Section 508, SOC 2, and GDPR is integrated throughout our software. You can trust your operations stay protected and meet all necessary standards.",
+        image: security,
+    },
+    {
+        header: "Designed for Scale",
+        des: "Whether you have five users or five thousand, our systems support seamless growth. We ensure performance and stability without costly rebuilds.",
+        image: scalable,
+    },
+    {
+        header: "Deep Domain Knowledge",
+        des: "Every product reflects our extensive experience; from patient referral platforms to enterprise resource planning; built to solve your specific challenges.",
+        image: secure,
+    },
 ];
-
-
 
 export { products, standOutData, whyChooseData };
