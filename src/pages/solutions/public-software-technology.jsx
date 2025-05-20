@@ -8,6 +8,7 @@ import imgIII from "../../assets/imgs/ps-3.png";
 import imgIV from "../../assets/imgs/ps-4.png";
 import imgV from "../../assets/imgs/ps-5.png";
 import CardGrey from "../../common/card-grey";
+import Cta from "../../components/solutions/cta";
 
 const c_s_data = {
 	header: "The Public Sector Challenge vs. K-Lord's Solution",
@@ -20,22 +21,6 @@ const c_s_data = {
 			"We deliver digital solutions designed for the public sector’s real-world needs—secure, compliant, and user-friendly. From digital permits to social service automation, we modernize operations without disrupting your mission.",
 	},
 };
-
-
-
- 
-
-
- 
-
-
-
-
-
- 
-
-
-  
 
 const smart_solution = [
 	{
@@ -95,6 +80,12 @@ const PublicSoftwareTechnology = () => {
 			<CardGrey
 				header='Smart Solutions for Public Impact'
 				data={smart_solution}
+			/>
+			<Cta
+				header='Ready to Serve Better with Smarter Tools?'
+				subheader='K-Lord Technologies empowers mission-driven agencies to scale their impact, reduce inefficiencies, and stay ahead of compliance demands. Let’s build what your community needs.'
+				ctaTextI='Get Started with Discovery'
+				ctaTextII='Explore Products'
 			/>
 		</>
 	);

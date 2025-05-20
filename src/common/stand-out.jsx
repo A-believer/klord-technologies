@@ -17,7 +17,7 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 	};
 
 	return (
-		<section className='contain py-16 space-y-8'>
+		<section className='contain py-16 space-y-16'>
 			<div className='space-y-[42px]'>
 				<div className='flex items-center justify-between lg:flex-row flex-col gap-y-10'>
 					<h3 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-left'>
@@ -32,7 +32,7 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 					)}
 				</div>
 				{desc && <>{desc}</>}
-				<div className='md:flex hidden items-center justify-end gap-x-2.5'>
+				{/* <div className='md:flex hidden items-center justify-end gap-x-2.5'>
 					<button
 						className='bg-[#F15533] rounded-[14px] w-[45px] h-[45px] flex items-center justify-center cursor-pointer'
 						onClick={() => scroll("left")}>
@@ -43,26 +43,24 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 						onClick={() => scroll("right")}>
 						<ChevronRight color='#ffffff' />
 					</button>
-				</div>
+				</div> */}
 			</div>
 			<div
 				ref={scrollRef}
-				className='w-full rounded-[30px] flex md:flex-row flex-col md:items-stretch items-center gap-2.5 overflow-x-auto scrollbar-hide md:scrollbar-default scroll-smooth scrollbar-hide'>
+				className='w-full grid md:grid-cols-2 grid-cols-1 gap-4'>
 				{data.map((item, index) => (
 					<div
 						key={index}
-						className='shrink-0 p-10 pb-0 bg-[#F5F7F9] rounded-[30px] text-[#0F0F0F] min-w-[350px] max-w-[518px] w-full flex flex-col gap-y-4'>
-						<div className='max-w-[300px] shrink-0 space-y-5'>
-							<h5 className=' font-sora text-[26px]/8 font-semibold'>
+						className='py-9 px-[88px] bg-[#F5F7F9] rounded-[30px] text-[#0F0F0F] w-full flex flex-col items-center justify-between gap-y-5 h-full'>
+						<img src={item.image} alt='' className='w-[176px] h-[176px]' />
+						<div className='space-y-5'>
+							<h5 className=' font-sora text-[26px]/8 font-semibold text-center'>
 								{item.header}
 							</h5>
-							<p className="text-[#0F0F0F] text-[15px]/normal tracking-[-0.45px] font-inter font-medium">{item.des}</p>
+							<p className='text-[#0F0F0F] text-[15px]/normal tracking-[-0.45px] font-inter font-medium text-center'>
+								{item.des}
+							</p>
 						</div>
-						<img
-							src={item.image}
-							alt=''
-							className='w-[252px] h-[252px] self-end'
-						/>
 					</div>
 				))}
 			</div>
