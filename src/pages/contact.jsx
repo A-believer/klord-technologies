@@ -10,37 +10,38 @@ import imgII from "../assets/imgs/contact-scalable.png";
 import imgIII from "../assets/imgs/contact-expert.png";
 import imgIV from "../assets/imgs/contact-security.png";
 
+
 const cardData = [
-	{
-		id: 1,
-		title: "Custom Solutions",
-		desc: "We create tailor-made software that suits your specific operational needs.",
-		image: imgI,
-	},
-	{
-		id: 2,
-		title: "Compliance-Focused",
-		desc: "Our solutions adhere to the highest industry standards, including HIPAA, SOC 2, GDPR, and more.",
-		image: imgII,
-	},
-	{
-		id: 3,
-		title: "Security at the Core",
-		desc: "Data protection and user privacy are our top priorities, integrated into every stage of the development process.",
-		image: imgIII,
-	},
-	{
-		id: 4,
-		title: "Scalable & Future-Ready",
-		desc: "Our products are designed to grow with your organization, ensuring lasting impact.",
-		image: imgIV,
-	},
-	{
-		id: 5,
-		title: "Industry Expertise",
-		desc: "We understand the unique challenges of healthcare, public sector, and enterprise markets, bringing valuable insights to every project .",
-		image: imgII,
-	},
+    {
+        id: 1,
+        title: "Custom-Fit Platforms",
+        desc: "We design software around your goals and workflows, ensuring an intuitive experience for your users.",
+        image: imgI,
+    },
+    {
+        id: 2,
+        title: "Compliance at Every Step",
+        desc: "HIPAA, SOC 2, GDPR, and more; compliance is integrated in every stage of our development process, so you can operate with confidence.",
+        image: imgII,
+    },
+    {
+        id: 3,
+        title: "Security Is a Priority",
+        desc: "Strong encryption, role-based access, and infrastructure safeguards protect your data at all times.",
+        image: imgIII,
+    },
+    {
+        id: 4,
+        title: "Built to Scale and Adapt",
+        desc: "Our modular designs allow you to add features, users, and integrations smoothly as your organization grows.",
+        image: imgIV,
+    },
+    {
+        id: 5,
+        title: "Experienced Industry Partner",
+        desc: "With deep expertise in healthcare, public sector, and enterprise software, we deliver practical solutions you can rely on.",
+        image: imgII,
+    },
 ];
 
 const Contact = () => {

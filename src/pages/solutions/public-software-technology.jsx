@@ -2,6 +2,12 @@ import Seo from "../../common/seo";
 import bgSrc from "../../assets/imgs/public-technology-bg.png";
 import HeroComp from "../../common/hero-comp";
 import ChallengeSolutions from "../../components/solutions/challenge-solutions";
+import imgI from "../../assets/imgs/ps-1.png";
+import imgII from "../../assets/imgs/ps-2.png";
+import imgIII from "../../assets/imgs/ps-3.png";
+import imgIV from "../../assets/imgs/ps-4.png";
+import imgV from "../../assets/imgs/ps-5.png";
+import CardGrey from "../../common/card-grey";
 
 const c_s_data = {
 	header: "The Public Sector Challenge vs. K-Lord's Solution",
@@ -14,6 +20,55 @@ const c_s_data = {
 			"We deliver digital solutions designed for the public sector’s real-world needs—secure, compliant, and user-friendly. From digital permits to social service automation, we modernize operations without disrupting your mission.",
 	},
 };
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+ 
+
+
+  
+
+const smart_solution = [
+	{
+		id: 1,
+		header: "Public Health & Social Services ",
+		desc: "Digitize referrals, program enrollment, reporting, and case management for health departments and social care organizations; fully HIPAA-compliant and scalable for statewide or regional deployment. ",
+		img: imgI,
+	},
+	{
+		id: 2,
+		header: "Education Systems & Campus Portals ",
+		desc: "Build platforms for student information systems, faculty management, virtual learning, and online enrollment—engineered for ease of use across districts and campuses. ",
+		img: imgII,
+	},
+	{
+		id: 3,
+		header: " e-Government & Digital Services ",
+		desc: "Replace paper processes with mobile-ready platforms for licenses, permits, compliance tracking, and citizen engagement. Designed for rapid rollout and public access. ",
+		img: imgIII,
+	},
+	{
+		id: 4,
+		header: "Regulatory Compliance & Document Workflows ",
+		desc: "Automate FOIA responses, public records, approvals, and policy updates. Maintain audit readiness with full encryption and compliance coverage. ",
+		img: imgIV,
+	},
+	{
+		id: 5,
+		header: "NGO & Nonprofit Program Management",
+		desc: "Enable nonprofits to track beneficiaries, manage referrals, automate donor programs, and report outcomes transparently, without complex technical overhead. ",
+		img: imgV,
+	},
+];
 
 const PublicSoftwareTechnology = () => {
 	return (
@@ -36,6 +91,10 @@ const PublicSoftwareTechnology = () => {
 				challenges={c_s_data.challenges}
 				header={c_s_data.header}
 				solutions={c_s_data.solutions}
+			/>
+			<CardGrey
+				header='Smart Solutions for Public Impact'
+				data={smart_solution}
 			/>
 		</>
 	);

@@ -15,27 +15,28 @@ import icon10 from "../assets/imgs/icon-10.png";
 import icon11 from "../assets/imgs/icon-11.png";
 import icon12 from "../assets/imgs/icon-12.png";
 
+
 const whyChooseKlordData = [
-	{
-		header: "Tailored Solutions",
-		des: "We create software built specifically for your industry, not generic systems.",
-		image: solutions,
-	},
-	{
-		header: "Built-In Compliance",
-		des: "Our platforms meet HIPAA, FOIA, and other industry standards.",
-		image: security,
-	},
-	{
-		header: "Scalable",
-		des: "From startup to enterprise, our products grow with you",
-		image: scalable,
-	},
-	{
-		header: "Proven Impact",
-		des: "Our clients experience tangible improvements in productivity, customer satisfaction, and compliance.",
-		image: secure,
-	},
+    {
+        header: "Precisely Tailored Solutions",
+        des: "Our platforms fit your exact industry workflows. From patient referral management to enterprise resource planning, we deliver solutions that work seamlessly.",
+        image: solutions,
+    },
+    {
+        header: "Compliance Built-In",
+        des: "Regulatory requirements like HIPAA, FOIA, and accessibility standards are core to our development process, ensuring audit readiness and trust.",
+        image: security,
+    },
+    {
+        header: "Scalable Architecture",
+        des: "You can expand your solution from pilot programs to enterprise-wide deployments without costly downtime or rewrites.",
+        image: scalable,
+    },
+    {
+        header: "Proven Results",
+        des: "Our clients enjoy improved workflows, greater accuracy, and measurable operational gains. We deliver software that drives business value.",
+        image: secure,
+    },
 ];
 
 const portfolioData = [
