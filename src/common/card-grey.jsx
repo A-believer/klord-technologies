@@ -9,7 +9,7 @@ const CardGrey = ({ header, data }) => {
 					<div
 						key={item.id}
 						className='xl:flex-[1_1_350px] flex-[1_1_300px] max-w-[400px] bg-[#FAFAFA] border border-[#F5F5F5] rounded-[10px] p-[22px] pt-[30px]'>
-						<h4 className='text-black text-2xl/8 font-semibold tracking-[-1.04px] '>
+						<h4 className='text-black text-2xl/8 font-semibold font-sora tracking-[-1.04px] '>
 							{item.header}
 						</h4>
 						<p className='mt-3 mb-9 text-left'>{item.desc}</p>

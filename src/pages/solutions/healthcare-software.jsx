@@ -14,7 +14,7 @@ import UseCases from "../../components/solutions/healthcare-software/use-cases";
 import Testimonials from "../../components/home/testimonials";
 import jolene from "../../assets/imgs/jolene.png";
 import ruben from "../../assets/imgs/ruben.png";
-import Cta from "../../components/solutions/healthcare-software/cta";
+import Cta from "../../components/solutions/cta";
 
 const testimonials = [
 	{
@@ -66,7 +66,14 @@ const HealthcareSoftware = () => {
 			<SlidingCards data={devProcessData} />
 			<UseCases />
 			<Testimonials testimonials={testimonials} />
-			<Cta/>
+
+			<Cta
+				header='Ready to Transform Your Healthcare Operations?'
+				subheader='Partner with K-Lord Technologies to develop custom healthcare software
+					solutions that enhance patient care and streamline your operations.'
+				ctaTextI='Contact Us'
+				ctaTextII='See Our Work'
+			/>
 		</>
 	);
 };

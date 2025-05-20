@@ -7,8 +7,14 @@ import imgII from "../../assets/imgs/es-2.png";
 import imgIII from "../../assets/imgs/es-3.png";
 import imgIV from "../../assets/imgs/es-4.png";
 import imgV from "../../assets/imgs/es-5.png";
+import imgVI from "../../assets/imgs/es-6.png";
+import imgVII from "../../assets/imgs/es-7.png";
+import imgVIII from "../../assets/imgs/es-8.png";
+import imgIX from "../../assets/imgs/es-9.png";
 import CardGrey from "../../common/card-grey";
 import UseCases from "../../components/solutions/enterprise-software/use-cases";
+import CardSwitch from "../../common/card-switch";
+import Cta from "../../components/solutions/cta";
 
 const c_s_data = {
 	header: "The Challenge vs. The K-Lord Solution",
@@ -65,9 +71,32 @@ const what_we_deliver = [
 	},
 ];
 
-const standOutData = [
-	{}
-]
+const whyChooseData = [
+	{
+		id: 1,
+		title: "Cross-Industry Experience",
+		desc: "We've delivered enterprise-grade platforms across healthcare, logistics, finance, and more. This broad expertise brings proven best practices to your project.",
+		image: imgVI,
+	},
+	{
+		id: 2,
+		title: "Built for Growth",
+		desc: "Our infrastructure supports large data volumes, distributed teams, and high concurrency. You can trust your systems will scale efficiently as you grow.",
+		image: imgVII,
+	},
+	{
+		id: 3,
+		title: "Long-Term Partnership",
+		desc: "Our commitment extends beyond launch. We provide ongoing support, maintenance, and strategic updates to keep your software aligned with your evolving needs.",
+		image: imgVIII,
+	},
+	{
+		id: 4,
+		title: "Software That Fits Your Process",
+		desc: "We tailor our solutions to match your workflows and business logic, reducing disruption and improving adoption across your teams.",
+		image: imgIX,
+	},
+];
 
 const EnterpriseSoftware = () => {
 	return (
@@ -93,7 +122,17 @@ const EnterpriseSoftware = () => {
 				solutions={c_s_data.solutions}
 			/>
 			<CardGrey header='What We Deliver' data={what_we_deliver} />
-			<UseCases/>
+			<UseCases />
+			<CardSwitch
+				data={whyChooseData}
+				header={"Why Enterprises Choose K-Lord"}
+			/>
+			<Cta
+				header='Ready to Build Enterprise Software That Works for You?'
+				subheader="At K-Lord Technologies, we help growing organizations remove complexity, unlock data, and move faster. Let's build the platform that drives your next stage of growth."
+				ctaTextI='Let’s Get Started'
+				ctaTextII='See What We’ve Built'
+			/>
 		</>
 	);
 };

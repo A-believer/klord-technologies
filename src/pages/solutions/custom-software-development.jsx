@@ -9,6 +9,7 @@ import imgIV from "../../assets/imgs/cs-4.png";
 import imgV from "../../assets/imgs/cs-5.png";
 import imgVI from "../../assets/imgs/cs-6.png";
 import CardGrey from "../../common/card-grey";
+import Cta from "../../components/solutions/cta";
 
 const c_s_data = {
 	header: "Our Problem–Solution Approach",
@@ -86,6 +87,12 @@ const CustomSoftwareDevelopment = () => {
 			<CardGrey
 				header='Key Features of Our Custom Software'
 				data={key_features}
+			/>
+			<Cta
+				header='Ready to Build Custom Software for Your Business?'
+				subheader='At K-Lord Technologies, we don’t just write code, we solve real business problems with software built to fit, scale, and evolve. Let’s create something that works the way you work.'
+				ctaTextI='Get in Touch'
+				ctaTextII='See Our Work'
 			/>
 		</>
 	);
