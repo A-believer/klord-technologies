@@ -1,15 +1,12 @@
-import Seo from "../common/seo";
-import Hero from "../components/career/hero";
-import Newsletter from "../components/career/newsletter";
-import Positions from "../components/career/positions";
-import Values from "../components/career/values";
-
-const jobData = [
+export const jobData = [
 	{
+		id: 1,
 		title: "Frontend Engineer (React / Next.js)",
 		location: "Remote",
 		employmentType: "Full-Time",
 		department: "Product Engineering + Web Development",
+		description:
+			"Collaborate with designers and backend developers to deliver responsive, accessible, and scalable UI for platforms and applications. ",
 		aboutRole:
 			"We're looking for a Frontend Engineer with expertise in React and Next.js to help build high-performance, responsive interfaces across applications and platforms. You'll collaborate with UI/UX designers and backend engineers to translate clean design into functional web experiences used in healthcare, enterprise, and public infrastructure.",
 		responsibilities: [
@@ -29,10 +26,13 @@ const jobData = [
 		],
 	},
 	{
+		id: 2,
 		title: "Backend Developer (Node.js / Python) + DevOps",
 		location: "Remote",
 		employmentType: "Full-Time",
 		department: "Product Engineering",
+		description:
+			"Build secure, high-performance APIs and services powering healthcare and custom software systems. Experience with integrations, encryption, cloud architecture and DevOps preferred.",
 		aboutRole:
 			"K-Lord Technologies is hiring a skilled Backend Developer with strong DevOps experience to help build and scale secure, high-performance platforms in healthcare, enterprise, and the public sector.",
 		responsibilities: [
@@ -52,10 +52,13 @@ const jobData = [
 		],
 	},
 	{
+		id: 3,
 		title: "QA Automation Engineer",
 		location: "Remote",
 		employmentType: "Contract",
 		department: "Quality Assurance",
+		description:
+			"Design and implement automated test suites to ensure reliability and compliance across HIPAA-regulated systems and enterprise modules. ",
 		aboutRole:
 			"As our QA Automation Engineer, you'll design and manage automated test pipelines for K-Lord's HIPAA-compliant platforms. Your work ensures the safety, performance, and reliability of systems used in healthcare delivery and public programs.",
 		responsibilities: [
@@ -74,10 +77,13 @@ const jobData = [
 		],
 	},
 	{
+		id: 4,
 		title: "UI/UX Designer",
 		location: "Remote",
 		employmentType: "Full-Time",
 		department: "Product Design",
+		description:
+			"Create user-centric designs for complex workflows in software and applications. Work closely with frontend teams to translate wireframes into production-ready interfaces. ",
 		aboutRole:
 			"K-Lord Technologies is seeking a creative and strategic UI/UX Designer to lead interface design for high-impact applications across healthcare and public services. You'll turn complex workflows into elegant user experiences that meet accessibility and compliance standards.",
 		responsibilities: [
@@ -96,10 +102,13 @@ const jobData = [
 		],
 	},
 	{
+		id: 5,
 		title: "Business Analyst (Healthcare & Public Sector)",
 		location: "Remote",
 		employmentType: "Full-Time",
 		department: "Product Strategy",
+		description:
+			"Gather requirements, analyze workflows, and help define digital solutions for clinics, agencies, and NGOs.",
 		aboutRole:
 			"We're hiring a Business Analyst to drive requirements gathering, user workflow design, and documentation across digital transformation projects in healthcare and public sector settings. You'll bridge the gap between clients, users, and our dev team.",
 		responsibilities: [
@@ -118,20 +127,3 @@ const jobData = [
 		],
 	},
 ];
-
-const Career = () => {
-	return (
-		<>
-			<Seo
-				title='Careers at K-Lord Technologies | Join Our Healthcare, Enterprise & GovTech Software Team'
-				description='Explore remote and hybrid job opportunities at K-Lord Technologies. We’re hiring developers, analysts,  designers, and other engineers to build impactful, scalable digital solutions for healthcare, public sector, and enterprise clients.'
-				content=''
-			/>
-			<Hero />
-			<Values />
-			<Positions jobData={jobData} />
-			<Newsletter />
-		</>
-	);
-};
-export default Career;

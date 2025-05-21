@@ -41,7 +41,7 @@ const Values = () => {
 					What We Stand For
 				</h2>
 
-				<div className='flex justify-between lg:flex-row flex-col items-center gap-y-9 gap-x-10'>
+				<div className='flex justify-between lg:flex-row flex-col gap-y-9 gap-x-10'>
 					<ul className='space-y-[34px] lg:max-w-[493px] w-full shrink-0'>
 						{values.map((item, idx) => (
 							<li key={idx} className='space-y-3'>
