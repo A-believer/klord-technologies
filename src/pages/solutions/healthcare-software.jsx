@@ -63,7 +63,7 @@ const HealthcareSoftware = () => {
 				data={keyFeaturesData}
 				header={"Key Features of Our Solutions"}
 			/>
-			<SlidingCards data={devProcessData} />
+			<SlidingCards header={"Our Development Process"} data={devProcessData} />
 			<UseCases />
 			<Testimonials testimonials={testimonials} />
 

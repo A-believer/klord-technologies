@@ -74,6 +74,7 @@ const testimonials = [
 		image: sarah,
 	},
 ];
+
 const PublicSoftwareTechnology = () => {
 	return (
 		<>

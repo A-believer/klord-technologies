@@ -8,12 +8,18 @@ import imgIII from "../../assets/imgs/cs-3.png";
 import imgIV from "../../assets/imgs/cs-4.png";
 import imgV from "../../assets/imgs/cs-5.png";
 import imgVI from "../../assets/imgs/cs-6.png";
+import imgVII from "../../assets/imgs/cs-7.png";
+import imgVIII from "../../assets/imgs/cs-8.png";
+import imgIX from "../../assets/imgs/cs-9.png";
+import imgX from "../../assets/imgs/cs-10.png";
+import imgXI from "../../assets/imgs/cs-11.png";
 import CardGrey from "../../common/card-grey";
 import Cta from "../../components/solutions/cta";
 import goodwood from "../../assets/imgs/goodwood.png";
 import panisa from "../../assets/imgs/panisa.png";
 import Testimonials from "../../components/home/testimonials";
-
+import SlidingCards from "../../common/sliding-cards";
+import CardSwitch from "../../common/card-switch";
 
 const c_s_data = {
 	header: "Our Problem–Solution Approach",
@@ -83,6 +89,72 @@ const testimonials = [
 	},
 ];
 
+const ourProcessData = [
+	{
+		id: 1,
+		header: "Discovery & Planning",
+		desc: "We begin with a deep dive into your operations, pain points, and strategic goals. This ensures alignment and sets the foundation for measurable outcomes.",
+	},
+	{
+		id: 2,
+		header: "UX/UI Design & Prototyping",
+		desc: "Our designers craft intuitive, accessible, and beautiful interfaces that support usability and customer satisfaction from day one.",
+	},
+	{
+		id: 3,
+		header: "Agile Development",
+		desc: "We build iteratively using agile methodologies, delivering functional software fast, and refining with your feedback in every sprint.",
+	},
+	{
+		id: 4,
+		header: "QA & Testing",
+		desc: "Before launch, we conduct end-to-end testing under real-world conditions to ensure performance, stability, and security.",
+	},
+	{
+		id: 5,
+		header: "Launch & Training",
+		desc: "We roll out your software with zero friction. We also train your team and provide supporting documentation to ensure immediate adoption.",
+	},
+	{
+		id: 6,
+		header: "Post-Launch Optimization",
+		desc: "Our partnership continues with support, performance enhancements, and long-term roadmapping as your business evolves.",
+	},
+];
+
+const whyChooseData = [
+	{
+		id: 1,
+		title: "Healthcare",
+		desc: "We develop HIPAA-compliant platforms for patient management, referral tracking, and telehealth—streamlining care delivery and reporting.",
+		image: imgVII,
+	},
+	{
+		id: 2,
+		title: "Enterprise",
+		desc: "Custom CRM systems, ERP modules, and internal collaboration platforms designed to automate processes and unify your operations.",
+		image: imgVIII,
+	},
+	{
+		id: 3,
+		title: "Public Sector & Nonprofits",
+		desc: "Robust, secure software that helps public institutions and mission-driven organizations digitize workflows and serve stakeholders efficiently.",
+		image: imgIX,
+	},
+	{
+		id: 4,
+		title: "E-commerce & Retail",
+		desc: "Inventory control, customer portals, secure payment flows, and personalized shopping experiences for modern buyers.",
+		image: imgX,
+	},
+	{
+		id: 5,
+		title: "Finance & Insurance",
+		desc: "Build secure, compliant platforms to manage financial transactions, client onboarding, and risk analysis.",
+		image: imgXI,
+	},
+];
+
 const CustomSoftwareDevelopment = () => {
 	return (
 		<>
@@ -109,7 +181,13 @@ const CustomSoftwareDevelopment = () => {
 				header='Key Features of Our Custom Software'
 				data={key_features}
 			/>
+			<SlidingCards
+				header={"Our Process: Ideate, Collaborate, Build, Grow"}
+				data={ourProcessData}
+			/>
+			<CardSwitch data={whyChooseData} header={"Industries We Serve"} />
 			<Testimonials testimonials={testimonials} />
+
 			<Cta
 				header='Ready to Build Custom Software for Your Business?'
 				subheader='At K-Lord Technologies, we don’t just write code, we solve real business problems with software built to fit, scale, and evolve. Let’s create something that works the way you work.'

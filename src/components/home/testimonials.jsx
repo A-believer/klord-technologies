@@ -30,7 +30,7 @@ const Testimonials = ({ testimonials }) => {
 			<div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-4 gap-y-6  w-full '>
 				{testimonials.map((testimonial, idx) => (
 					<div key={idx} className='w-full space-y-5'>
-						<div className='bg-[#1C1C1C] rounded-[30px] pl-3.5 pr-[25.35px] pt-[30px] pb-10 flex items-start gap-x-5 h-[138px]'>
+						<div className='bg-[#1C1C1C] rounded-[30px] pl-3.5 pr-[25.35px] pt-[30px] pb-10 flex items-start gap-x-5 min-h-[138px]'>
 							<img src={quotes} alt='quotes' className='w-8 h-auto mt-1' />
 							<p className='text-[15px]/[22px] font-medium tracking-[-0.45px] text-[#F5F7F9]'>
 								<i>"</i>
