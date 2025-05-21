@@ -10,6 +10,10 @@ import imgV from "../../assets/imgs/cs-5.png";
 import imgVI from "../../assets/imgs/cs-6.png";
 import CardGrey from "../../common/card-grey";
 import Cta from "../../components/solutions/cta";
+import goodwood from "../../assets/imgs/goodwood.png";
+import panisa from "../../assets/imgs/panisa.png";
+import Testimonials from "../../components/home/testimonials";
+
 
 const c_s_data = {
 	header: "Our Problem–Solution Approach",
@@ -62,6 +66,23 @@ const key_features = [
 	},
 ];
 
+const testimonials = [
+	{
+		name: "Tompsen Grace Clinic",
+		position: "Director, Tompsen Grace Clinic ",
+		quote:
+			"K-Lord Technologies built a secure appointment system that slashed our no-show rates by 30%. Seamless integration and intuitive UX made adoption a breeze.”",
+		image: panisa,
+	},
+	{
+		name: "Goodwood Inc.",
+		position: "COO, Goodwood Inc. ",
+		quote:
+			"K-Lord gave us a centralized, cross-department solution that brought transparency and cohesion across teams. Outstanding collaboration and technical insight.",
+		image: goodwood,
+	},
+];
+
 const CustomSoftwareDevelopment = () => {
 	return (
 		<>
@@ -88,6 +109,7 @@ const CustomSoftwareDevelopment = () => {
 				header='Key Features of Our Custom Software'
 				data={key_features}
 			/>
+			<Testimonials testimonials={testimonials} />
 			<Cta
 				header='Ready to Build Custom Software for Your Business?'
 				subheader='At K-Lord Technologies, we don’t just write code, we solve real business problems with software built to fit, scale, and evolve. Let’s create something that works the way you work.'

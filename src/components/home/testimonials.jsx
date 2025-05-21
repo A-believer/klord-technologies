@@ -44,7 +44,7 @@ const Testimonials = ({ testimonials }) => {
 								alt={testimonial.name}
 								className='w-[61px] h-[61px]'
 							/>
-							<div className='font-inter gap-1'>
+							<div className='font-inter gap-2'>
 								<p className='text-lg/[25.2px] tracking-[-0.18px]'>
 									{testimonial.name}
 								</p>
