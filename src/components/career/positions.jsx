@@ -9,7 +9,7 @@ const Positions = ({ jobData }) => {
           Want to work with global talent and help build software that transforms care delivery, operations, and digital engagement? Apply today.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 gap-8">
+      {/* <div className="grid md:grid-cols-2 gap-8">
         {jobData.map((job, idx) => (
           <div
             key={idx}
@@ -47,7 +47,7 @@ const Positions = ({ jobData }) => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };
