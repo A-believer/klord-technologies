@@ -12,30 +12,30 @@ import imgXI from "../assets/imgs/about-innovation.png";
 import imgXII from "../assets/imgs/about-collaboration.png";
 
 const sectionI = [
-	{
-		id: 1,
-		title: "Healthcare",
-		desc: "From patient referral systems to telehealth platforms, we enhance patient care while ensuring HIPAA compliance.",
-		image: imgI,
-	},
-	{
-		id: 2,
-		title: "Public Sector",
-		desc: "We help government agencies, educational institutions, and nonprofit organizations with secure, compliant solutions that improve service delivery and engagement.",
-		image: imgII,
-	},
-	{
-		id: 3,
-		title: "Small & Medium Enterprises (SMEs)",
-		desc: "We design agile and cost-effective tools that streamline business operations and support growth.",
-		image: imgIII,
-	},
-	{
-		id: 4,
-		title: "Enterprises",
-		desc: "Our enterprise-level solutions are built for scalability, security, and integration, enabling large organizations to optimize workflows and improve overall efficiency.",
-		image: imgIV,
-	},
+    {
+        id: 1,
+        title: "Healthcare",
+        desc: "We build secure, patient-centered solutions. From referral tracking to virtual consultation, all tailored to improve access and outcomes while meeting HIPAA and data compliance standards.",
+        image: imgI,
+    },
+    {
+        id: 2,
+        title: "Public Sector", 
+        desc: "We support government agencies, schools, and nonprofits with digital tools that simplify operations, increase transparency, and enhance public service delivery across diverse populations and communities.",
+        image: imgII,
+    },
+    {
+        id: 3,
+        title: "Small & Medium Enterprises (SMEs)",
+        desc: "Our platforms are agile, budget-conscious, and designed to help growing businesses automate processes, reach customers effectively, and scale operations with confidence and control.",
+        image: imgIII,
+    },
+    {
+        id: 4,
+        title: "Enterprise Organizations",
+        desc: "We develop scalable, integrated software that streamlines complex workflows, improves team collaboration, and ensures enterprise-grade security, performance, and compliance at every level.",
+        image: imgIV,
+    },
 ];
 
 const sectionII = [

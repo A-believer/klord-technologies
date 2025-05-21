@@ -9,7 +9,7 @@ const clientImages = [img1, img2, img3, img4, img5];
 
 const Testimonials = ({ testimonials }) => {
 	return (
-		<section className='contain py-16 md:space-y-16 space-y-10 text-[#0F0F0F]'>
+		<section className='contain md:py-16 py-8 md:space-y-16 space-y-10 text-[#0F0F0F]'>
 			<h3 className='font-sora  lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-center max-w-[800px] w-full mx-auto'>
 				Hear Stories
 				<span className='inline-block align-middle mx-2'>
