@@ -13,7 +13,9 @@ import Resources from "./pages/resources";
 import Faqs from "./pages/faqs";
 import GetStarted from "./pages/get-started";
 import PrivacyAndTerms from "./components/layout/privacy-and-terms";
-import Career from "./pages/career";
+import Career from "./pages/career/career";
+import JobDescription from "./pages/career/job-description";
+import JobForm from "./pages/career/job-form";
 
 const App = () => {
 	return (
@@ -52,8 +54,8 @@ const App = () => {
 
 				<Route path='/about' element={<About />} />
 				<Route path='/careers' element={<Career />} />
-				<Route path='/careers/:id' element={<Career />} />
-				<Route path='/careers/:id/apply' element={<Career />} />
+				<Route path='/careers/:id' element={<JobDescription />} />
+				<Route path='/careers/:id/apply' element={<JobForm />} />
 			</Route>
 			<Route path='/get-started' element={<GetStarted />} />
 		</Routes>
