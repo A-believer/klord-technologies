@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const SlidingCards = ({ data }) => {
+const SlidingCards = ({ header,data }) => {
 	const scrollRef = useRef(null);
 
 	const scroll = (direction) => {
@@ -15,7 +15,7 @@ const SlidingCards = ({ data }) => {
 	return (
 		<section className='contain md:py-16 py-10 space-y-14'>
 			<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-2.4px] text-center'>
-				Our Development Process
+				 {header}
 			</h2>
 			<div
 				ref={scrollRef}
@@ -23,15 +23,15 @@ const SlidingCards = ({ data }) => {
 				{data.map((item) => (
 					<div
 						key={item.id}
-						className='md:w-[457px] w-full shrink-0 bg-[#1C1C1C] rounded-[26px] pl-7 pb-8 font-sora flex flex-col justify-between'>
+						className='lg:w-[550px] md:w-[457px] w-full shrink-0 bg-[#1C1C1C] rounded-[26px] pl-7 pb-8 font-sora flex flex-col justify-between'>
 						<span className='text-[#F5F7F9]/[0.05] text-[97px]/[135px] font-semibold'>
 							{item.id}
 						</span>
-						<div className=' space-y-3 px-2 mb-auto'>
-							<h3 className='text-[27px]/[37px] font-semibold text-[#F5F7F9] text-wrap'>
+						<div className=' space-y-3 px-2 mb-auto max-w-[380px] flex flex-col justify-end h-full'>
+							<h3 className='text-[27px]/[37px] font-semibold font-sora text-[#F5F7F9] text-wrap'>
 								{item.header}
 							</h3>
-							<p className='text-[#F5F7F9]/[0.8] font-inter max-w-[380px] sm:w-full w-[90%]'>
+							<p className='text-[#F5F7F9]/[0.8] text-[15px]/[25px] font-medium font-inter max-w-[380px] sm:w-full w-[90%]'>
 								{item.desc}
 							</p>
 						</div>
