@@ -23,7 +23,7 @@ const Experience = () => {
 	return (
 		<section
 			ref={sectionRef}
-			className='contain py-16 md:space-y-28 space-y-20'>
+			className='contain md:py-16 py-8 md:space-y-28 space-y-20'>
 			<motion.div
 				initial={{ opacity: 0, y: 40 }}
 				animate={
