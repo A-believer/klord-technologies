@@ -9,6 +9,9 @@ import imgIV from "../../assets/imgs/ps-4.png";
 import imgV from "../../assets/imgs/ps-5.png";
 import CardGrey from "../../common/card-grey";
 import Cta from "../../components/solutions/cta";
+import jerome from "../../assets/imgs/jerome.png";
+import sarah from "../../assets/imgs/sarah.png";
+import Testimonials from "../../components/home/testimonials";
 
 const c_s_data = {
 	header: "The Public Sector Challenge vs. K-Lord's Solution",
@@ -55,6 +58,22 @@ const smart_solution = [
 	},
 ];
 
+const testimonials = [
+	{
+		name: "Greenland Health Collaborative",
+		position: "Director of IT, Greenland Public Health Collaborative ",
+		quote:
+			"K-Lord Technologies helped us digitize our intake and case tracking system in under 90 days. The platform complies with HIPAA, and state mandates, and our staff picked it up immediately.",
+		image: jerome,
+	},
+	{
+		name: "Bright Steps Education Network",
+		position: "IT Director, Crown Enterprise Solutions",
+		quote:
+			"We needed a student portal that was accessible, stable, and intuitive. K-Lord delivered a solution that connected students, faculty, and administration without overcomplicating anything.",
+		image: sarah,
+	},
+];
 const PublicSoftwareTechnology = () => {
 	return (
 		<>
@@ -81,6 +100,7 @@ const PublicSoftwareTechnology = () => {
 				header='Smart Solutions for Public Impact'
 				data={smart_solution}
 			/>
+			<Testimonials testimonials={testimonials} />
 			<Cta
 				header='Ready to Serve Better with Smarter Tools?'
 				subheader='K-Lord Technologies empowers mission-driven agencies to scale their impact, reduce inefficiencies, and stay ahead of compliance demands. Let’s build what your community needs.'

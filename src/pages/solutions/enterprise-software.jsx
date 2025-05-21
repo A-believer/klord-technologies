@@ -15,6 +15,9 @@ import CardGrey from "../../common/card-grey";
 import UseCases from "../../components/solutions/enterprise-software/use-cases";
 import CardSwitch from "../../common/card-switch";
 import Cta from "../../components/solutions/cta";
+import ramana from "../../assets/imgs/ramana.png";
+import mahesh from "../../assets/imgs/mahesh.png";
+import Testimonials from "../../components/home/testimonials";
 
 const c_s_data = {
 	header: "The Challenge vs. The K-Lord Solution",
@@ -98,6 +101,23 @@ const whyChooseData = [
 	},
 ];
 
+const testimonials = [
+	{
+		name: "Goodwood Inc.",
+		position: "COO, Goodwood Inc.",
+		quote:
+			"The software K-Lord delivered became the backbone of our operations. HR, finance, and project teams now collaborate inside one intuitive system—no extra training, no extra tools.",
+		image: ramana,
+	},
+	{
+		name: "Crown Enterprise Solutions ",
+		position: "IT Director, Crown Enterprise Solutions",
+		quote:
+			"Their ERP platform scaled effortlessly as we opened new branches. K-Lord’s team nailed the balance between flexibility and control.",
+		image: mahesh,
+	},
+];
+
 const EnterpriseSoftware = () => {
 	return (
 		<>
@@ -127,6 +147,7 @@ const EnterpriseSoftware = () => {
 				data={whyChooseData}
 				header={"Why Enterprises Choose K-Lord"}
 			/>
+			<Testimonials testimonials={testimonials} />
 			<Cta
 				header='Ready to Build Enterprise Software That Works for You?'
 				subheader="At K-Lord Technologies, we help growing organizations remove complexity, unlock data, and move faster. Let's build the platform that drives your next stage of growth."
