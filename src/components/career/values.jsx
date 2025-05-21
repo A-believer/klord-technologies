@@ -25,7 +25,7 @@ const values = [
 
 const Values = () => {
 	return (
-		<section className='contain md:py-16 py-8 md:space-y-14 space-y-8 '>
+		<section className='contain md:py-16 py-8 md:space-y-14 space-y-8'>
 			<div className='space-y-4'>
 				<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px]'>
 					Our Culture & Values
@@ -37,12 +37,12 @@ const Values = () => {
 				</p>
 			</div>
 			<div className='md:space-y-14 space-y-8'>
-				<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-2.4px]'>
+				<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px]'>
 					What We Stand For
 				</h2>
 
-				<div className='flex justify-between xl:flex-row flex-col gap-y-9 gap-x-10'>
-					<ul className='space-y-[34px] max-w-[493px] w-full shrink-0'>
+				<div className='flex justify-between lg:flex-row flex-col items-center gap-y-9 gap-x-10'>
+					<ul className='space-y-[34px] lg:max-w-[493px] w-full shrink-0'>
 						{values.map((item, idx) => (
 							<li key={idx} className='space-y-3'>
 								<h5 className='font-sora text-[#0F0F0F] text-2xl/[29.76px]  font-semibold tracking-[-1.04px]'>
@@ -54,7 +54,11 @@ const Values = () => {
 							</li>
 						))}
 					</ul>
-					<img src={img} alt='a picture' className='object-contain xl:w-full  mx-auto' />
+					<img
+						src={img}
+						alt='a picture'
+						className='object-contain xl:w-full mx-auto xl:max-h-[542px] max-h-[350px]'
+					/>
 				</div>
 			</div>
 		</section>

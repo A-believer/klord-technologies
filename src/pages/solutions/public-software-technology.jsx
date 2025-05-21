@@ -7,11 +7,17 @@ import imgII from "../../assets/imgs/ps-2.png";
 import imgIII from "../../assets/imgs/ps-3.png";
 import imgIV from "../../assets/imgs/ps-4.png";
 import imgV from "../../assets/imgs/ps-5.png";
+import imgVI from "../../assets/imgs/ps-6.png";
+import imgVII from "../../assets/imgs/ps-7.png";
+import imgVIII from "../../assets/imgs/ps-8.png";
+import imgIX from "../../assets/imgs/ps-9.png";
 import CardGrey from "../../common/card-grey";
 import Cta from "../../components/solutions/cta";
 import jerome from "../../assets/imgs/jerome.png";
 import sarah from "../../assets/imgs/sarah.png";
 import Testimonials from "../../components/home/testimonials";
+import CardSwitch from "../../common/card-switch";
+import WhyChooseKlord from "../../components/solutions/public-software/why-choose-klord";
 
 const c_s_data = {
 	header: "The Public Sector Challenge vs. K-Lord's Solution",
@@ -74,6 +80,33 @@ const testimonials = [
 		image: sarah,
 	},
 ];
+const whyChooseData = [
+  {
+    id: 1,
+    title: "Proven Public Sector Expertise",
+    desc: "We've partnered with government agencies, educational institutions, and healthcare providers. Our solutions are built to address their unique challenges and compliance requirements.",
+    image: imgVI
+  },
+  {
+    id: 2,
+    title: "Customized Workflows",
+    desc: "Our software reflects your real-world processes, including tailored permissions and approval flows; no template-built solutions here.",
+    image: imgVII
+  },
+  {
+    id: 3,
+    title: "Ongoing Support You Can Rely On", 
+    desc: "We offer training, maintenance, and continuous improvements after deployment to help your systems evolve with your mission.",
+    image: imgVIII
+  },
+  {
+    id: 4,
+    title: "Accessible and Compliant",
+    desc: "We design to meet accessibility standards like WCAG and Section 508, while ensuring HIPAA and FOIA compliance, delivering reliable experiences for all users.",
+    image: imgIX
+  }
+];
+
 
 const PublicSoftwareTechnology = () => {
 	return (
@@ -101,6 +134,11 @@ const PublicSoftwareTechnology = () => {
 				header='Smart Solutions for Public Impact'
 				data={smart_solution}
 			/>
+			<CardSwitch
+				header={"We Build With Standards That Matter"}
+				data={whyChooseData}
+			/>
+			<WhyChooseKlord/>
 			<Testimonials testimonials={testimonials} />
 			<Cta
 				header='Ready to Serve Better with Smarter Tools?'
