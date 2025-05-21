@@ -123,13 +123,13 @@ const Career = () => {
 	return (
 		<>
 			<Seo
-				title='Enterprise Software Solutions for Scalable, Secure Operations | K-Lord Technologies '
-				description='Build secure, cloud-native enterprise software with K-Lord Technologies. From ERP systems to  intelligent automation, we help modern organizations scale faster, streamline operations, and unlock efficiency.'
+				title='Careers at K-Lord Technologies | Join Our Healthcare, Enterprise & GovTech Software Team'
+				description='Explore remote and hybrid job opportunities at K-Lord Technologies. We’re hiring developers, analysts,  designers, and other engineers to build impactful, scalable digital solutions for healthcare, public sector, and enterprise clients.'
 				content=''
 			/>
 			<Hero />
-			<Values/>
-			<Positions />
+			<Values />
+			<Positions jobData={jobData} />
 			<Newsletter />
 		</>
 	);

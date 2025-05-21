@@ -38,38 +38,40 @@ const sectionI = [
     },
 ];
 
+
 const sectionII = [
-	{
-		id: 1,
-		title: "Custom Solutions",
-		desc: " We create tailor-made software that suits your specific operational needs.",
-		image: imgV,
-	},
-	{
-		id: 2,
-		title: "Compliance-Focused",
-		desc: "Our solutions adhere to the highest industry standards, including HIPAA, SOC 2, GDPR, and more.",
-		image: imgVI,
-	},
-	{
-		id: 3,
-		title: "Security at the Core",
-		desc: "Data protection and user privacy are our top priorities, integrated into every stage of the development process.",
-		image: imgVII,
-	},
-	{
-		id: 4,
-		title: "Scalable & Future-Ready",
-		desc: "Our products are designed to grow with your organization, ensuring lasting impact.",
-		image: imgVIII,
-	},
-	{
-		id: 5,
-		title: "Industry Expertise",
-		desc: "We understand the unique challenges of healthcare, public sector, and enterprise markets, bringing valuable insights to every project.",
-		image: imgIX,
-	},
+    {
+        id: 1,
+        title: "Custom Solutions",
+        desc: "We design purpose-built software that fits your exact operational rhythm. No off-the-shelf shortcuts. Just unique tools hand-made to address real problems and target pain points.",
+        image: imgV,
+    },
+    {
+        id: 2,
+        title: "Compliance-Focused", 
+        desc: "From HIPAA to GDPR and beyond, every line of code is written with compliance and best practices in mind. You get secure, audit-ready systems without the usual complexity.",
+        image: imgVI,
+    },
+    {
+        id: 3,
+        title: "Security at the Core",
+        desc: "Data protection isn't a feature. It's our foundation. We build with security at every level so your users stay safe, your systems stay clean, and your peace of mind stays intact.",
+        image: imgVII,
+    },
+    {
+        id: 4,
+        title: "Scalable & Future-Ready",
+        desc: "Our platforms evolve as you do. They're ready to handle more users, more data, and more demand without disruption. Growth shouldn't mean growing pains.",
+        image: imgVIII,
+    },
+    {
+        id: 5,
+        title: "Industry Expertise",
+        desc: "We know the terrain. With deep roots in healthcare, government, and enterprise environments, we bring insight that saves time, avoids pitfalls, and delivers lasting impact.",
+        image: imgIX,
+    },
 ];
+
 
 const sectionIII = [
 	{

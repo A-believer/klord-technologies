@@ -11,9 +11,9 @@ const Hero = () => {
 				backgroundSize: "cover",
 				backgroundPosition: "center",
 			}}
-			className='md:h-screen h-[105vh]'>
-			<div className='md:h-screen h-[105vh] bg-gradient-to-b from-black/5 to-black relative'>
-				<div className='max-w-[1440px] w-[86.5%] mx-auto text-white font-inter mb-0 md:h-screen h-[105vh] lg:pb-[100px] pb-14 lg:gap-16 gap-12 flex items-end justify-between'>
+			className='md:h-screen h-[115vh]'>
+			<div className='md:h-screen h-[115vh] bg-gradient-to-b from-black/5 to-black relative'>
+				<div className='max-w-[1440px] w-[86.5%] mx-auto text-white font-inter mb-0 md:h-screen h-[115vh] lg:pb-[100px] pb-14 lg:gap-16 gap-12 flex items-end justify-between'>
 					<div className='w-full'>
 						<motion.h1
 							initial={{ opacity: 0, y: 50 }}
