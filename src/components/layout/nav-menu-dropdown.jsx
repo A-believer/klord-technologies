@@ -16,7 +16,9 @@ function DropDownMenu({ dropdownMenu, setIsCurrentDropdown }) {
 						className='w-full flex gap-4 items-start'>
 						<img src={item.icon} alt='' className='w-6 h-6' />
 						<div>
-							<p className='text-base/6 tracking-[-0.24px] hover:font-semibold'>{item.title}</p>
+							<p className='text-base/6 tracking-[-0.24px] hover:font-semibold'>
+								{item.title}
+							</p>
 							{item.des && (
 								<p className='text-[#707070] font-inter text-sm/5 hover:underline'>
 									{item.des}
@@ -30,7 +32,7 @@ function DropDownMenu({ dropdownMenu, setIsCurrentDropdown }) {
 	);
 }
 
-function MobileMenu() {
+function MobileMenu({ setIsMobileMenuOpen }) {
 	const { pathname } = useLocation();
 	const [isCurrentDropdown, setIsCurrentDropdown] = useState(null);
 
@@ -38,19 +40,15 @@ function MobileMenu() {
 		setIsCurrentDropdown(index === isCurrentDropdown ? null : index);
 	};
 	return (
-		<div className='absolute xl:hidden block lg:top-20 top-14 p-5 rounded-xl w-full right-5 md:max-w-[300px] max-w-[80%] border border-[#EAECF0] shadow-lg shadown-[0px_12px_16px_-4px_rgba(16,24,40,0.08),_0px_4px_6px_-2px_rgba(16,24,40,0.03)] bg-[#FAFAFA] space-y-4'>
+		<div className='absolute xl:hidden block lg:top-20 top-16 p-5 rounded-xl w-full sm:right-5 right-0 md:w-[300px] max-w-full border border-[#EAECF0] shadow-[0px_12px_16px_-4px_rgba(16,24,40,0.08),_0px_4px_6px_-2px_rgba(16,24,40,0.03)] bg-[#FAFAFA] space-y-4 sm:h-fit h-screen'>
 			<h4 className='font-bold text-xl'>Menu</h4>
 			<hr className='border-none bg-black h-0.5' />
-			<ul className='space-y-8'>
+			<ul className='space-y-4 '>
 				{navlinks.map((navlink, index) =>
 					navlink.dropdownMenu ? (
 						<li key={index} className='space-y-3'>
 							<div
-								className={`${
-									(navlink.path.includes("/products") ||
-										navlink.path.includes("/solutions")) &&
-									"text-"
-								} flex-center gap-x-2 hover:underline cursor-pointer`}>
+								className={` flex-center gap-x-2 hover:underline cursor-pointer`}>
 								{navlink.title}
 								<button
 									className='-hover:translate-0.5 transition-all duration-600 cursor-pointer'
@@ -73,7 +71,7 @@ function MobileMenu() {
 												<Link
 													to={item.path}
 													onClick={() => {
-														return setTimeout(setIsCurrentDropdown(null), 4000);
+														setIsMobileMenuOpen(false);
 													}}
 													className='w-full flex gap-4 items-start'>
 													<img src={item.icon} alt='' className='w-6 h-6' />
@@ -95,11 +93,13 @@ function MobileMenu() {
 							</>
 						</li>
 					) : (
-						<li key={index} className="w-full text-center">
+						<li key={index} className='w-full text-center'>
 							<Link
 								to={navlink.path}
 								className={`
-											${pathname === navlink.path && "font-bold text-black"} hover:underline  w-full text-center`}>
+											${
+												pathname === navlink.path && "font-bold text-black"
+											} hover:underline  w-full text-center`}>
 								{navlink.title}
 							</Link>
 						</li>

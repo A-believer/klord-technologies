@@ -47,7 +47,7 @@ const PrivacyAndTerms = ({ page }) => {
 	};
 
 	return (
-		<div className='text-black max-w-[1440px] w-[86.5%] mx-auto lg:pt-[206px] pt-[136px] lg:pb-[75px] pb-[59px] font-inter flex lg:flex-row flex-col justify-between gap-x-20 gap-y-16'>
+		<div className='text-black max-w-[1440px] w-[90%] mx-auto lg:pt-[206px] pt-[136px] lg:pb-[75px] pb-[59px] font-inter flex lg:flex-row flex-col justify-between gap-x-20 gap-y-16'>
 			<div className='flex lg:flex-col flex-row gap-y-2 lg:justify-start justify-between text-[#0F0F0F]/80 font-semibold xl:max-w-[296px] w-full'>
 				<button
 					onClick={() => setCurrentPage("privacy-policy")}

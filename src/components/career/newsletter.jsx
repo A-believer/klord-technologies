@@ -6,7 +6,7 @@ const Newsletter = () => {
 			<div className='flex items-start justify-between lg:flex-row flex-col gap-x-14 gap-y-10 bg-[#FF5F0F] border-[2.5px] border-[#FF5F0F] contain md:px-12 px-3 md:pt-16 md:pb-11 py-12 rounded-[30px] shadow-[0px_36px_24.9px_0px_rgba(0,0,0,0.10)] '>
 				<div className='max-w-[508px] w-full space-y-4'>
 					<h3 className='text-[#F5F7F9] text-[32px]/[52.8px] font-semibold font-sora tracking-[-2.4px]'>
-						Stay Ahead with K-Lord Insights
+						Stay Ahead with <span className='text-nowrap'>K-Lord</span> Insights
 					</h3>
 					<p className='font-inter text-[#F5F7F9] text-2xl/8 tracking-[-0.96px] font-normal'>
 						Sign up for tips, insights, and updates on tech, innovation, and

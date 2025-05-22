@@ -38,10 +38,10 @@ const ProductsView = () => {
 	}, [location.hash]);
 
 	return (
-		<section className='contain py-16 md:space-y-10 space-y-6'>
+		<section className=' py-16 md:space-y-10 space-y-6'>
 			<div
 				ref={namesRef}
-				className='flex justify-center items-center gap-x-[18px] overflow-hidden overflow-x-scroll scrollbar-hide sm:px-0 px-32 pb-10'>
+				className='flex justify-center items-stretch gap-x-[18px] overflow-hidden overflow-x-scroll scrollbar-hide sm:px-0 px-32 pb-10'>
 				{products.map((product) => (
 					<button
 						key={product.id}
@@ -54,7 +54,7 @@ const ProductsView = () => {
 					</button>
 				))}
 			</div>
-			<div>
+			<div className="contain">
 				<AnimatePresence mode='wait'>
 					{products
 						.filter((product) => product.name === currentProduct)

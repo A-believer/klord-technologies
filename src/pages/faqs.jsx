@@ -25,7 +25,7 @@ for healthcare, SMEs, enterprises, and the public sector. Find answers to your q
 our services, products, and expertise."
 				content=''
 			/>
-			<div className='text-black max-w-[1440px] w-[86.5%] mx-auto lg:pt-[206px] pt-[136px] lg:pb-[75px] pb-[59px] font-inter flex lg:flex-row flex-col justify-between gap-x-20 gap-y-16'>
+			<div className='text-black max-w-[1440px] w-[90%] mx-auto lg:pt-[206px] pt-[136px] lg:pb-[75px] pb-[59px] font-inter flex lg:flex-row flex-col justify-between gap-x-20 gap-y-16'>
 				<div className='space-y-4 max-w-[457px] w-full'>
 					<h1 className='lg:text-5xl/[135%] text-[32px]/[45px] font-semibold text-[#0F0F0F] tracking-[-2.4px]'>
 						Frequently Asked Questions (FAQ)
@@ -44,7 +44,9 @@ our services, products, and expertise."
 								<p className='font-sora text-lg/7 font-semibold'>
 									{faq.question}
 								</p>
-								<button onClick={() => toggleAnswer(faq.id)} className="cursor-pointer">
+								<button
+									onClick={() => toggleAnswer(faq.id)}
+									className='cursor-pointer'>
 									{currentAnswer === faq.id ? (
 										<CircleMinus color='#98A2B3' size={24} />
 									) : (
@@ -65,8 +67,10 @@ our services, products, and expertise."
 										}}
 										transition={{ duration: 0.3, ease: "easeInOut" }}
 										className='space-y-4 overflow-hidden'>
-										<p dangerouslySetInnerHTML={{__html: faq.answer}} className='text-[#696969] text-base/7 pr-7' />
-											
+										<p
+											dangerouslySetInnerHTML={{ __html: faq.answer }}
+											className='text-[#696969] text-base/7 pr-7'
+										/>
 									</motion.div>
 								)}
 							</AnimatePresence>

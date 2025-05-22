@@ -4,11 +4,14 @@ const CardGrey = ({ header, data }) => {
 			<h2 className='text-[#0F0F0F] font-inter font-semibold lg:tracking-[-2.4px] tracking-[-1px] lg:text-5xl/[64px] text-[32px]/[44px] text-center'>
 				{header}
 			</h2>
-			<div className='flex flex-wrap justify-center  gap-9'>
+			<div
+				className={`flex w-full flex-wrap justify-center  
+						 gap-x-8 lg:gap-y-16 gap-y-8
+				`}>
 				{data.map((item) => (
 					<div
 						key={item.id}
-						className='xl:flex-[1_1_350px] flex-[1_1_300px] max-w-[400px] bg-[#FAFAFA] border border-[#F5F5F5] rounded-[10px] p-[22px] pt-[30px]'>
+						className=' bg-[#FAFAFA] border border-[#F5F5F5] rounded-[10px] p-[22px] pt-[30px] xl:w-[31.6%] lg:w-[30.92%] sm:w-[47.5%] w-full'>
 						<h4 className='text-black text-2xl/8 font-semibold font-sora tracking-[-1.04px] '>
 							{item.header}
 						</h4>
