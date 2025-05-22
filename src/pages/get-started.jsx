@@ -94,7 +94,7 @@ const GetStarted = () => {
 					<GetStartedSuccess />
 				) : (
 					<main className='w-full'>
-						<div className='max-w-[1246px] xl:w-full w-[86.5%] mx-auto lg:pt-[106px] pt-10 space-y-[65px] pb-20'>
+						<div className='max-w-[1246px] xl:w-full w-[90%] mx-auto lg:pt-[106px] pt-10 space-y-[65px] pb-20'>
 							<div className='md:flex hidden justify-between gap-4'>
 								{levels.map((level, index) => (
 									<button

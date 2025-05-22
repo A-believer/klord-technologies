@@ -3,8 +3,9 @@ import results from "../assets/imgs/home-results.png";
 import specific from "../assets/imgs/home-specific.png";
 import secure from "../assets/imgs/home-secure.png";
 import solutions from "../assets/imgs/solutions.png";
-import scalable from "../assets/imgs/scalable.png";
 import security from "../assets/imgs/security.png";
+import purpose from "../assets/imgs/purpose.png";
+import design from "../assets/imgs/design.png";
 import icon1 from "../assets/imgs/icon-1.png";
 import icon2 from "../assets/imgs/icon-2.png";
 import icon3 from "../assets/imgs/icon-3.png";
@@ -182,26 +183,26 @@ const standOutData = [
 ];
 
 const whyChooseData = [
-    {
-        header: "Purpose-Built Solutions",
-        des: "Our modular platforms include exactly what you need; no unnecessary features or bloat. This keeps your tools straightforward, effective, and easy to use.",
-        image: solutions,
-    },
-    {
-        header: "Compliance and Security by Design",
-        des: "Compliance with HIPAA, Section 508, SOC 2, and GDPR is integrated throughout our software. You can trust your operations stay protected and meet all necessary standards.",
-        image: security,
-    },
-    {
-        header: "Designed for Scale",
-        des: "Whether you have five users or five thousand, our systems support seamless growth. We ensure performance and stability without costly rebuilds.",
-        image: scalable,
-    },
-    {
-        header: "Deep Domain Knowledge",
-        des: "Every product reflects our extensive experience; from patient referral platforms to enterprise resource planning; built to solve your specific challenges.",
-        image: secure,
-    },
+	{
+		header: "Purpose-Built Solutions",
+		des: "Our modular platforms include exactly what you need; no unnecessary features or bloat. This keeps your tools straightforward, effective, and easy to use.",
+		image: purpose,
+	},
+	{
+		header: "Compliance and Security by Design",
+		des: "Compliance with HIPAA, Section 508, SOC 2, and GDPR is integrated throughout our software. You can trust your operations stay protected and meet all necessary standards.",
+		image: security,
+	},
+	{
+		header: "Designed for Scale",
+		des: "Whether you have five users or five thousand, our systems support seamless growth. We ensure performance and stability without costly rebuilds.",
+		image: design,
+	},
+	{
+		header: "Deep Domain Knowledge",
+		des: "Every product reflects our extensive experience; from patient referral platforms to enterprise resource planning; built to solve your specific challenges.",
+		image: solutions,
+	},
 ];
 
 export { products, standOutData, whyChooseData };

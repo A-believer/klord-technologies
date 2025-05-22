@@ -49,7 +49,7 @@ const WhatWeBuild = () => {
 					isSectionInView ? { opacity: 1, y: 0 } : { opacity: 0.7, y: 40 }
 				}
 				transition={{ duration: 0.7, ease: "easeOut" }}
-				className='py-16 max-w-[1440px] mx-auto w-[86.5%] md:space-y-16 space-y-10 font-sora'>
+				className='py-16 max-w-[1440px] mx-auto w-[90%] md:space-y-16 space-y-10 font-sora'>
 				<h1 className='heading'>What We Build</h1>
 				<div className='font-inter flex items-start justify-between gap-x-[30px]'>
 					{/* Sticky left column */}

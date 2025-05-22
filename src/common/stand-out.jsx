@@ -19,14 +19,14 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 	return (
 		<section className='contain py-16 space-y-16'>
 			<div className='space-y-[42px]'>
-				<div className='flex items-center justify-between lg:flex-row flex-col gap-y-10'>
+				<div className='flex items-center justify-between md:flex-row flex-col gap-y-10'>
 					<h3 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-left'>
 						Why K-Lord Stands Out
 					</h3>
 					{ctaText && (
 						<Link
 							to={ctaLink}
-							className='bg-[#01588E] hover:bg-[#014c8e] transition-all duration-500 rounded-[55px] lg:w-fit w-full py-2.5 px-[30px] text-white text-center shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]'>
+							className='bg-[#01588E] hover:bg-[#014c8e] transition-all duration-500 rounded-[55px] md:w-fit w-full py-2.5 px-[30px] text-white text-center shadow-[0px_1.344px_0.537px_-0.625px_rgba(0,0,0,0.09),0px_3.185px_1.274px_-1.25px_rgba(0,0,0,0.09),0px_5.809px_2.324px_-1.875px_rgba(0,0,0,0.08),0px_9.658px_3.863px_-2.5px_rgba(0,0,0,0.08),0px_15.597px_6.239px_-3.125px_rgba(0,0,0,0.07),0px_25.531px_10.212px_-3.75px_rgba(0,0,0,0.06),0px_43.962px_17.585px_-4.375px_rgba(0,0,0,0.04)]'>
 							{ctaText}
 						</Link>
 					)}

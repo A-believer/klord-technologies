@@ -15,8 +15,8 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className='max-w-[1440px] md:w-[86.5%] mx-auto w-full fixed md:top-8 top-0 left-0 right-0 bg-[#FAFAFA] md:rounded-[48px] z-50 shadow-lg'>
-			<div className='md:px-8 px-5 md:py-[18px] py-3 flex-between font-sora text-[#667085] text-sm/6 relative w-full'>
+		<nav className='max-w-[1440px] md:w-[90%] mx-auto w-full fixed lg:top-8 sm:top-3 top-0 left-0 right-0 bg-[#FAFAFA] md:rounded-[48px] z-50 shadow-lg'>
+			<div className=' md:py-4 py-3 flex-between font-sora text-[#667085] text-sm/6 sm:w-[95%] w-[90%] mx-auto'>
 				<div className='flex item-center gap-x-10'>
 					<Link to='/'>
 						<img src={logo} alt='K-lord Logo' />
@@ -26,12 +26,7 @@ const Navbar = () => {
 						{navlinks.map((navlink, index) =>
 							navlink.dropdownMenu ? (
 								<li
-									className={`${
-										navlink?.path &&
-										(navlink?.path.includes("/products") ||
-											navlink?.path.includes("/solutions")) &&
-										""
-									} flex items-center gap-x-2 hover:underline cursor-pointer`}
+									className={`flex items-center gap-x-2 hover:underline cursor-pointer`}
 									key={index}>
 									{navlink.path ? (
 										<Link to={navlink?.path}>{navlink.title}</Link>
@@ -91,7 +86,9 @@ const Navbar = () => {
 						{isMobileMenuOpen ? <X /> : <Menu />}
 					</button>
 				</div>
-				{isMobileMenuOpen && <MobileMenu />}
+				{isMobileMenuOpen && (
+					<MobileMenu setIsMobileMenuOpen={setIsMobileMenuOpen} />
+				)}
 			</div>
 		</nav>
 	);
