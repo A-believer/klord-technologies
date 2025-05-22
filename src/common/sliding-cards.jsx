@@ -10,9 +10,8 @@ const SlidingCards = ({ header, data }) => {
 		const handleScroll = () => {
 			if (!containerRef.current) return;
 			const containerLeft = containerRef.current.scrollLeft;
-			const containerWidth = containerRef.current.offsetWidth;
 
-			let closestIdx = 0;
+			let closestIdx = 1;
 			let minDiff = Infinity;
 			cardRefs.current.forEach((card, idx) => {
 				if (card) {
