@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-		<div className='grid lg:grid-cols-2 grid-cols-1 gap-x-8 text-lg/8 font-inter font-medium tracking-[-0.18px] text-black/80 py-16 contain'>
+		<div className='grid lg:grid-cols-2 grid-cols-1 gap-8 text-lg/8 font-inter font-medium tracking-[-0.18px] text-black/80 py-16 contain'>
 			<div className=''>
 				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
 					Who We Are
