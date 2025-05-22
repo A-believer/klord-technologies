@@ -6,7 +6,7 @@ import PortfolioDetails from "./portfolio-details";
 const PortfolioView = () => {
 	const [currentPortfolio, setCurrentPortfolio] = useState("UrCalls");
 	return (
-		<section className='contain py-16'>
+		<section className=' py-16'>
 			<div className='flex justify-center items-center gap-x-[18px] overflow-hidden overflow-x-scroll scrollbar-hide sm:px-0 px-32 sm:pb-16 pb-11'>
 				{portfolioData.map((porfolio) => (
 					<button
@@ -20,7 +20,7 @@ const PortfolioView = () => {
 					</button>
 				))}
 			</div>
-			<div>
+			<div className='contain'>
 				<AnimatePresence mode='wait'>
 					{portfolioData
 						.filter((portfolio) => portfolio.name === currentPortfolio)

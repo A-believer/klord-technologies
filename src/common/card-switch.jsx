@@ -5,7 +5,7 @@ const CardSwitch = ({ header, data, subtext }) => {
 	const [currentCard, setCurrentCard] = useState(0);
 	const currentImage = data[currentCard].image;
 	return (
-		<section className='contain md:space-y-16 space-y-10 md:py-16 py-10'>
+		<section className='contain md:space-y-16 space-y-10 md:py-10 py-6'>
 			<div className='space-y-4'>
 				<h2 className='text-[#0F0F0F] font-inter font-semibold lg:tracking-[-2.4px] tracking-[-1px] lg:text-5xl/[64px] text-[32px]/[44px]'>
 					{header}
@@ -17,7 +17,7 @@ const CardSwitch = ({ header, data, subtext }) => {
 				)}
 			</div>
 
-			<div className='grid lg:grid-cols-2 grid-cols-1 gap-x-20 gap-y-8'>
+			<div className='grid lg:grid-cols-2 grid-cols-1 justify-between gap-x-20 gap-y-8'>
 				<div className='space-y-9 max-w-[531px] w-full'>
 					{data.map((card, index) => (
 						<div
@@ -64,7 +64,7 @@ const CardSwitch = ({ header, data, subtext }) => {
 					<motion.img
 						key={currentImage}
 						src={currentImage}
-						className='rounded-[18px]'
+						className='rounded-[18px] lg:ml-auto mx-auto'
 						alt={data[currentCard]?.image}
 						initial={{ opacity: 0, x: -40 }}
 						animate={{ opacity: 1, x: 0 }}
