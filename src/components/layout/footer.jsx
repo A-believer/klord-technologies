@@ -27,7 +27,7 @@ const Footer = () => {
 							let’s get creating!
 						</p>
 					</div>
-					<div className='space-y-6'>
+					<div className='space-y-6 '>
 						<div className='text-[#FFA587] flex md:justify-end justify-between md:gap-x-10 gap-x-5'>
 							<ul className='space-y-2.5'>
 								{footerlinks.quicklinks.map((item, index) =>
