@@ -7,15 +7,19 @@ const PortfolioDetails = ({ portfolio }) => {
 			<h3 className='text-[#0F0F0F] lg:text-5xl/[64px] text-[32px]/[42px] tracking-[-2.4px] font-semibold text-center font-inter'>
 				{portfolio?.header}
 			</h3>
-			<img src={portfolio?.img} alt='' className='rounded-[18px] mx-auto w-full' />
+			<img
+				src={portfolio?.img}
+				alt=''
+				className='rounded-[18px] mx-auto w-full'
+			/>
 			<div>
 				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
 					Overview
 				</h4>
 				<h4>{portfolio?.overview}</h4>
 			</div>
-			<div className="grid lg:grid-cols-2 grid-cols-1 gap-x-8">
-				<div className="">
+			<div className='grid lg:grid-cols-2 grid-cols-1 gap-x-8'>
+				<div className=''>
 					<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
 						Challenge
 					</h4>
@@ -29,14 +33,12 @@ const PortfolioDetails = ({ portfolio }) => {
 				</div>
 			</div>
 
-			<div className="space-y-6">
+			<div className='space-y-6'>
 				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
 					Key Features
 				</h4>
 				<div
-					className={`grid ${
-						portfolio?.name === "NexaLife Care" && "lg:grid-cols-4"
-					} lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-8 lg:gap-y-16 gap-y-[30px]`}>
+					className={`flex w-full flex-wrap justify-center xl:[&>*]:w-[31.6%] lg:[&>*]:w-[30.92%] sm:[&>*]:w-[47.5%] [&>*]:w-full gap-x-8 lg:gap-y-16 gap-y-8`}>
 					{portfolio?.keyFeatures.map((card, idx) => (
 						<Card key={idx} content={card} />
 					))}
@@ -47,7 +49,7 @@ const PortfolioDetails = ({ portfolio }) => {
 				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
 					Impact
 				</h4>
-				<ul className="list-disc md:ml-8 ml-5">
+				<ul className='list-disc md:ml-8 ml-5'>
 					{portfolio?.impact.map((item, idx) => (
 						<li key={idx}>
 							<p dangerouslySetInnerHTML={{ __html: item }} />
