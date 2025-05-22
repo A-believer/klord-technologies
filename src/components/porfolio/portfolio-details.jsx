@@ -7,7 +7,7 @@ const PortfolioDetails = ({ portfolio }) => {
 			<h3 className='text-[#0F0F0F] lg:text-5xl/[64px] text-[32px]/[42px] tracking-[-2.4px] font-semibold text-center font-inter'>
 				{portfolio?.header}
 			</h3>
-			<img src={portfolio?.img} alt='' className='rounded-[18px]' />
+			<img src={portfolio?.img} alt='' className='rounded-[18px] mx-auto w-full' />
 			<div>
 				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
 					Overview

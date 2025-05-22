@@ -49,7 +49,7 @@ const Hero = () => {
 	return (
 		<section
 			ref={sectionRef}
-			className='contain md:pt-[186px] pt-[142px] md:pb-[70px] pb-14 md:space-y-[30px] space-y-[26px] text-[#0f0f0f] font-inter'>
+			className='contain md:pt-[150px] pt-[100px] md:pb-10 pb-8 md:space-y-[30px] space-y-[26px] text-[#0f0f0f] font-inter'>
 			<div className='space-y-5 max-w-[845px]'>
 				<h1 className='lg:text-[65px]/[74px] text-[32px]/10 font-sora font-semibold tracking-[-3px]'>
 					About K-Lord Technologies
@@ -60,16 +60,16 @@ const Hero = () => {
 					public sector, SMEs, and enterprises.
 				</p>
 			</div>
-			<div className='grid lg:grid-cols-2 grid-cols-1 items-center gap-4 lg:items-start'>
-				<div className='overflow-hidden max-w-[581px] w-full mx-auto lg:aspect-auto aspect-video'>
+			<div className='flex items-start lg:flex-row flex-col justify-between gap-x-4 gap-y-6'>
+				<div className='lg:max-w-[600px] w-full'>
 					<img
 						src={hero}
 						alt='Hero Image'
-						className='object-cover max-w-[581px] lg:aspect-auto aspect-video w-full md:rounded-[30px] mx-auto rounded-[18px]'
+						className='lg:max-w-[600px] w-full md:rounded-[30px] rounded-[18px]'
 					/>
 				</div>
 
-				<div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
+				<div className='grid md:grid-cols-2 grid-cols-1 gap-4 shrink-0 lg:w-1/2 w-full'>
 					{aboutMetricsData.map((item, index) => (
 						<div
 							className='font-sora rounded-[30px] border border-dashed border-spacing-2 border-[#69696966] bg-[#FAFAFA] w-full pl-5 pt-[23px] pb-[30px] xl:space-y-[117px] space-y-9'

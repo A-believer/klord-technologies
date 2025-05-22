@@ -12,7 +12,7 @@ const Footer = () => {
 		setIsCurrentDropdown(index === isCurrentDropdown ? null : index);
 	};
 	return (
-		<footer className='bg-[#00090F] md:py-20 py-10 text-[#FFFEF5] text-[15px]/[22.5px] tracking-[-0.45px] font-medium font-inter'>
+		<footer className='bg-[#00090F] md:py-14 py-8 text-[#FFFEF5] text-[15px]/[22.5px] tracking-[-0.45px] font-medium font-inter'>
 			<div className='max-w-[1440px] w-[90%] mx-auto'>
 				<div className='md:flex justify-between items-center space-y-10'>
 					<div className='md:space-y-12 space-y-8'>
