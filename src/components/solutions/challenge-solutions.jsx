@@ -19,6 +19,7 @@ const ChallengeSolutions = ({ header, challenges, solutions }) => {
 						challenges.list.map((item, idx) => (
 							<p className='flex item-start gap-x-[10px]' key={idx}>
 								<img
+									loading='lazy'
 									src={check}
 									alt='check icon'
 									className='h-[18px] w-[18px] lg:mt-o mt-1.5'
@@ -38,6 +39,7 @@ const ChallengeSolutions = ({ header, challenges, solutions }) => {
 						challenges.list.map((item, idx) => (
 							<p className='flex item-start gap-x-[10px]' key={idx}>
 								<img
+									loading='lazy'
 									src={checkOrange}
 									alt='check icon'
 									className='h-[18px] w-[18px] lg:mt-o mt-1.5'

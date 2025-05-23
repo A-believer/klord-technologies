@@ -48,7 +48,7 @@ const WhyChooseKlord = () => {
 						<div
 							key={item.id}
 							className='space-y-16 p-6 bg-[#F7F7F7] max-w-[294px] transition-all duration-500 hover:scale-[102%] hover:shadow-[0px_1.344px_0.537px_-0.625px_rgba(0,0,0,0.09),0px_3.185px_1.274px_-1.25px_rgba(0,0,0,0.09),0px_5.809px_2.324px_-1.875px_rgba(0,0,0,0.08),0px_9.658px_3.863px_-2.5px_rgba(0,0,0,0.08),0px_15.597px_6.239px_-3.125px_rgba(0,0,0,0.07),0px_25.531px_10.212px_-3.75px_rgba(0,0,0,0.06),0px_43.962px_17.585px_-4.375px_rgba(0,0,0,0.04)]'>
-							<img src={item.icon} alt='' />
+							<img loading='lazy' src={item.icon} alt='' />
 							<p className='text-[#101828] text-xl/[30px] tracking-[-0.2px]'>
 								{item.text}
 							</p>

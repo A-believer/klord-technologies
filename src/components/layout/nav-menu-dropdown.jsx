@@ -14,7 +14,7 @@ function DropDownMenu({ dropdownMenu, setIsCurrentDropdown }) {
 							return setTimeout(setIsCurrentDropdown(null), 4000);
 						}}
 						className='w-full flex gap-4 items-start'>
-						<img src={item.icon} alt='' className='w-6 h-6' />
+						<img loading='lazy' src={item.icon} alt='' className='w-6 h-6' />
 						<div>
 							<p className='text-base/6 tracking-[-0.24px] hover:font-semibold'>
 								{item.title}
@@ -75,7 +75,12 @@ function MobileMenu({ setIsMobileMenuOpen }) {
 														setIsMobileMenuOpen(false);
 													}}
 													className='w-full flex gap-4 items-start'>
-													<img src={item.icon} alt='' className='w-6 h-6' />
+													<img
+														loading='lazy'
+														src={item.icon}
+														alt=''
+														className='w-6 h-6'
+													/>
 													<div>
 														<p className='text-base/6 tracking-[-0.24px]'>
 															{item.title}

@@ -17,6 +17,7 @@ const Footer = () => {
 				<div className='md:flex justify-between items-center space-y-10'>
 					<div className='md:space-y-12 space-y-8'>
 						<img
+							loading='lazy'
 							src={logo}
 							alt='K-Lord Logo'
 							className='w-[201px] h-[76px] object-cover object-left'
@@ -64,6 +65,7 @@ const Footer = () => {
 																	}}
 																	className='w-full flex gap-4 items-start'>
 																	<img
+																		loading='lazy'
 																		src={data.icon}
 																		alt=''
 																		className='w-6 h-6'
@@ -120,7 +122,7 @@ const Footer = () => {
 					{contactData.map((item, index) => (
 						<div key={index} className='max-w-[200px] space-y-2.5'>
 							<h5 className='text-[#FFA587] flex items-center-safe md:gap-x-7 gap-x-2.5'>
-								<img src={item.icon} alt={item.name} />
+								<img loading='lazy' src={item.icon} alt={item.name} />
 								{item.name}
 							</h5>
 							<p>{item.data}</p>

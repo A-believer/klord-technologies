@@ -16,6 +16,7 @@ const Testimonials = ({ testimonials }) => {
 					<div className='flex items-center justify-center -space-x-4'>
 						{clientImages.map((img, idx) => (
 							<img
+								loading='lazy'
 								key={idx}
 								src={img}
 								alt={`client ${idx + 1}`}
@@ -31,7 +32,12 @@ const Testimonials = ({ testimonials }) => {
 				{testimonials.map((testimonial, idx) => (
 					<div key={idx} className='w-full space-y-5'>
 						<div className='bg-[#1C1C1C] rounded-[30px] pl-3.5 pr-[25.35px] pt-[30px] pb-10 flex items-start gap-x-5 min-h-[138px]'>
-							<img src={quotes} alt='quotes' className='w-8 h-auto mt-1' />
+							<img
+								loading='lazy'
+								src={quotes}
+								alt='quotes'
+								className='w-8 h-auto mt-1'
+							/>
 							<p className='text-[15px]/[22px] font-medium tracking-[-0.45px] text-[#F5F7F9]'>
 								<i>"</i>
 								{testimonial.quote}
@@ -40,6 +46,7 @@ const Testimonials = ({ testimonials }) => {
 						</div>
 						<div className='flex items-center gap-x-3.5 px-5'>
 							<img
+								loading='lazy'
 								src={testimonial.image}
 								alt={testimonial.name}
 								className='w-[61px] h-[61px]'

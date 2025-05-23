@@ -16,7 +16,12 @@ const CardGrey = ({ header, data }) => {
 							{item.header}
 						</h4>
 						<p className='mt-3 mb-9 text-left'>{item.desc}</p>
-						<img src={item.img} alt='' className='rounded-[13px] mx-auto' />
+						<img
+							loading='lazy'
+							src={item.img}
+							alt=''
+							className='rounded-[13px] mx-auto'
+						/>
 					</div>
 				))}
 			</div>

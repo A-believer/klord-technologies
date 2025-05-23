@@ -5,9 +5,9 @@ import { GetStartedContext } from "../../pages/get-started";
 import { useNavigate } from "react-router";
 
 const GetStartedSuccess = () => {
-  const { currentLevel, direction } = useContext(GetStartedContext);
-  const navigate = useNavigate();
-	
+	const { currentLevel, direction } = useContext(GetStartedContext);
+	const navigate = useNavigate();
+
 	const variants = {
 		enter: (direction) => ({
 			x: direction > 0 ? 500 : -500,
@@ -27,14 +27,13 @@ const GetStartedSuccess = () => {
 		type: "spring",
 		stiffness: 300,
 		damping: 30,
-  };
+	};
 
-  useEffect(() => {
-    setTimeout(() => {
-      navigate(-1);
-    }, 2000);
-  }, [navigate]);
-  
+	useEffect(() => {
+		setTimeout(() => {
+			navigate(-1);
+		}, 2000);
+	}, [navigate]);
 
 	return (
 		<AnimatePresence custom={direction} mode='wait'>
@@ -49,6 +48,7 @@ const GetStartedSuccess = () => {
 				className='w-full h-screen flex-center'>
 				<div className='font-inter space-y-4 text-center'>
 					<img
+						loading='lazy'
 						src={successImg}
 						alt='Man on a rocket'
 						className='md:w-[199px] md:h-[199px] w-[164px] h-[164px] mx-auto'
