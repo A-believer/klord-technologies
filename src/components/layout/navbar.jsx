@@ -19,7 +19,7 @@ const Navbar = () => {
 			<div className=' md:py-4 py-3 flex-between font-sora text-[#667085] text-sm/6 sm:w-[95%] w-[90%] mx-auto'>
 				<div className='flex item-center gap-x-10'>
 					<Link to='/'>
-						<img src={logo} alt='K-lord Logo' />
+						<img loading='lazy' src={logo} alt='K-lord Logo' />
 					</Link>
 
 					<ul className='xl:flex hidden items-center gap-x-8'>

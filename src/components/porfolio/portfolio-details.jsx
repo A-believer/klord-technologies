@@ -8,6 +8,7 @@ const PortfolioDetails = ({ portfolio }) => {
 				{portfolio?.header}
 			</h3>
 			<img
+				loading='lazy'
 				src={portfolio?.img}
 				alt=''
 				className='rounded-[18px] mx-auto w-full'

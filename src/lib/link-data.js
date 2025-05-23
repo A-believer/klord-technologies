@@ -38,7 +38,7 @@ const navlinks = [
 	},
 	{
 		title: "Solutions",
-		
+
 		dropdownMenu: [
 			{
 				title: "Healthcare",
@@ -66,10 +66,10 @@ const navlinks = [
 		title: "Portfolio",
 		path: "/portfolio",
 	},
-	// {
-	// 	title: "Resources",
-	// 	path: "/resources",
-	// },
+	{
+		title: "Resources",
+		path: "/resources",
+	},
 	{
 		title: "Careers",
 		path: "/careers",

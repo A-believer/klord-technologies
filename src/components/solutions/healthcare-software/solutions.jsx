@@ -57,9 +57,9 @@ const Solutions = () => {
 						key={idx}
 						className='w-full p-8 flex flex-col gap-y-20 bg-[#1C1C1C] rounded-[26px]'>
 						<span className='rounded-full bg-[#212121] w-16 h-16 flex items-center justify-center'>
-							<img src={item.image} alt={item.header} />
+							<img loading='lazy' src={item.image} alt={item.header} />
 						</span>
-						<div className="flex items-center justify-between gap-x-6">
+						<div className='flex items-center justify-between gap-x-6'>
 							<div className='space-y-3 max-w-[380px] w-full'>
 								<h4 className='text-[27px]/[37px] font-sora font-semibold tracking-[-1.04px]'>
 									{item.header}

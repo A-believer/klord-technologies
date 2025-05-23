@@ -7,11 +7,13 @@ const Hero = () => {
 		<section className='w-full bg-[#fdfdfd]'>
 			<div className='max-w-[1440px] h-full w-[90%] mx-auto relative pt-16 max-h-fit'>
 				<img
+					loading='lazy'
 					src={homeHero}
 					alt=''
 					className='aspect-video max-h-[560px] mx-auto md:flex hidden'
 				/>
 				<img
+					loading='lazy'
 					src={homeHeroMobile}
 					alt=''
 					className='aspect-auto mx-auto md:hidden flex'

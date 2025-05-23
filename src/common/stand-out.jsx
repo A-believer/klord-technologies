@@ -52,7 +52,12 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 					<div
 						key={index}
 						className='lg:py-9 py-5 xl:px-[88px] sm:px-7 px-5 bg-[#F5F7F9] rounded-[30px] text-[#0F0F0F] w-full flex flex-col items-center justify-between gap-y-5 h-full'>
-						<img src={item.image} alt='' className='w-[176px] h-[176px]' />
+						<img
+							loading='lazy'
+							src={item.image}
+							alt=''
+							className='w-[176px] h-[176px]'
+						/>
 						<div className='space-y-5'>
 							<h5 className=' font-sora text-[26px]/8 font-semibold text-center'>
 								{item.header}

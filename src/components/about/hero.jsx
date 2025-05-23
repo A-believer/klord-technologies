@@ -63,6 +63,7 @@ const Hero = () => {
 			<div className='flex items-start lg:flex-row flex-col justify-between gap-x-4 gap-y-6'>
 				<div className='lg:max-w-[600px] w-full'>
 					<img
+						loading='lazy'
 						src={hero}
 						alt='Hero Image'
 						className='lg:max-w-[600px] w-full md:rounded-[30px] rounded-[18px]'
