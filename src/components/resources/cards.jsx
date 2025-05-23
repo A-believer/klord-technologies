@@ -10,10 +10,10 @@ const Cards = ({ data }) => {
 				alt=''
 				className='rounded-[20px] object-cover object-center w-full md:aspect-auto aspect-video'
 			/>
-			<div className='flex items-start justify-between mt-8 mb-3'>
+			<div className='flex items-start justify-between gap-x-4 mt-8 mb-3'>
 				<h3 className='text-[#101828] font-sora font-semibold text-xl/[30px]'>
 					{data.title}
-				</h3>{" "}
+				</h3>
 				<Link to={data.link}>
 					<MoveUpRight />
 				</Link>
