@@ -1,7 +1,7 @@
 import need from "../assets/imgs/home-need.png";
 import results from "../assets/imgs/home-results.png";
 import specific from "../assets/imgs/home-specific.png";
-import secure from "../assets/imgs/home-secure.png";
+import scalable from "../assets/imgs/scalable.png";
 import solutions from "../assets/imgs/solutions.png";
 import security from "../assets/imgs/security.png";
 import purpose from "../assets/imgs/purpose.png";
@@ -178,7 +178,7 @@ const standOutData = [
 	{
 		header: "Scalable & Secure",
 		des: "Our platforms are designed to grow with your organization, from startups to large enterprises. Security and compliance are built in from day one, keeping your data safe and your business running reliably. ",
-		image: secure,
+		image: scalable,
 	},
 ];
 
@@ -191,12 +191,12 @@ const whyChooseData = [
 	{
 		header: "Compliance and Security by Design",
 		des: "Compliance with HIPAA, Section 508, SOC 2, and GDPR is integrated throughout our software. You can trust your operations stay protected and meet all necessary standards.",
-		image: security,
+		image: scalable,
 	},
 	{
 		header: "Designed for Scale",
 		des: "Whether you have five users or five thousand, our systems support seamless growth. We ensure performance and stability without costly rebuilds.",
-		image: design,
+		image: security,
 	},
 	{
 		header: "Deep Domain Knowledge",

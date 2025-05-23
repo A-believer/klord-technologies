@@ -1,4 +1,4 @@
-import img from "../../assets/imgs/career-values.png";
+import img from "../../assets/imgs/career-values.jpg";
 
 const values = [
 	{
@@ -57,7 +57,7 @@ const Values = () => {
 					<img
 						src={img}
 						alt='a picture'
-						className='object-contain xl:w-full mx-auto xl:max-h-[542px] max-h-[350px]'
+						className='object-cover xl:w-full mx-auto xl:max-h-[542px] max-h-[350px] xl:max-w-[624px] lg:max-w-[400px] w-full rounded-[18px]'
 					/>
 				</div>
 			</div>
