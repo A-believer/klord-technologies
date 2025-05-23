@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { navlinks } from "../../lib/link-data";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -34,6 +34,7 @@ function DropDownMenu({ dropdownMenu, setIsCurrentDropdown }) {
 
 function MobileMenu({ setIsMobileMenuOpen }) {
 	const { pathname } = useLocation();
+	const navigate = useNavigate();
 	const [isCurrentDropdown, setIsCurrentDropdown] = useState(null);
 
 	const handleDropdown = (index) => {
@@ -68,9 +69,9 @@ function MobileMenu({ setIsMobileMenuOpen }) {
 									<ul className=' font-sora text-black cursor-auto z-50'>
 										{navlink.dropdownMenu.map((item, index) => (
 											<li key={index} className='p-3'>
-												<Link
-													to={item.path}
+												<button
 													onClick={() => {
+														navigate(item.path);
 														setIsMobileMenuOpen(false);
 													}}
 													className='w-full flex gap-4 items-start'>
@@ -85,7 +86,7 @@ function MobileMenu({ setIsMobileMenuOpen }) {
 															</p>
 														)}
 													</div>
-												</Link>
+												</button>
 											</li>
 										))}
 									</ul>
@@ -94,29 +95,38 @@ function MobileMenu({ setIsMobileMenuOpen }) {
 						</li>
 					) : (
 						<li key={index} className='w-full text-center'>
-							<Link
-								to={navlink.path}
+							<button
+								onClick={() => {
+									navigate(navlink.path);
+									setIsMobileMenuOpen(false);
+								}}
 								className={`
 											${
 												pathname === navlink.path && "font-bold text-black"
 											} hover:underline  w-full text-center`}>
 								{navlink.title}
-							</Link>
+							</button>
 						</li>
 					)
 				)}
 			</ul>
 			<div className='block lg:hidden space-y-4'>
-				<Link
-					className='block py-2.5 px-[18px] hover:border rounded-[30px] transition-all duration-500 text-center'
-					to='/contact'>
+				<button
+					onClick={() => {
+						navigate("/contact");
+						setIsMobileMenuOpen(false);
+					}}
+					className='block py-2.5 px-[18px] hover:border rounded-[30px] transition-all duration-500 text-center mx-auto'>
 					Contact
-				</Link>
-				<Link
-					className='block py-2.5 px-[18px] border  border-[#F95607] text-white bg-[#F95607] hover:bg-white hover:text-[#F95607] rounded-[30px] transition-all duration-500 text-center'
-					to='/get-started'>
+				</button>
+				<button
+					onClick={() => {
+						navigate("/get-started");
+						setIsMobileMenuOpen(false);
+					}}
+					className='block py-2.5 px-[18px] border  border-[#F95607] text-white bg-[#F95607] hover:bg-white hover:text-[#F95607] rounded-[30px] transition-all duration-500 text-center w-full'>
 					Get Started
-				</Link>
+				</button>
 			</div>
 		</div>
 	);
