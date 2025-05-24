@@ -1,7 +1,7 @@
 const InputComp = ({ name, label, type, placeholder, error }) => {
 	return (
 		<div className='flex flex-col gap-y-[6px] text-sm/5 w-full'>
-			<label htmlFor={name} className='font-medium text-[#344054]'>
+			<label htmlFor={name} className='font-medium text-[#344054] font-inter'>
 				{label} <span className='text-red-500'>*</span>
 			</label>
 			<input
