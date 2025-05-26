@@ -58,7 +58,7 @@ const Values = () => {
 						loading='lazy'
 						src={img}
 						alt='a picture'
-						className='object-cover xl:w-full mx-auto xl:max-h-[542px] max-h-[350px] xl:max-w-[624px] lg:max-w-[400px] w-full rounded-[18px]'
+						className='object-cover xl:max-h-[580px] max-h-[350px] xl:max-w-[624px] lg:max-w-[400px] w-full rounded-[18px] overflow-hidden'
 					/>
 				</div>
 			</div>

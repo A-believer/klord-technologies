@@ -49,7 +49,7 @@ const ReachOut = () => {
 							<p className='mt-2 mb-5 font-inter text-[#8D8D8D] text-base/6'>
 								{item.desc}
 							</p>
-							<p className='text-[#FF5F0F] text-base/6'>{item.dets}</p>
+							<p className='text-[#FF5F0F] text-lg/6'>{item.dets}</p>
 						</div>
 					</div>
 				))}

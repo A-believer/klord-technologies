@@ -25,7 +25,9 @@ const CardSwitch = ({ header, data, subtext }) => {
 							className='flex items-center gap-x-7 transition-all duration-500'>
 							<div
 								className={`${
-									index === currentCard ? "bg-[#F95607] sm:h-[110px] h-[150px]" : ""
+									index === currentCard
+										? "bg-[#F95607] sm:h-[110px] h-[150px]"
+										: ""
 								}  w-[10px] rounded-[28px] shrink-0`}
 							/>
 							<button
@@ -50,7 +52,7 @@ const CardSwitch = ({ header, data, subtext }) => {
 												open: { height: "auto", opacity: 1 },
 												collapsed: { height: 0, opacity: 0 },
 											}}
-											transition={{ duration: 0.5, ease: "easeInOut" }}>
+											transition={{ duration: 0.2, ease: "easeInOut" }}>
 											{card.desc}
 										</motion.p>
 									)}
@@ -62,6 +64,7 @@ const CardSwitch = ({ header, data, subtext }) => {
 
 				<AnimatePresence mode='wait'>
 					<motion.img
+						loading="lazy"
 						key={currentImage}
 						src={currentImage}
 						className='rounded-[18px] lg:ml-auto mx-auto'
@@ -69,7 +72,7 @@ const CardSwitch = ({ header, data, subtext }) => {
 						initial={{ opacity: 0, x: -40 }}
 						animate={{ opacity: 1, x: 0 }}
 						exit={{ opacity: 0, x: 40 }}
-						transition={{ duration: 0.5, ease: "easeInOut" }}
+						transition={{ duration: 0.2, ease: "easeInOut" }}
 					/>
 				</AnimatePresence>
 			</div>

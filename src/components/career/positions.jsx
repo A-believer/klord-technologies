@@ -40,7 +40,7 @@ const Positions = ({ jobData }) => {
 								{job.department}
 							</span>
 						</div>
-						<div className='block w-fit ml-auto hover:underline'>
+						<div className='block w-fit hover:underline'>
 							<Link
 								to={`/careers/${job.id}`}
 								className='flex items-center gap-x-2 w-fit text-[#FF5F0F]'>

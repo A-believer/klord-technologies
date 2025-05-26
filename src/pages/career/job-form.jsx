@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useParams } from "react-router";
+import { Navigate, useParams } from "react-router";
 import { jobData } from "../../lib/job-data";
 import InputComp from "../../common/input-comp";
 import UploadBox from "../../common/upload-box";
@@ -29,20 +29,23 @@ const JobForm = () => {
 			setSubmitting(false);
 			return;
 		}
+		// Map FormData to object
+		let data = {};
+		formData.forEach((value, key) => {
+			data[key] = value;
+		});
+
+		data = { ...data, job: job.title };
+		console.log(data); // This is now a plain object
 		// Simulate submission (replace with real API call)
 		setTimeout(() => {
 			setSubmitting(false);
 			setSubmitted(true);
-		}, 1200);
+		}, 3000);
 	};
 
 	if (!job) return <div className='p-8'>Job not found.</div>;
-	if (submitted)
-		return (
-			<div className='p-8 text-green-600 font-semibold'>
-				Application submitted! Thank you.
-			</div>
-		);
+	if (submitted) return <Navigate to={"/careers"} />;
 
 	return (
 		<section className='contain grid lg:grid-cols-2 xl:gap-x-20 gap-x-14 gap-y-14 lg:pt-[186px] sm:pt-[120px] pt-20 lg:pb-20 pb-14'>

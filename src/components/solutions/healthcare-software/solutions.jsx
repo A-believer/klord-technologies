@@ -51,11 +51,11 @@ const Solutions = () => {
 				</p>
 			</div>
 
-			<div className='grid md:grid-cols-2 grid-cols-1 gap-x-[22px] gap-y-8 text-[#F5F7F9]'>
+			<div className='flex flex-wrap justify-center gap-x-[22px] gap-y-8 text-[#F5F7F9]'>
 				{cardData.map((item, idx) => (
 					<div
 						key={idx}
-						className='w-full p-8 flex flex-col gap-y-20 bg-[#1C1C1C] rounded-[26px]'>
+						className='xl:w-[49%] lg:w-[48.6%] sm:w-[48%] w-full p-8 flex flex-col gap-y-20 bg-[#1C1C1C] rounded-[26px]'>
 						<span className='rounded-full bg-[#212121] w-16 h-16 flex items-center justify-center'>
 							<img loading='lazy' src={item.image} alt={item.header} />
 						</span>
