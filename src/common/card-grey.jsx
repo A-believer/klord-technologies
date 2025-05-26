@@ -20,7 +20,7 @@ const CardGrey = ({ header, data }) => {
 							loading='lazy'
 							src={item.img}
 							alt=''
-							className='rounded-[13px] mx-auto'
+							className='rounded-[13px] mx-auto w-full object-cover'
 						/>
 					</div>
 				))}

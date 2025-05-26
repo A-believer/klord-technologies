@@ -121,7 +121,7 @@ const Footer = () => {
 				<div className='md:flex items-start gap-x-20 space-y-10 my-10  md:py-[30px] py-5 border-y border-[rgba(255,255,255,0.30)]'>
 					{contactData.map((item, index) => (
 						<div key={index} className='max-w-[200px] space-y-2.5'>
-							<h5 className='text-[#FFA587] flex items-center-safe md:gap-x-7 gap-x-2.5'>
+							<h5 className='text-[#FFA587] flex items-center gap-x-2'>
 								<img loading='lazy' src={item.icon} alt={item.name} />
 								{item.name}
 							</h5>
