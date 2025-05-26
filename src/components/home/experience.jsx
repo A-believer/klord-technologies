@@ -23,12 +23,10 @@ const Experience = () => {
 	return (
 		<section
 			ref={sectionRef}
-			className='contain md:py-16 py-8 md:space-y-28 space-y-20'>
+			className='contain  py-8 md:space-y-28 space-y-20'>
 			<motion.div
 				initial={{ opacity: 0, y: 40 }}
-				animate={
-					isSectionInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 40 }
-				}
+				animate={isSectionInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 40 }}
 				transition={{ duration: 0.7, ease: "easeOut" }}
 				className='flex md:items-end justify-between md:flex-row flex-col w-full gap-y-10 md:mb-28 mb-20'>
 				<motion.h1

@@ -50,7 +50,7 @@ const SlidingCards = ({ header, data }) => {
 	};
 
 	return (
-		<section className='contain md:py-16 py-10 space-y-14'>
+		<section className='contain  py-10 space-y-14'>
 			<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-2.4px] text-center'>
 				{header}
 			</h2>

@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Cta = ({ header, subheader, ctaTextI, ctaTextII }) => {
 	return (
-		<section className='contain md:py-16 py-10 flex justify-between items-start lg:flex-row flex-col gap-y-10 font-inter'>
+		<section className='contain  py-10 flex justify-between items-start lg:flex-row flex-col gap-y-10 font-inter'>
 			<div className='max-w-[768px] w-full space-y-5'>
 				<h3 className='font-sora text-[28px]/[42px] font-semibold tracking-[-0.96px] text-[#0f0f0f]'>
 					{header}

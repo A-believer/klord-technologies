@@ -26,7 +26,7 @@ const cardData = [
 ];
 const WhyChooseKlord = () => {
 	return (
-		<section className='contain md:py-16 py-10 md:space-y-16 space-y-10 font-inter'>
+		<section className='contain  py-10 md:space-y-16 space-y-10 font-inter'>
 			<div className='max-w-[943px] w-full space-y-4'>
 				<h2 className='font-sora lg:text-5xl/[64px] text-[32px]/[46px] font-semibold tracking-[-2.4px] text-[#0f0f0f]'>
 					Seamless Integration & Scalable Architecture

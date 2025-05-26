@@ -26,7 +26,7 @@ const data = [
 
 const ReachOut = () => {
 	return (
-		<section className='contain md:py-16 py-10 lg:space-y-11 space-y-8'>
+		<section className='contain  py-10 lg:space-y-11 space-y-8'>
 			<div className='max-w-[862px] w-full space-y-4'>
 				<h1 className='font-sora lg:text-5xl/[64px] text-[32px]/normal font-semibold tracking-[-2.4px] text-[#0f0f0f]'>
 					Reach Out to Us

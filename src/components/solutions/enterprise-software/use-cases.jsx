@@ -9,7 +9,7 @@ const caseData = [
 ];
 const UseCases = () => {
 	return (
-		<section className='contain md:space-y-16 space-y-10 md:py-16 py-10 text-[#F5F7F9]/[0.8] font-inter text-[15px]/[25px] tracking-[-0.45px] font-medium'>
+		<section className='contain md:space-y-16 space-y-10  py-10 text-[#F5F7F9]/[0.8] font-inter text-[15px]/[25px] tracking-[-0.45px] font-medium'>
 			<h2 className='text-[#0F0F0F] font-sora font-semibold lg:tracking-[-2.4px] tracking-[-1px] lg:text-5xl/[64px] text-[32px]/[44px] md:text-center text-left'>
 				Key Use Cases
 			</h2>

@@ -25,7 +25,7 @@ const values = [
 
 const Values = () => {
 	return (
-		<section className='contain md:py-16 py-8 md:space-y-14 space-y-8'>
+		<section className='contain  py-8 md:space-y-14 space-y-8'>
 			<div className='space-y-4'>
 				<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px]'>
 					Our Culture & Values
