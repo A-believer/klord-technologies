@@ -1,6 +1,6 @@
 const CardGrey = ({ header, data }) => {
 	return (
-		<section className='contain md:space-y-16 space-y-10 md:py-16 py-10'>
+		<section className='contain md:space-y-16 space-y-10  py-10'>
 			<h2 className='text-[#0F0F0F] font-inter font-semibold lg:tracking-[-2.4px] tracking-[-1px] lg:text-5xl/[64px] text-[32px]/[44px] text-center'>
 				{header}
 			</h2>

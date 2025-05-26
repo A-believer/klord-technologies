@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Cta = () => {
 	return (
-		<section className='contain md:py-16 py-10 flex justify-between lg:items-center lg:flex-row flex-col gap-y-10'>
+		<section className='contain  py-10 flex justify-between lg:items-center lg:flex-row flex-col gap-y-10'>
 			<div className='max-w-[662px] w-full space-y-5'>
 				<h3 className='font-sora text-[28px]/[42px] font-semibold tracking-[-0.96px] text-[#0f0f0f]'>
 					Request a Demo or Consultation

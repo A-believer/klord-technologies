@@ -2,7 +2,7 @@ import NexalifecareImg from "../../products/nexalifecare-img";
 
 const UseCases = () => {
 	return (
-		<section className='contain md:space-y-16 space-y-10 md:py-16 py-10'>
+		<section className='contain md:space-y-16 space-y-10  py-10'>
 			<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-2.4px] text-center'>
 				Case Studies
 			</h2>

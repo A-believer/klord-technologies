@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const PortfolioCTA = () => {
 	return (
-		<section className='contain md:py-16 py-10 flex justify-between lg:flex-row flex-col gap-y-10'>
+		<section className='contain  py-10 flex justify-between lg:flex-row flex-col gap-y-10'>
 			<div className='max-w-[662px] w-full space-y-5'>
 				<h3 className='font-sora text-[28px]/[42px] font-semibold tracking-[-0.56px] text-[#101828]'>
 					Ready to Take the Next Step?
