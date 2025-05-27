@@ -32,8 +32,8 @@ const WhyChooseKlord = () => {
 					Seamless Integration & Scalable Architecture
 				</h2>
 				<p className='text-black/80 font-inter text-lg/normal tracking-[-0.18px] max-w-[922px]'>
-					We deliver platforms that plug into your existing environment—legacy
-					databases, cloud APIs, internal workflows—without requiring downtime
+					We deliver platforms that plug into your existing environment legacy
+					databases, cloud APIs, internal workflows without requiring downtime
 					or full replacement. Our modular architecture scales with program
 					growth and evolving policies.
 				</p>

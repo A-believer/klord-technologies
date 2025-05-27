@@ -15,28 +15,27 @@ import icon10 from "../assets/imgs/icon-10.png";
 import icon11 from "../assets/imgs/icon-11.png";
 import icon12 from "../assets/imgs/icon-12.png";
 
-
 const whyChooseKlordData = [
-    {
-        header: "Precisely Tailored Solutions",
-        des: "Our platforms fit your exact industry workflows. From patient referral management to enterprise resource planning, we deliver solutions that work seamlessly.",
-        image: solutions,
-    },
-    {
-        header: "Compliance Built-In",
-        des: "Regulatory requirements like HIPAA, FOIA, and accessibility standards are core to our development process, ensuring audit readiness and trust.",
-        image: security,
-    },
-    {
-        header: "Scalable Architecture",
-        des: "You can expand your solution from pilot programs to enterprise-wide deployments without costly downtime or rewrites.",
-        image: scalable,
-    },
-    {
-        header: "Proven Results",
-        des: "Our clients enjoy improved workflows, greater accuracy, and measurable operational gains. We deliver software that drives business value.",
-        image: secure,
-    },
+	{
+		header: "Precisely Tailored Solutions",
+		des: "Our platforms fit your exact industry workflows. From patient referral management to enterprise resource planning, we deliver solutions that work seamlessly.",
+		image: solutions,
+	},
+	{
+		header: "Compliance Built-In",
+		des: "Regulatory requirements like HIPAA, FOIA, and accessibility standards are core to our development process, ensuring audit readiness and trust.",
+		image: security,
+	},
+	{
+		header: "Scalable Architecture",
+		des: "You can expand your solution from pilot programs to enterprise-wide deployments without costly downtime or rewrites.",
+		image: scalable,
+	},
+	{
+		header: "Proven Results",
+		des: "Our clients enjoy improved workflows, greater accuracy, and measurable operational gains. We deliver software that drives business value.",
+		image: secure,
+	},
 ];
 
 const portfolioData = [
@@ -48,9 +47,9 @@ const portfolioData = [
 		overview:
 			"UrCalls is a high-performance video conferencing solution that addresses the needs of SMEs, enterprises, telehealth providers, and more. It offers HD video andaudio quality, real-time screen sharing, and cross-platform livestreaming for seamless collaboration and communication.",
 		challenge:
-			"Many teams face high costs and limited features in video calls—slowing down productivity, especially in telehealth and remote collaboration.",
+			"Many teams face high costs and limited features in video calls slowing down productivity, especially in telehealth and remote collaboration.",
 		solution:
-			"Many teams face high costs and limited features in video calls—slowing down productivity, especially in telehealth and remote collaboration.",
+			"Many teams face high costs and limited features in video calls slowing down productivity, especially in telehealth and remote collaboration.",
 		keyFeatures: [
 			{
 				icon: icon1,

@@ -24,7 +24,7 @@ const addressSectionData = [
 	{
 		id: 3,
 		title: "Next-Gen Technology Integration",
-		desc: "Empower care delivery with modern tools—from telehealth platforms to mobile health apps—engineered to enhance engagement, accessibility, and continuity of care.",
+		desc: "Empower care delivery with modern tools from telehealth platforms to mobile health apps engineered to enhance engagement, accessibility, and continuity of care.",
 		image: imgIII,
 	},
 	{
@@ -93,7 +93,5 @@ const devProcessData = [
 		desc: "Providing smooth deployment and ongoing support for optimal performance.",
 	},
 ];
-
-
 
 export { addressSectionData, keyFeaturesData, devProcessData };

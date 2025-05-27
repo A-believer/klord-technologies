@@ -29,19 +29,27 @@ const JobForm = () => {
 			setSubmitting(false);
 			return;
 		}
-		// Map FormData to object
-		let data = {};
-		formData.forEach((value, key) => {
-			data[key] = value;
-		});
+		formData.append("job", job.title); // add job title to FormData
+		try {
+			 const res = await fetch("http://localhost:3000/api/job-application", {
+					method: "POST",
+					body: formData, // send FormData directly
+				});
 
-		data = { ...data, job: job.title };
-		console.log(data); // This is now a plain object
-		// Simulate submission (replace with real API call)
-		setTimeout(() => {
+				if (!res.ok) {
+					const errorText = await res.text(); // catch HTML error
+					throw new Error(`Server responded with error: ${errorText}`);
+				}
+
+				const result = await res.json();
+				if (result.success) alert("Submitted!");
 			setSubmitting(false);
 			setSubmitted(true);
-		}, 3000);
+		} catch (error) {
+			console.error(error);
+			setError("Submission failed.");
+			setSubmitting(false);
+		}
 	};
 
 	if (!job) return <div className='p-8'>Job not found.</div>;
@@ -122,7 +130,8 @@ const JobForm = () => {
 				<button
 					type='submit'
 					className='bg-[#01588E] text-white py-3 rounded-[55px] font-semibold hover:bg-[#01588E]/[0.8] duration-500 transition-all disabled:opacity-60 w-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] cursor-pointer'
-					disabled={submitting}>
+					// disabled={submitting}
+				>
 					{submitting ? "Submitting..." : "Submit Application"}
 				</button>
 				{error && <div className='md:col-span-2 text-red-500'>{error}</div>}

@@ -32,7 +32,7 @@ const testimonials = [
 		name: "Jacob Jones",
 		position: "Head of IT, EduConnect Solutions",
 		quote:
-			"We needed a secure video platform that felt like ours—UrCalls gave us full control and seamless integration.",
+			"We needed a secure video platform that felt like ours UrCalls gave us full control and seamless integration.",
 		image: jacob,
 	},
 	{

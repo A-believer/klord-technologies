@@ -39,17 +39,17 @@ const products = [
 			{
 				icon: icon1,
 				title: "HD Audio & Video Quality",
-				desc: "Deliver meetings with crystal-clear sound and high-definition visuals—every time.",
+				desc: "Deliver meetings with crystal-clear sound and high-definition visuals every time.",
 			},
 			{
 				icon: icon2,
 				title: "Real-Time Screen Sharing & Whiteboard",
-				desc: "Collaborate live with screen presentations and interactive whiteboarding—ideal for demos, workshops, and brainstorming.",
+				desc: "Collaborate live with screen presentations and interactive whiteboarding ideal for demos, workshops, and brainstorming.",
 			},
 			{
 				icon: icon3,
 				title: "Session Recording & Playback",
-				desc: "Record your meetings for compliance, training, or archival—easy to access and share.",
+				desc: "Record your meetings for compliance, training, or archival easy to access and share.",
 			},
 			{
 				icon: icon4,
@@ -64,7 +64,7 @@ const products = [
 			{
 				icon: icon6,
 				title: "Cross-Platform Livestreaming",
-				desc: "Go live on YouTube, Facebook, and more—simultaneously—with just one click.",
+				desc: "Go live on YouTube, Facebook, and more simultaneously with just one click.",
 			},
 			{
 				icon: icon7,
@@ -74,7 +74,7 @@ const products = [
 			{
 				icon: icon8,
 				title: "Flexible Pricing with a Free Plan",
-				desc: "Affordable for startups, scalable for enterprises—start with our feature-rich free plan and upgrade as you grow.",
+				desc: "Affordable for startups, scalable for enterprises start with our feature-rich free plan and upgrade as you grow.",
 			},
 		],
 		highlight:
@@ -120,7 +120,7 @@ const products = [
 		name: "Sharework Flow",
 		header: "Modular ERP for Agile, Growing Businesses",
 		imgSection: <ShareworkflowImg />,
-		desc: "Sharework Flow is an all-in-one, flexible ERP solution packed with everything you need to run and grow your business. From HR to accounting, CRM to project management—Sharework helps unify your operations under one intelligent system.",
+		desc: "Sharework Flow is an all-in-one, flexible ERP solution packed with everything you need to run and grow your business. From HR to accounting, CRM to project management Sharework helps unify your operations under one intelligent system.",
 		cardContent: [
 			{
 				icon: icon13,

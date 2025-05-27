@@ -18,7 +18,7 @@ const Portfolio = () => {
 				headerWidth='max-w-[1123px] w-full'
 				header='Real-World Solutions for Businesses, Healthcare, and Public Institutions'
 				paragraphWidth='max-w-[885px] w-full'
-				paragraph='K-Lord Technologies designs and implements innovative digital solutions that make a real difference. Our portfolio spans video conferencing, patient referral systems, and agile ERP solutions—each tailored to the unique challenges of our clients. Here’s how we’ve helped organizations drive growth, enhance service delivery, and achieve impactful results.'
+				paragraph='K-Lord Technologies designs and implements innovative digital solutions that make a real difference. Our portfolio spans video conferencing, patient referral systems, and agile ERP solutions each tailored to the unique challenges of our clients. Here’s how we’ve helped organizations drive growth, enhance service delivery, and achieve impactful results.'
 				bgSrc={bgSrc}
 			/>
 			<PortfolioView />
@@ -26,7 +26,7 @@ const Portfolio = () => {
 				data={whyChooseKlordData}
 				desc={
 					<p className='text-lg/8 font-medium font-inter max-w-[922px]'>
-						At K-Lord Technologies, we don’t just deliver software—we build
+						At K-Lord Technologies, we don’t just deliver software we build
 						solutions that help organizations thrive. Our products are designed
 						to{" "}
 						<b className='text-[#FF5F0F]'>
@@ -37,7 +37,7 @@ const Portfolio = () => {
 					</p>
 				}
 			/>
-			<PortfolioCTA/>
+			<PortfolioCTA />
 		</>
 	);
 };

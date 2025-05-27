@@ -6,7 +6,7 @@ const metricsData = [
 		title: "Users",
 		num: "100000",
 		sign: "+",
-		des: "We’ve successfully completed over 250 projects—and we’re just getting started!",
+		des: "We’ve successfully completed over 250 projects and we’re just getting started!",
 	},
 	{
 		title: "Business Growth",
