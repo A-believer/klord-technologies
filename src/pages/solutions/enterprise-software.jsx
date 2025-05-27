@@ -45,7 +45,7 @@ const what_we_deliver = [
 	{
 		id: 1,
 		header: "Custom Enterprise Software",
-		desc: "Fully tailored platforms aligned with your operations—built to integrate smoothly with your current tools and evolve as your business grows.",
+		desc: "Fully tailored platforms aligned with your operations built to integrate smoothly with your current tools and evolve as your business grows.",
 		img: imgI,
 	},
 	{
@@ -69,7 +69,7 @@ const what_we_deliver = [
 	{
 		id: 5,
 		header: "Cloud-Native Scalability ",
-		desc: "Our architecture supports global expansion, heavy workloads, and rapid growth—without compromising performance or security. ",
+		desc: "Our architecture supports global expansion, heavy workloads, and rapid growth without compromising performance or security. ",
 		img: imgV,
 	},
 ];
@@ -106,7 +106,7 @@ const testimonials = [
 		name: "Goodwood Inc.",
 		position: "COO, Goodwood Inc.",
 		quote:
-			"The software K-Lord delivered became the backbone of our operations. HR, finance, and project teams now collaborate inside one intuitive system—no extra training, no extra tools.",
+			"The software K-Lord delivered became the backbone of our operations. HR, finance, and project teams now collaborate inside one intuitive system no extra training, no extra tools.",
 		image: ramana,
 	},
 	{

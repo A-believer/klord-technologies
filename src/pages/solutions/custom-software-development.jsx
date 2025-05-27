@@ -37,7 +37,7 @@ const key_features = [
 	{
 		id: 1,
 		header: "Tailored to Your Business",
-		desc: "Every feature is designed to fit your unique operational needs—from automating approvals and digitizing workflows to building complex integrations.",
+		desc: "Every feature is designed to fit your unique operational needs from automating approvals and digitizing workflows to building complex integrations.",
 		img: imgI,
 	},
 	{
@@ -126,7 +126,7 @@ const whyChooseData = [
 	{
 		id: 1,
 		title: "Healthcare",
-		desc: "We develop HIPAA-compliant platforms for patient management, referral tracking, and telehealth—streamlining care delivery and reporting.",
+		desc: "We develop HIPAA-compliant platforms for patient management, referral tracking, and telehealth streamlining care delivery and reporting.",
 		image: imgVII,
 	},
 	{
@@ -167,7 +167,7 @@ const CustomSoftwareDevelopment = () => {
 				headerWidth='max-w-[1192px] w-full'
 				header='Custom Software Solutions Built Around Your Business'
 				paragraphWidth='max-w-[773px] w-full'
-				paragraph='At K-Lord Technologies, we design and engineer software that matches your workflows—not the other way around. From powerful backend systems to sleek, intuitive interfaces, our custom software solutions drive efficiency, innovation, and competitive advantage.'
+				paragraph='At K-Lord Technologies, we design and engineer software that matches your workflows not the other way around. From powerful backend systems to sleek, intuitive interfaces, our custom software solutions drive efficiency, innovation, and competitive advantage.'
 				bgSrc={bgSrc}
 				ctaTextI='Start Your Project Today'
 				ctaTextII='See Our Work'

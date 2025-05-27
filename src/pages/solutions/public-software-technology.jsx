@@ -27,7 +27,7 @@ const c_s_data = {
 	},
 	solutions: {
 		paragraph:
-			"We deliver digital solutions designed for the public sector’s real-world needs—secure, compliant, and user-friendly. From digital permits to social service automation, we modernize operations without disrupting your mission.",
+			"We deliver digital solutions designed for the public sector’s real-world needs secure, compliant, and user-friendly. From digital permits to social service automation, we modernize operations without disrupting your mission.",
 	},
 };
 
@@ -41,7 +41,7 @@ const smart_solution = [
 	{
 		id: 2,
 		header: "Education Systems & Campus Portals ",
-		desc: "Build platforms for student information systems, faculty management, virtual learning, and online enrollment—engineered for ease of use across districts and campuses. ",
+		desc: "Build platforms for student information systems, faculty management, virtual learning, and online enrollment engineered for ease of use across districts and campuses. ",
 		img: imgII,
 	},
 	{
@@ -81,32 +81,31 @@ const testimonials = [
 	},
 ];
 const whyChooseData = [
-  {
-    id: 1,
-    title: "Proven Public Sector Expertise",
-    desc: "We've partnered with government agencies, educational institutions, and healthcare providers. Our solutions are built to address their unique challenges and compliance requirements.",
-    image: imgVI
-  },
-  {
-    id: 2,
-    title: "Customized Workflows",
-    desc: "Our software reflects your real-world processes, including tailored permissions and approval flows; no template-built solutions here.",
-    image: imgVII
-  },
-  {
-    id: 3,
-    title: "Ongoing Support You Can Rely On", 
-    desc: "We offer training, maintenance, and continuous improvements after deployment to help your systems evolve with your mission.",
-    image: imgVIII
-  },
-  {
-    id: 4,
-    title: "Accessible and Compliant",
-    desc: "We design to meet accessibility standards like WCAG and Section 508, while ensuring HIPAA and FOIA compliance, delivering reliable experiences for all users.",
-    image: imgIX
-  }
+	{
+		id: 1,
+		title: "Proven Public Sector Expertise",
+		desc: "We've partnered with government agencies, educational institutions, and healthcare providers. Our solutions are built to address their unique challenges and compliance requirements.",
+		image: imgVI,
+	},
+	{
+		id: 2,
+		title: "Customized Workflows",
+		desc: "Our software reflects your real-world processes, including tailored permissions and approval flows; no template-built solutions here.",
+		image: imgVII,
+	},
+	{
+		id: 3,
+		title: "Ongoing Support You Can Rely On",
+		desc: "We offer training, maintenance, and continuous improvements after deployment to help your systems evolve with your mission.",
+		image: imgVIII,
+	},
+	{
+		id: 4,
+		title: "Accessible and Compliant",
+		desc: "We design to meet accessibility standards like WCAG and Section 508, while ensuring HIPAA and FOIA compliance, delivering reliable experiences for all users.",
+		image: imgIX,
+	},
 ];
-
 
 const PublicSoftwareTechnology = () => {
 	return (
@@ -120,7 +119,7 @@ const PublicSoftwareTechnology = () => {
 				headerWidth='max-w-[1192px] w-full'
 				header='Digital Transformation for Government, Education, Healthcare & Nonprofits'
 				paragraphWidth='max-w-[773px] w-full'
-				paragraph='K-Lord Technologies delivers innovative, compliance-ready solutions for public sector organizations. Our platforms are built to modernize workflows, enhance citizen engagement, and support service delivery—securely and at scale.'
+				paragraph='K-Lord Technologies delivers innovative, compliance-ready solutions for public sector organizations. Our platforms are built to modernize workflows, enhance citizen engagement, and support service delivery securely and at scale.'
 				bgSrc={bgSrc}
 				ctaTextI='Modernize Your Operations'
 				ctaTextII='See Our Work'
@@ -138,7 +137,7 @@ const PublicSoftwareTechnology = () => {
 				header={"We Build With Standards That Matter"}
 				data={whyChooseData}
 			/>
-			<WhyChooseKlord/>
+			<WhyChooseKlord />
 			<Testimonials testimonials={testimonials} />
 			<Cta
 				header='Ready to Serve Better with Smarter Tools?'
