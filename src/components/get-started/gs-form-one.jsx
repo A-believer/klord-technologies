@@ -1,7 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import InputComp from "../../common/input-comp";
 import { GetStartedContext } from "../../pages/get-started";
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef, useState, useEffect } from "react";
 
 const GsFormOne = () => {
 	const {
@@ -21,6 +21,17 @@ const GsFormOne = () => {
 		phone_number: "",
 	});
 	const [isFormValid, setIsFormValid] = useState(false);
+
+	// Initialize form with existing data
+	useEffect(() => {
+		if (formRef.current) {
+			formRef.current.first_name.value = data.first_name || "";
+			formRef.current.last_name.value = data.last_name || "";
+			formRef.current.job_title.value = data.job_title || "";
+			formRef.current.email.value = data.email || "";
+			formRef.current.phone_number.value = data.phone_number || "";
+		}
+	}, [data]);
 
 	// Form validation function
 	const validateForm = () => {
@@ -51,20 +62,20 @@ const GsFormOne = () => {
 		}
 
 		// Validate phone number
-		const phoneRegex = /^\d{11}$/;
-		if (!form.phone_number.value.trim()) {
-			errors.phone_number = "Phone number is required";
-		} else if (!phoneRegex.test(form.phone_number.value.trim())) {
-			errors.phone_number = "Please enter a valid phone number: +1 (555) 000-0000";
-		}
+		// const phoneRegex = /^\d{11}$/;
+		// if (!form.phone_number.value.trim()) {
+		// 	errors.phone_number = "Phone number is required";
+		// } else if (!phoneRegex.test(form.phone_number.value.trim())) {
+		// 	errors.phone_number = "Please enter a valid phone number: +1 (555) 000-0000";
+		// }
 
 		setFormErrors(errors);
 		return Object.keys(errors).length === 0;
 	};
 
 	const handleNext = () => {
-        if (validateForm()) {
-            setIsFormValid(true);
+		if (validateForm()) {
+			setIsFormValid(true);
 			// Update the context data with form values
 			const form = formRef.current;
 			const updatedData = {
@@ -75,18 +86,36 @@ const GsFormOne = () => {
 				email: form.email.value.trim(),
 				phone_number: form.phone_number.value.trim(),
 			};
-			
+
+			// Update the data state first
 			setData(updatedData);
+
+			// Mark level as completed
 			toggleCurrentLevelCompletion();
 
-			const nextLevel = levels.find(
-				(level) => level.id === currentLevel + 1
-			);
+			// Then proceed to next level
+			const nextLevel = levels.find((level) => level.id === currentLevel + 1);
 			if (nextLevel) {
 				setCurrentLevel(nextLevel.id);
 			}
 		}
 	};
+
+	// Also mark as completed when form is valid on mount
+	useEffect(() => {
+		if (formRef.current) {
+			const form = formRef.current;
+			if (
+				form.first_name.value.trim() &&
+				form.last_name.value.trim() &&
+				form.job_title.value.trim() &&
+				form.email.value.trim() &&
+				form.phone_number.value.trim()
+			) {
+				toggleCurrentLevelCompletion();
+			}
+		}
+	}, []);
 
 	return (
 		<form ref={formRef} className='space-y-6 font-inter'>
@@ -122,7 +151,7 @@ const GsFormOne = () => {
 			/>
 
 			<div className='flex flex-col gap-y-[6px] text-xs/5 w-full'>
-				<label htmlFor="phone_number" className='font-medium text-[#344054]'>
+				<label htmlFor='phone_number' className='font-medium text-[#344054]'>
 					Phone number <span className='text-red-500'>*</span>
 				</label>
 				<div className='relative h-11 overflow-hidden'>
@@ -143,8 +172,8 @@ const GsFormOne = () => {
 					<p className='text-red-500 text-xs'>{formErrors.phone_number}</p>
 				)}
 			</div>
-            <button
-                disabled={isFormValid}
+			<button
+				disabled={isFormValid}
 				type='button'
 				onClick={handleNext}
 				className='bg-[#01588E] text-white py-3 w-full rounded-[55px] text-base/6 font-medium cursor-pointer'>

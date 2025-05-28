@@ -31,7 +31,7 @@ const GetStartedSuccess = () => {
 
 	useEffect(() => {
 		setTimeout(() => {
-			navigate(-1);
+			navigate("/");
 		}, 2000);
 	}, [navigate]);
 

@@ -1,4 +1,4 @@
-import { useRef, useContext, useState } from "react";
+import { useRef, useContext, useState, useEffect } from "react";
 import InputComp from "../../common/input-comp";
 import { GetStartedContext } from "../../pages/get-started";
 
@@ -20,6 +20,23 @@ const GsFormThree = () => {
 	const [isFormValid, setIsFormValid] = useState(false);
 	const [showOtherInput, setShowOtherInput] = useState(false);
 
+	// Initialize form with existing data
+	useEffect(() => {
+		if (formRef.current) {
+			formRef.current.help_needed.value = data.help_needed || "";
+			formRef.current.project_description.value =
+				data.project_description || "";
+			formRef.current.project_timeline.value = data.project_timeline || "";
+			formRef.current.estimated_budget.value = data.estimated_budget || "";
+
+			// Handle other help needed input
+			if (data.help_needed === "Other") {
+				setShowOtherInput(true);
+				formRef.current.other_help_needed.value = data.other_help_needed || "";
+			}
+		}
+	}, [data]);
+
 	// Form validation function
 	const validateForm = () => {
 		const errors = {};
@@ -31,7 +48,10 @@ const GsFormThree = () => {
 		}
 
 		// If "Other" is selected, validate the other input
-		if (form.help_needed.value === "Other" && !form.other_help_needed.value.trim()) {
+		if (
+			form.help_needed.value === "Other" &&
+			!form.other_help_needed.value.trim()
+		) {
 			errors.other_help_needed = "Please specify what you need help with";
 		}
 
@@ -61,23 +81,44 @@ const GsFormThree = () => {
 			const updatedData = {
 				...data,
 				help_needed: form.help_needed.value,
-				other_help_needed: form.help_needed.value === "Other" ? form.other_help_needed.value.trim() : "",
+				other_help_needed:
+					form.help_needed.value === "Other"
+						? form.other_help_needed.value.trim()
+						: "",
 				project_description: form.project_description.value.trim(),
 				project_timeline: form.project_timeline.value,
 				estimated_budget: form.estimated_budget.value.trim(),
 			};
 
+			// Update the data state first
 			setData(updatedData);
+
+			// Mark level as completed
 			toggleCurrentLevelCompletion();
 
-			const nextLevel = levels.find(
-				(level) => level.id === currentLevel + 1
-			);
+			// Then proceed to next level
+			const nextLevel = levels.find((level) => level.id === currentLevel + 1);
 			if (nextLevel) {
 				setCurrentLevel(nextLevel.id);
 			}
 		}
 	};
+
+	// Also mark as completed when form is valid on mount
+	useEffect(() => {
+		if (formRef.current) {
+			const form = formRef.current;
+			if (
+				form.help_needed.value &&
+				form.project_description.value.trim() &&
+				form.project_timeline.value &&
+				(!form.help_needed.value === "Other" ||
+					form.other_help_needed.value.trim())
+			) {
+				toggleCurrentLevelCompletion();
+			}
+		}
+	}, []);
 
 	return (
 		<form ref={formRef} className='space-y-6 font-inter'>
@@ -95,9 +136,15 @@ const GsFormThree = () => {
 						<option value='' disabled selected>
 							select industry
 						</option>
-						<option value='Custom Software Development'>Custom Software Development</option>
-						<option value='Commercial Off-the-Shelf (COTS) Solution'>Commercial Off-the-Shelf (COTS) Solution</option>
-						<option value='SaaS Product Design & Launch'>SaaS Product Design & Launch</option>
+						<option value='Custom Software Development'>
+							Custom Software Development
+						</option>
+						<option value='Commercial Off-the-Shelf (COTS) Solution'>
+							Commercial Off-the-Shelf (COTS) Solution
+						</option>
+						<option value='SaaS Product Design & Launch'>
+							SaaS Product Design & Launch
+						</option>
 						<option value='Healthcare Solution'>Healthcare Solution</option>
 						<option value='Enterprise Software'>Enterprise Software</option>
 						<option value='Other'>Other</option>
@@ -137,8 +184,11 @@ const GsFormThree = () => {
 
 			{/* Project Description Textarea */}
 			<div className='flex flex-col gap-y-[6px] text-xs/5 w-full'>
-				<label htmlFor='project_description' className='font-medium text-[#344054]'>
-					Tell us briefly about your project or goal <span className='text-red-500'>*</span>
+				<label
+					htmlFor='project_description'
+					className='font-medium text-[#344054]'>
+					Tell us briefly about your project or goal{" "}
+					<span className='text-red-500'>*</span>
 				</label>
 				<textarea
 					className='border border-[#D0D5DD] rounded-[8px] px-3.5 py-2.5 w-full min-h-[100px]'
@@ -147,13 +197,17 @@ const GsFormThree = () => {
 					placeholder='share your project idea...'
 				/>
 				{formErrors.project_description && (
-					<p className='text-red-500 text-xs'>{formErrors.project_description}</p>
+					<p className='text-red-500 text-xs'>
+						{formErrors.project_description}
+					</p>
 				)}
 			</div>
 
 			{/* Project Timeline Dropdown */}
 			<div className='flex flex-col gap-y-[6px] text-xs/5 w-full'>
-				<label htmlFor='project_timeline' className='font-medium text-[#344054]'>
+				<label
+					htmlFor='project_timeline'
+					className='font-medium text-[#344054]'>
 					Project Timeline <span className='text-red-500'>*</span>
 				</label>
 				<div className='relative'>

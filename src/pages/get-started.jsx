@@ -37,17 +37,11 @@ const GetStarted = () => {
 		setLevels((prevLevels) => {
 			return prevLevels.map((level) => {
 				if (level.id === currentLevel) {
-					return { ...level, isCompleted: !level.isCompleted };
+					return { ...level, isCompleted: true };
 				}
 				return level;
 			});
 		});
-	};
-
-	// Update setCurrentLevel to also set direction
-	const handleLevelChange = (newLevel) => {
-		setDirection(newLevel > currentLevel ? 1 : -1);
-		setCurrentLevel(newLevel);
 	};
 
 	// Animation variants
@@ -85,7 +79,7 @@ const GetStarted = () => {
 					data,
 					setData,
 					currentLevel,
-					setCurrentLevel: handleLevelChange,
+					setCurrentLevel,
 					levels,
 					setLevels,
 					toggleCurrentLevelCompletion,
