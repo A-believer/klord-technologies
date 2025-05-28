@@ -9,6 +9,8 @@ const LiveChat = () => {
 	const [showLiveChat, setShowLiveChat] = useState(false);
 	const [showCustomQuestion, setShowCustomQuestion] = useState(false);
 	const [formErrors, setFormErrors] = useState({});
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	let PORT = import.meta.env.PORT || "http://localhost:3000";
 
 	const formRef = useRef(null);
 	const customQuestionRef = useRef(null);
@@ -64,38 +66,68 @@ const LiveChat = () => {
 	};
 
 	// Form submission handler
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
+		setIsSubmitting(true);
 
 		if (validateForm()) {
 			const form = new FormData(formRef.current);
 			let formData = {};
-			
+
 			// Convert FormData to a regular object
 			for (let [key, value] of form.entries()) {
-				formData[key] = value;
+				// Skip prompt-* keys as we'll handle them separately
+				if (!key.startsWith("prompt-")) {
+					formData[key] = value;
+				}
 			}
-			
+
 			// Extract selected prompts
 			const selectedPrompts = quickPrompts
 				.filter((prompt) => formRef.current[`prompt-${prompt.id}`]?.checked)
 				.map((prompt) => prompt.label);
-			
+
 			// Add selected prompts to formData
 			formData.selectedPrompts = selectedPrompts;
-			
-			console.log("Form submitted:", formData);
-			
-			// Reset form
-			formRef.current.reset();
-			setShowCustomQuestion(false);
-			setFormErrors({});
-			
-			// Show success message and close chat
-			toast.success(
-				"Thank you for your message. We'll get back to you shortly!"
-			);
-			setShowLiveChat(false);
+
+			try {
+				const response = await fetch(`${PORT}/api/live-chat`, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(formData),
+				});
+				console.log(formData);
+
+				if (!response.ok) {
+					throw new Error(`Server responded with error: ${response.status}`);
+				}
+
+				const result = await response.json();
+
+				if (result.success) {
+					// Reset form
+					formRef.current.reset();
+					setShowCustomQuestion(false);
+					setFormErrors({});
+
+					// Show success message and close chat
+					toast.success(
+						"Thank you for your message. We'll get back to you shortly!"
+					);
+					setShowLiveChat(false);
+				} else {
+					throw new Error(result.message || "Failed to submit form");
+				}
+			} catch (error) {
+				console.error("Error submitting form:", error);
+				toast.error("Failed to submit your message. Please try again.");
+			} finally {
+				setIsSubmitting(false);
+			}
+		} else {
+			setIsSubmitting(false);
 		}
 	};
 
@@ -220,8 +252,32 @@ const LiveChat = () => {
 							</div>
 							<button
 								type='submit'
-								className='bg-[#01588E] rounded-[55px] text-white py-3 text-center w-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]'>
-								Submit Message
+								disabled={isSubmitting}
+								className='bg-[#01588E] rounded-[55px] text-white py-3 text-center w-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] disabled:opacity-50 disabled:cursor-not-allowed'>
+								{isSubmitting ? (
+									<>
+										<svg
+											className='animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block'
+											xmlns='http://www.w3.org/2000/svg'
+											fill='none'
+											viewBox='0 0 24 24'>
+											<circle
+												className='opacity-25'
+												cx='12'
+												cy='12'
+												r='10'
+												stroke='currentColor'
+												strokeWidth='4'></circle>
+											<path
+												className='opacity-75'
+												fill='currentColor'
+												d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'></path>
+										</svg>
+										Submitting...
+									</>
+								) : (
+									"Submit Message"
+								)}
 							</button>
 						</form>
 					</motion.div>

@@ -1,0 +1,19 @@
+{
+    "deploy": {
+        "files": [
+            "dist/**",
+            ".htaccess"
+        ],
+        "ignore": [
+            "node_modules/**",
+            "src/**",
+            ".git/**",
+            "*.md",
+            "*.json",
+            "*.js",
+            "*.config.js",
+            "*.config.ts",
+            "*.lock"
+        ]
+    }
+}

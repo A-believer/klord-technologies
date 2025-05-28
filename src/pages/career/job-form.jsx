@@ -11,7 +11,7 @@ const JobForm = () => {
 	const [submitting, setSubmitting] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
 	const [error, setError] = useState("");
-	let PORT = process.env.PORT || "http://localhost:3000/";
+	let PORT = import.meta.env.PORT || "http://localhost:3000";
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -32,18 +32,18 @@ const JobForm = () => {
 		}
 		formData.append("job", job.title); // add job title to FormData
 		try {
-			 const res = await fetch(`${PORT}api/job-application`, {
-					method: "POST",
-					body: formData, // send FormData directly
-				});
+			const res = await fetch(`${PORT}/api/job-application`, {
+				method: "POST",
+				body: formData, // send FormData directly
+			});
 
-				if (!res.ok) {
-					const errorText = await res.text(); // catch HTML error
-					throw new Error(`Server responded with error: ${errorText}`);
-				}
+			if (!res.ok) {
+				const errorText = await res.text(); // catch HTML error
+				throw new Error(`Server responded with error: ${errorText}`);
+			}
 
-				const result = await res.json();
-				if (result.success) alert("Submitted!");
+			const result = await res.json();
+			if (result.success) alert("Submitted!");
 			setSubmitting(false);
 			setSubmitted(true);
 		} catch (error) {

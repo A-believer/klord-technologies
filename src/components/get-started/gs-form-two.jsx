@@ -1,4 +1,4 @@
-import { useRef, useContext, useState } from "react";
+import { useRef, useContext, useState, useEffect } from "react";
 import InputComp from "../../common/input-comp";
 import { GetStartedContext } from "../../pages/get-started";
 
@@ -18,6 +18,25 @@ const GsFormTwo = () => {
 		team_size: "",
 	});
 	const [isFormValid, setIsFormValid] = useState(false);
+
+	// Initialize form with existing data
+	useEffect(() => {
+		if (formRef.current) {
+			formRef.current.company_name.value = data.company_name || "";
+			formRef.current.website_url.value = data.website_url || "";
+			formRef.current.industry.value = data.industry || "";
+
+			// Set the radio button
+			if (data.team_size) {
+				const radioButton = formRef.current.querySelector(
+					`input[name="team_size"][value="${data.team_size}"]`
+				);
+				if (radioButton) {
+					radioButton.checked = true;
+				}
+			}
+		}
+	}, [data]);
 
 	// Team size options array
 	const teamSizeOptions = [
@@ -69,17 +88,33 @@ const GsFormTwo = () => {
 					form.querySelector('input[name="team_size"]:checked')?.value || "",
 			};
 
+			// Update the data state first
 			setData(updatedData);
+
+			// Mark level as completed
 			toggleCurrentLevelCompletion();
 
-			const nextLevel = levels.find(
-				(level) => level.id === currentLevel + 1
-			);
+			// Then proceed to next level
+			const nextLevel = levels.find((level) => level.id === currentLevel + 1);
 			if (nextLevel) {
-				setCurrentLevel(nextLevel.id );
+				setCurrentLevel(nextLevel.id);
 			}
 		}
 	};
+
+	// Also mark as completed when form is valid on mount
+	useEffect(() => {
+		if (formRef.current) {
+			const form = formRef.current;
+			if (
+				form.company_name.value.trim() &&
+				form.industry.value &&
+				form.querySelector('input[name="team_size"]:checked')
+			) {
+				toggleCurrentLevelCompletion();
+			}
+		}
+	}, []);
 
 	return (
 		<form ref={formRef} className='space-y-6 font-inter'>
@@ -169,7 +204,7 @@ const GsFormTwo = () => {
 			<div className='flex md:flex-row flex-col w-full gap-4'>
 				<button
 					type='button'
-					onClick={() => setCurrentLevel("Personal Info")}
+					onClick={() => setCurrentLevel(1)}
 					className='text-[#01588E] border border-[#01588E]] bg-white py-3 w-full rounded-[55px] text-base/6 font-medium cursor-pointer'>
 					Back
 				</button>
