@@ -57,7 +57,7 @@ const Navbar = () => {
 									<Link
 										to={navlink.path}
 										className={`
-											${pathname === navlink.path && "font-bold text-black"} hover:underline										`}>
+											${pathname === navlink.path && "font-bold text-black"} hover:underline			`}>
 										{navlink.title}
 									</Link>
 								</li>

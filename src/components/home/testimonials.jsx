@@ -28,9 +28,9 @@ const Testimonials = ({ testimonials }) => {
 				Straight From Our Clients
 			</h3>
 
-			<div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-4 gap-y-6  w-full '>
+			<div className='flex justify-center flex-wrap gap-x-4 gap-y-6  w-full '>
 				{testimonials.map((testimonial, idx) => (
-					<div key={idx} className='w-full space-y-5'>
+					<div key={idx} className='xl:w-[32.5%] lg:w-[32%] sm:w-[48.5%] w-full space-y-5'>
 						<div className='bg-[#1C1C1C] rounded-[30px] pl-3.5 pr-[25.35px] pt-[30px] pb-10 flex items-start gap-x-5 min-h-[138px]'>
 							<img
 								loading='lazy'
