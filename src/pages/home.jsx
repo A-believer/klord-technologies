@@ -60,7 +60,7 @@ const Home = () => {
 				content=''
 			/>
 			<Hero />
-			<Metrics />
+			{/* <Metrics /> */}
 			<WhatWeBuild />
 			<StandOut data={standOutData} />
 			<Testimonials testimonials={testimonials} />
