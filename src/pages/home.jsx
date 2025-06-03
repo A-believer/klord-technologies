@@ -60,12 +60,12 @@ const Home = () => {
 				content=''
 			/>
 			<Hero />
-			{/* <Metrics /> */}
 			<WhatWeBuild />
 			<StandOut data={standOutData} />
 			<Testimonials testimonials={testimonials} />
 			<Experience />
 			<Newsletter />
+			<Metrics />
 		</>
 	);
 };

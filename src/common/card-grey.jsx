@@ -11,8 +11,8 @@ const CardGrey = ({ header, data }) => {
 				{data.map((item) => (
 					<div
 						key={item.id}
-						className=' bg-[#FAFAFA] border border-[#F5F5F5] rounded-[10px] p-[22px] pt-[30px] xl:w-[31.6%] lg:w-[30.92%] sm:w-[47.5%] w-full'>
-						<h4 className='text-black text-2xl/8 font-semibold font-sora tracking-[-1.04px] '>
+						className=' bg-[#FAFAFA] border border-[#F5F5F5] rounded-[10px] p-[22px] pt-[30px] xl:w-[31.6%] lg:w-[30.92%] sm:w-[47.5%] w-full shadow-[0px_36px_36.4px_0px_rgba(0,0,0,0.05)]'>
+						<h4 className='text-black text-2xl/8 font-semibold font-sora tracking-[-1.04px]'>
 							{item.header}
 						</h4>
 						<p className='mt-3 mb-9 text-left'>{item.desc}</p>
