@@ -13,7 +13,6 @@ import icon4 from "../assets/imgs/icon-4.png";
 import icon5 from "../assets/imgs/icon-5.png";
 import icon6 from "../assets/imgs/icon-6.png";
 import icon7 from "../assets/imgs/icon-7.png";
-import icon8 from "../assets/imgs/icon-8.png";
 import icon9 from "../assets/imgs/icon-9.png";
 import icon10 from "../assets/imgs/icon-10.png";
 import icon11 from "../assets/imgs/icon-11.png";
