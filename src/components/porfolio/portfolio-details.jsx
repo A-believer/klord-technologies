@@ -20,26 +20,30 @@ const PortfolioDetails = ({ portfolio }) => {
 				<h4>{portfolio?.overview}</h4>
 			</div>
 			<div className='grid lg:grid-cols-2 grid-cols-1 gap-x-8'>
-				<div className=''>
-					<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
+				<div className='bg-[#1C1C1C] rounded-[26px] text-[#F5F7F9]/60 py-8 pl-8 pr-12'>
+					<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1 text-[#F5F7F9]'>
 						Challenge
 					</h4>
 					<p>{portfolio?.challenge}</p>
 				</div>
-				<div>
-					<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
+				<div className="bg-[#FF5F0F] rounded-[26px] text-[#F5F7F9]/60 py-8 pl-8 pr-12">
+					<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1 text-[#F5F7F9]'>
 						Solution
 					</h4>
 					<p>{portfolio?.solution}</p>
 				</div>
 			</div>
 
-			<div className='space-y-6'>
-				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
+			<div className='space-y-5'>
+				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-4'>
 					Key Features
 				</h4>
 				<div
-					className={`flex w-full flex-wrap justify-center xl:[&>*]:w-[31.6%] lg:[&>*]:w-[30.92%] sm:[&>*]:w-[47.5%] [&>*]:w-full gap-x-8 lg:gap-y-16 gap-y-8`}>
+					className={`flex w-full flex-wrap justify-center  ${
+						portfolio.name === "NexaLife Care"
+							? "lg:[&>*]:w-[23%] sm:[&>*]:w-[48%] [&>*]:w-full gap-x-8 lg:gap-y-16 gap-y-8"
+							: "xl:[&>*]:w-[31.6%] lg:[&>*]:w-[30.92%] sm:[&>*]:w-[47.5%] [&>*]:w-full gap-x-8 lg:gap-y-16 gap-y-8"
+					}`}>
 					{portfolio?.keyFeatures.map((card, idx) => (
 						<Card key={idx} content={card} />
 					))}
