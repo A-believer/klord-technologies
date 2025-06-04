@@ -38,31 +38,31 @@ const products = [
 		cardContent: [
 			{
 				icon: icon1,
-				desc: "FHD audio and video for clear, uninterrupted meetings.",
+				title: "FHD audio and video for clear, uninterrupted meetings.",
 			},
 			{
 				icon: icon2,
-				desc: "Interactive screen sharing and whiteboard tools.",
+				title: "Interactive screen sharing and whiteboard tools.",
 			},
 			{
 				icon: icon3,
-				desc: "Built-in polls and breakout rooms for engagement.",
+				title: "Built-in polls and breakout rooms for engagement.",
 			},
 			{
 				icon: icon4,
-				desc: "Session recording with on-demand playback.",
+				title: "Session recording with on-demand playback.",
 			},
 			{
 				icon: icon5,
-				desc: "Real-time in-call chat for seamless collaboration.",
+				title: "Real-time in-call chat for seamless collaboration.",
 			},
 			{
 				icon: icon6,
-				desc: "One-click livestreaming and webinar support.",
+				title: "One-click livestreaming and webinar support.",
 			},
 			{
 				icon: icon7,
-				desc: "Scalable plans, including a full-featured free tier.",
+				title: "Scalable plans, including a full-featured free tier.",
 			},
 		],
 		highlight:
@@ -79,31 +79,31 @@ const products = [
 		cardContent: [
 			{
 				icon: icon9,
-				desc: "End-to-end patient referral workflow automation",
+				title: "End-to-end patient referral workflow automation",
 			},
 			{
 				icon: icon10,
-				desc: "Smart scheduling with confirmations and follow-ups",
+				title: "Smart scheduling with confirmations and follow-ups",
 			},
 			{
 				icon: icon11,
-				desc: "Advocacy tools to reach high-need populations",
+				title: "Advocacy tools to reach high-need populations",
 			},
 			{
 				icon: icon12,
-				desc: "Patient-first and provider-friendly approach",
+				title: "Patient-first and provider-friendly approach",
 			},
 			{
 				icon: icon9,
-				desc: "Regulation compliance infrastructure",
+				title: "Regulation compliance infrastructure",
 			},
 			{
 				icon: icon10,
-				desc: "Real-time status tracking and feedback collection",
+				title: "Real-time status tracking and feedback collection",
 			},
 			{
 				icon: icon11,
-				desc: "Scalable for providers of any size or service model",
+				title: "Scalable for providers of any size or service model",
 			},
 		],
 		highlight:
@@ -120,27 +120,27 @@ const products = [
 		cardContent: [
 			{
 				icon: icon13,
-				desc: "Streamlined CRM to manage leads, clients, and pipelines.",
+				title: "Streamlined CRM to manage leads, clients, and pipelines.",
 			},
 			{
 				icon: icon14,
-				desc: "	Full-featured HR and payroll management.",
+				title: "	Full-featured HR and payroll management.",
 			},
 			{
 				icon: icon15,
-				desc: "	Easy-to-use accounting and financial reporting tools.",
+				title: "	Easy-to-use accounting and financial reporting tools.",
 			},
 			{
 				icon: icon16,
-				desc: "	Built-in task and project tracking with Kanban and Gantt views.",
+				title: "	Built-in task and project tracking with Kanban and Gantt views.",
 			},
 			{
 				icon: icon17,
-				desc: "	Inventory and procurement modules for real-time supply oversight.",
+				title: "	Inventory and procurement modules for real-time supply oversight.",
 			},
 			{
 				icon: icon18,
-				desc: "	Modular and API-ready so you scale only what you need.",
+				title: "	Modular and API-ready so you scale only what you need.",
 			},
 		],
 		highlight:
@@ -168,7 +168,7 @@ const standOutData = [
 	{
 		header: "Scalable & Secure",
 		des: "Our platforms are designed to grow with your organization, from startups to large enterprises. Security and compliance are built in from day one, keeping your data safe and your business running reliably. ",
-		image: scalable,
+		image: secure,
 	},
 ];
 
