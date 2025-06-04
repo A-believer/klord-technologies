@@ -2,7 +2,7 @@ import urcallsgif from "../../assets/lottiefiles/home-urcalls.json";
 import shareworkflowgif from "../../assets/lottiefiles/home-shareworkflow.json";
 import nexalifecaregif from "../../assets/lottiefiles/home-nexalifecare.json";
 import { Link } from "react-router";
-import { ChevronRight, Plus } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import Lottie from "lottie-react";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -101,9 +101,9 @@ const WhatWeBuild = () => {
 										<p className='text-[15px]/[22px] text-[#0f0f0f]/80 font-inter'>{sol.text}</p>
 									</div>
 								</div>
-								<div className='font-inter lg:text-xl/7 text-lg/6 tracking-[-0.6px] flex items-center justify-between bg-white rounded-[30px] py-7 px-5 hover:scale-[98%] transition-all duration-700 text-[#01588E] font-medium'>
-									<Link to={sol.link} className="hover:underline">Learn More</Link>
-									<Link to={sol.url} className="hover:underline">{sol.name === 'Custom Software Solutions' ? 'Get Started' : 'See in it Action'}</Link>
+								<div className='font-inter lg:text-xl/7 text-lg/6 tracking-[-0.6px] flex items-center justify-between bg-white rounded-[30px] py-7 px-5  text-[#01588E] font-medium'>
+									<Link to={sol.link} className="hover:underline flex items-center gap-x-2 hover:scale-[96%] transition-all duration-300">Learn More <ArrowRight/></Link>
+									<Link to={sol.url} className="hover:underline flex items-center gap-x-2 hover:scale-[96%] transition-all duration-300">{sol.name === 'Custom Software Solutions' ? 'Get Started' : 'See in it Action'} <ArrowRight/></Link>
 								</div>
 							</motion.div>
 						))}

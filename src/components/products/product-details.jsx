@@ -32,7 +32,7 @@ const ProductDetails = ({ product }) => {
 			</p>
 			<div className='flex items-center sm:justify-start sm:flex-row flex-col gap-x-5 gap-y-5'>
 				<Link
-					to='/get-started'
+					to={product.url}
 					className='bg-[#01588E] border border-[#01588E] rounded-[55px] lg:w-fit w-full py-2.5 px-[30px] text-white text-center shadow-[0px_1.344px_0.537px_-0.625px_rgba(0,0,0,0.09),0px_3.185px_1.274px_-1.25px_rgba(0,0,0,0.09),0px_5.809px_2.324px_-1.875px_rgba(0,0,0,0.08),0px_9.658px_3.863px_-2.5px_rgba(0,0,0,0.08),0px_15.597px_6.239px_-3.125px_rgba(0,0,0,0.07),0px_25.531px_10.212px_-3.75px_rgba(0,0,0,0.06),0px_43.962px_17.585px_-4.375px_rgba(0,0,0,0.04)] font-medium hover:bg-[#014c8e] transition-all duration-500 active:scale-[95%]'>
 					{product.ctaText}
 				</Link>
