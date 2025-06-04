@@ -5,7 +5,6 @@ import scalable from "../assets/imgs/scalable.png";
 import solutions from "../assets/imgs/solutions.png";
 import security from "../assets/imgs/security.png";
 import purpose from "../assets/imgs/purpose.png";
-import design from "../assets/imgs/design.png";
 import icon1 from "../assets/imgs/icon-1.png";
 import icon2 from "../assets/imgs/icon-2.png";
 import icon3 from "../assets/imgs/icon-3.png";
@@ -27,54 +26,43 @@ import icon18 from "../assets/imgs/icon-18.png";
 import UrcallsImg from "../components/products/urcalls-img";
 import NexalifecareImg from "../components/products/nexalifecare-img";
 import ShareworkflowImg from "../components/products/shareworkflow-img";
+	
 
 const products = [
 	{
 		id: 1,
 		name: "UrCalls",
-		header: "Professional Video Conferencing for Modern Teams",
+		header: "Connect Instantly, Anywhere",
 		imgSection: <UrcallsImg />,
-		desc: "UrCalls is a high-performance video conferencing solution designed for teams, educators, and providers who need reliability, control, and seamless collaboration.",
+		desc: "UrCalls is a secure, high-performance video conferencing platform built for modern teams in need of reliable communication and effortless collaboration. It brings structure and clarity to every meeting, from internal syncs to large-scale virtual events, without the technical headaches. Packed with powerful collaboration tools, UrCalls helps teams stay connected, aligned, and productive, all in one place.",
 		cardContent: [
 			{
 				icon: icon1,
-				title: "HD Audio & Video Quality",
-				desc: "Deliver meetings with crystal-clear sound and high-definition visuals every time.",
+				desc: "FHD audio and video for clear, uninterrupted meetings.",
 			},
 			{
 				icon: icon2,
-				title: "Real-Time Screen Sharing & Whiteboard",
-				desc: "Collaborate live with screen presentations and interactive whiteboarding ideal for demos, workshops, and brainstorming.",
+				desc: "Interactive screen sharing and whiteboard tools.",
 			},
 			{
 				icon: icon3,
-				title: "Session Recording & Playback",
-				desc: "Record your meetings for compliance, training, or archival easy to access and share.",
+				desc: "Built-in polls and breakout rooms for engagement.",
 			},
 			{
 				icon: icon4,
-				title: "Built-In Chat Functionality",
-				desc: "Communicate seamlessly during calls with in-session messaging and group discussions.",
+				desc: "Session recording with on-demand playback.",
 			},
 			{
 				icon: icon5,
-				title: "Workflow-Ready Productivity Tools",
-				desc: "Integrated features like meeting notes, action item tracking, and more to keep every session focused and productive.",
+				desc: "Real-time in-call chat for seamless collaboration.",
 			},
 			{
 				icon: icon6,
-				title: "Cross-Platform Livestreaming",
-				desc: "Go live on YouTube, Facebook, and more simultaneously with just one click.",
+				desc: "One-click livestreaming and webinar support.",
 			},
 			{
 				icon: icon7,
-				title: "Webinars & Large-Scale Events",
-				desc: "Host engaging webinars and online events with high attendee capacity and full presenter controls.",
-			},
-			{
-				icon: icon8,
-				title: "Flexible Pricing with a Free Plan",
-				desc: "Affordable for startups, scalable for enterprises start with our feature-rich free plan and upgrade as you grow.",
+				desc: "Scalable plans, including a full-featured free tier.",
 			},
 		],
 		highlight:
@@ -85,29 +73,37 @@ const products = [
 	{
 		id: 2,
 		name: "NexaLife Care",
-		header: "Smart Healthcare Referral & Clinic Management",
+		header: "Bridging the Healthcare Access Gap",
 		imgSection: <NexalifecareImg />,
-		desc: "NexaLife Care streamlines patient referral operations with a modular, HIPAA-compliant platform designed for patients, clinics, and other healthcare stakeholders.",
+		desc: "NexaLife Care is a purpose-built patient referral platform that helps healthcare providers connect with the people who need them most. Designed to serve underserved communities, it streamlines referral intake and care matching, making healthcare more accessible, and operations more scalable. Built for clinics, patients and provider networks, NexaLife Care automates the patient journey from referral to appointment, while ensuring compliance and coordination every step of the way.",
 		cardContent: [
 			{
 				icon: icon9,
-				title: "Patient Referral Workflow Automation",
-				desc: "Simplify intake, routing, and appointment tracking.",
+				desc: "End-to-end patient referral workflow automation",
 			},
 			{
 				icon: icon10,
-				title: "Scheduling Engine",
-				desc: "Book, confirm, and follow up all from one dashboard.",
+				desc: "Smart scheduling with confirmations and follow-ups",
 			},
 			{
 				icon: icon11,
-				title: "Compliance First Design",
-				desc: "Built to meet HIPAA, and other healthcare standards.",
+				desc: "Advocacy tools to reach high-need populations",
 			},
 			{
 				icon: icon12,
-				title: "Affiliate Advocacy and Referrals",
-				desc: "Wide networks of patient advocates with broad community reach.",
+				desc: "Patient-first and provider-friendly approach",
+			},
+			{
+				icon: icon9,
+				desc: "Regulation compliance infrastructure",
+			},
+			{
+				icon: icon10,
+				desc: "Real-time status tracking and feedback collection",
+			},
+			{
+				icon: icon11,
+				desc: "Scalable for providers of any size or service model",
 			},
 		],
 		highlight:
@@ -118,39 +114,33 @@ const products = [
 	{
 		id: 3,
 		name: "Sharework Flow",
-		header: "Modular ERP for Agile, Growing Businesses",
+		header: "Run Smarter. Scale Faster.",
 		imgSection: <ShareworkflowImg />,
-		desc: "Sharework Flow is an all-in-one, flexible ERP solution packed with everything you need to run and grow your business. From HR to accounting, CRM to project management Sharework helps unify your operations under one intelligent system.",
+		desc: "Sharework Flow is a modular, all-in-one ERP platform built for modern businesses that need to manage growth without the complexity. It brings your essential operations: HR, accounting, CRM, project management, and more, into one unified, intelligent system. Designed to streamline the way teams work, Sharework Flow simplifies daily operations, improves visibility, and removes the friction that slows businesses down. It's everything you need to run efficiently, with none of the bloat you don’t.",
 		cardContent: [
 			{
 				icon: icon13,
-				title: "Customer Relationship Management (CRM)",
-				desc: "Manage leads, deals, follow-ups, and client data with precision.",
+				desc: "Streamlined CRM to manage leads, clients, and pipelines.",
 			},
 			{
 				icon: icon14,
-				title: "Human Resources & Payroll",
-				desc: "Track attendance, onboard staff, and manage payroll easily.",
+				desc: "	Full-featured HR and payroll management.",
 			},
 			{
 				icon: icon15,
-				title: "Accounting & Financial Reporting",
-				desc: "Simplify bookkeeping, invoicing, and compliance reporting.",
+				desc: "	Easy-to-use accounting and financial reporting tools.",
 			},
 			{
 				icon: icon16,
-				title: "Project & Task Management",
-				desc: "Plan, assign, and track projects with built-in Kanban boards and Gantt charts.",
+				desc: "	Built-in task and project tracking with Kanban and Gantt views.",
 			},
 			{
 				icon: icon17,
-				title: "Inventory & Procurement Modules",
-				desc: "Stay on top of orders, vendors, and stock levels.",
+				desc: "	Inventory and procurement modules for real-time supply oversight.",
 			},
 			{
 				icon: icon18,
-				title: "API-Ready and Modular",
-				desc: "Pick only what you need; and scale as you grow.",
+				desc: "	Modular and API-ready so you scale only what you need.",
 			},
 		],
 		highlight:

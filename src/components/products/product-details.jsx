@@ -12,16 +12,21 @@ const ProductDetails = ({ product }) => {
 			<p className='md:my-[51px] my-7 text-lg/10 font-medium font-inter tracking-[-0.18px]'>
 				{product.desc}
 			</p>
+
+			<div className="space-y-[34px]">
+				<h4 className="font-inter text-4xl/normal font-semibold">Key Features</h4>
 			<div
 				className={`flex w-full flex-wrap justify-center  ${
 					product.name === "NexaLife Care"
-						? "lg:[&>*]:w-[24.5%] sm:[&>*]:w-[48%] [&>*]:w-full gap-x-8 lg:gap-y-16 gap-y-8"
+						? "lg:[&>*]:w-[23%] sm:[&>*]:w-[48%] [&>*]:w-full gap-x-8 lg:gap-y-16 gap-y-8"
 						: "xl:[&>*]:w-[31.6%] lg:[&>*]:w-[30.92%] sm:[&>*]:w-[47.5%] [&>*]:w-full gap-x-8 lg:gap-y-16 gap-y-8"
 				}`}>
 				{product.cardContent.map((card, idx) => (
 					<Card content={card} key={idx} />
 				))}
+			</div>	
 			</div>
+			
 			<p className='text-lg/10 font-bold font-inter tracking-[-0.18px]'>
 				{product.highlight}
 			</p>
