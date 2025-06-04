@@ -5,6 +5,7 @@ import scalable from "../assets/imgs/scalable.png";
 import solutions from "../assets/imgs/solutions.png";
 import security from "../assets/imgs/security.png";
 import purpose from "../assets/imgs/purpose.png";
+import secure from "../assets/imgs/home-secure.png";
 import icon1 from "../assets/imgs/icon-1.png";
 import icon2 from "../assets/imgs/icon-2.png";
 import icon3 from "../assets/imgs/icon-3.png";
@@ -181,7 +182,7 @@ const whyChooseData = [
 	{
 		header: "Compliance and Security by Design",
 		des: "Compliance with HIPAA, Section 508, SOC 2, and GDPR is integrated throughout our software. You can trust your operations stay protected and meet all necessary standards.",
-		image: scalable,
+		image: secure,
 	},
 	{
 		header: "Designed for Scale",
