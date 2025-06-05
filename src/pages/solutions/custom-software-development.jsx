@@ -1,22 +1,8 @@
 import Seo from "../../common/seo";
-import bgSrc from "../../assets/imgs/custom-software-bg.png";
 import HeroComp from "../../common/hero-comp";
 import ChallengeSolutions from "../../components/solutions/challenge-solutions";
-import imgI from "../../assets/imgs/cs-1.png";
-import imgII from "../../assets/imgs/cs-2.png";
-import imgIII from "../../assets/imgs/cs-3.png";
-import imgIV from "../../assets/imgs/cs-4.png";
-import imgV from "../../assets/imgs/cs-5.png";
-import imgVI from "../../assets/imgs/cs-6.png";
-import imgVII from "../../assets/imgs/cs-7.png";
-import imgVIII from "../../assets/imgs/cs-8.png";
-import imgIX from "../../assets/imgs/cs-9.png";
-import imgX from "../../assets/imgs/cs-10.png";
-import imgXI from "../../assets/imgs/cs-11.png";
 import CardGrey from "../../common/card-grey";
 import Cta from "../../components/solutions/cta";
-import goodwood from "../../assets/imgs/goodwood.png";
-import panisa from "../../assets/imgs/panisa.png";
 import Testimonials from "../../components/home/testimonials";
 import SlidingCards from "../../common/sliding-cards";
 import CardSwitch from "../../common/card-switch";
@@ -38,37 +24,37 @@ const key_features = [
 		id: 1,
 		header: "Tailored to Your Business",
 		desc: "Every feature is designed to fit your unique operational needs from automating approvals and digitizing workflows to building complex integrations.",
-		img: imgI,
+		img: "/imgs/cs-1.png",
 	},
 	{
 		id: 2,
 		header: "Scalable Architecture",
 		desc: "Future-proof your platform with modular, scalable builds that adapt to business growth, regulatory shifts, or user demand.",
-		img: imgII,
+		img: "/imgs/cs-2.png",
 	},
 	{
 		id: 3,
 		header: "Enterprise-Grade Security",
 		desc: "We follow best practices for encryption, access control, and regulatory compliance, including HIPAA, GDPR, and SOC 2 standards.",
-		img: imgIII,
+		img: "/imgs/cs-3.png",
 	},
 	{
 		id: 4,
 		header: "Smart Analytics & Reporting",
 		desc: "Get actionable insights with built-in analytics dashboards, real-time reporting, and visualized KPIs to make faster, better decisions.",
-		img: imgIV,
+		img: "/imgs/cs-4.png",
 	},
 	{
 		id: 5,
 		header: "Cross-Platform Performance",
 		desc: "Access anywhere, anytime. We build for web, mobile, tablet, and cross-device syncing, delivering seamless user experience on every screen.",
-		img: imgV,
+		img: "/imgs/cs-5.png",
 	},
 	{
 		id: 6,
 		header: "Full-Lifecycle Support",
 		desc: "From kickoff to post-launch optimization, we partner closely with you to ensure your solution performs flawlessly and grows with your needs.",
-		img: imgVI,
+		img: "/imgs/cs-6.png",
 	},
 ];
 
@@ -78,14 +64,14 @@ const testimonials = [
 		position: "Director, Tompsen Grace Clinic ",
 		quote:
 			"K-Lord Technologies built a secure appointment system that slashed our no-show rates by 30%. Seamless integration and intuitive UX made adoption a breeze.”",
-		image: panisa,
+		image: "/imgs/panisa.png",
 	},
 	{
 		name: "Goodwood Inc.",
 		position: "COO, Goodwood Inc. ",
 		quote:
 			"K-Lord gave us a centralized, cross-department solution that brought transparency and cohesion across teams. Outstanding collaboration and technical insight.",
-		image: goodwood,
+		image: "/imgs/goodwood.png",
 	},
 ];
 
@@ -127,31 +113,31 @@ const whyChooseData = [
 		id: 1,
 		title: "Healthcare",
 		desc: "We develop HIPAA-compliant platforms for patient management, referral tracking, and telehealth streamlining care delivery and reporting.",
-		image: imgVII,
+		image: "/imgs/cs-8.png",
 	},
 	{
 		id: 2,
 		title: "Enterprise",
 		desc: "Custom CRM systems, ERP modules, and internal collaboration platforms designed to automate processes and unify your operations.",
-		image: imgVIII,
+		image: "/imgs/cs-9.png",
 	},
 	{
 		id: 3,
 		title: "Public Sector & Nonprofits",
 		desc: "Robust, secure software that helps public institutions and mission-driven organizations digitize workflows and serve stakeholders efficiently.",
-		image: imgIX,
+		image: "/imgs/cs-10.png",
 	},
 	{
 		id: 4,
 		title: "E-commerce & Retail",
 		desc: "Inventory control, customer portals, secure payment flows, and personalized shopping experiences for modern buyers.",
-		image: imgX,
+		image: "/imgs/cs-11.png",
 	},
 	{
 		id: 5,
 		title: "Finance & Insurance",
 		desc: "Build secure, compliant platforms to manage financial transactions, client onboarding, and risk analysis.",
-		image: imgXI,
+		image: "/imgs/cs-12.png",
 	},
 ];
 
@@ -168,7 +154,7 @@ const CustomSoftwareDevelopment = () => {
 				header='Custom Software Solutions Built Around Your Business'
 				paragraphWidth='max-w-[773px] w-full'
 				paragraph='At K-Lord Technologies, we design and engineer software that matches your workflows not the other way around. From powerful backend systems to sleek, intuitive interfaces, our custom software solutions drive efficiency, innovation, and competitive advantage.'
-				bgSrc={bgSrc}
+				bgSrc="/imgs/custom-software-bg.png"
 				ctaTextI='Start Your Project Today'
 				ctaTextII='See Our Work'
 			/>

@@ -1,12 +1,11 @@
 import { Link } from "react-router";
 import { motion } from "framer-motion";
-import bgImg from "../../assets/imgs/career-hero.jpg";
 
 const Hero = () => {
 	return (
 		<section
 			style={{
-				background: `url(${bgImg})`,
+				background: `url(/imgs/career-hero.jpg)`,
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
 				backgroundPosition: "center",

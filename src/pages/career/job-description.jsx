@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router";
 import { jobData } from "../../lib/job-data";
-import { Building2, Clock, MapPin, MoveRight } from "lucide-react";
+import { Building2, Clock, MapPin } from "lucide-react";
 
 const JobDescription = () => {
 	const { id } = useParams();

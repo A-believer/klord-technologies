@@ -1,6 +1,5 @@
 import HeroComp from "../common/hero-comp";
 import Seo from "../common/seo";
-import bgSrc from "../assets/imgs/resources-bg.png";
 import SectionComp from "../components/resources/section-comp";
 import {
 	blogArticles,
@@ -23,7 +22,7 @@ const Resources = () => {
 				header='K-Lord Technologies Resources'
 				paragraphWidth='max-w-[773px] w-full'
 				paragraph='Welcome to the K-Lord Technologies resources hub, your go-to destination for valuable content designed to inform and inspire your digital transformation journey. From insightful whitepapers and detailed case studies to thought leadership articles and product documentation, we provide the knowledge and tools you need to leverage our innovative platforms for success.'
-				bgSrc={bgSrc}
+				bgSrc="/imgs/resources-bg.png"
 			/>
 			<SectionComp
 				headerText={" Whitepapers & E-books"}

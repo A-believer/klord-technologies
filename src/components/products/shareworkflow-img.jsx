@@ -5,7 +5,7 @@ const ShareworkflowImg = () => {
 		<div className='rounded-[18px]'>
 			<img
 				loading='lazy'
-				src={imgSrc}
+				src="/imgs/product-shareworkflow.png"
 				alt=''
 				className='mx-auto w-full rounded-[18px]'
 			/>

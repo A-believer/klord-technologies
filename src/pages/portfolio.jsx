@@ -1,6 +1,5 @@
 import HeroComp from "../common/hero-comp";
 import Seo from "../common/seo";
-import bgSrc from "../assets/imgs/portfolio-bg.png";
 import PortfolioView from "../components/porfolio/portfolio-view";
 import StandOut from "../common/stand-out";
 import { whyChooseKlordData } from "../lib/portfolio-data";
@@ -19,7 +18,7 @@ const Portfolio = () => {
 				header='Real-World Solutions for Businesses, Healthcare, and Public Institutions'
 				paragraphWidth='max-w-[885px] w-full'
 				paragraph='K-Lord Technologies designs and implements innovative digital solutions that make a real difference. Our portfolio spans video conferencing, patient referral systems, and agile ERP solutions each tailored to the unique challenges of our clients. Here’s how we’ve helped organizations drive growth, enhance service delivery, and achieve impactful results.'
-				bgSrc={bgSrc}
+				bgSrc="/imgs/portfolio-bg.png"
 			/>
 			<PortfolioView />
 			<StandOut

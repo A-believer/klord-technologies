@@ -5,7 +5,7 @@ const NexalifecareImg = () => {
 		<div className='w-full mx-auto bg-[#85ECFE] rounded-[18px] lg:pt-[90px] pt-12'>
 			<img
 				loading='lazy'
-				src={imgSrc}
+				src="/imgs/product-nexalifecare.png"
 				alt=''
 				className='mx-auto md:w-[75%] w-[95%]'
 			/>

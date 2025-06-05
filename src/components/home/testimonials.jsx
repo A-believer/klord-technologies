@@ -1,11 +1,4 @@
-import img1 from "../../assets/imgs/1.png";
-import img2 from "../../assets/imgs/2.png";
-import img3 from "../../assets/imgs/3.png";
-import img4 from "../../assets/imgs/4.png";
-import img5 from "../../assets/imgs/5.png";
-import quotes from "../../assets/imgs/quotes.png";
-
-const clientImages = [img1, img2, img3, img4, img5];
+const clientImages = ["/imgs/1.png", "/imgs/2.png", "/imgs/3.png", "/imgs/4.png", "/imgs/5.png"];
 
 const Testimonials = ({ testimonials }) => {
 	return (
@@ -34,7 +27,7 @@ const Testimonials = ({ testimonials }) => {
 						<div className='bg-[#1C1C1C] rounded-[30px] pl-3.5 pr-[25.35px] pt-[30px] pb-10 flex items-start gap-x-5 min-h-[138px]'>
 							<img
 								loading='lazy'
-								src={quotes}
+								src="/imgs/quotes.png"
 								alt='quotes'
 								className='w-8 h-auto mt-1'
 							/>

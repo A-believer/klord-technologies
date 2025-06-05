@@ -1,8 +1,3 @@
-import code from "../../../assets/svgs/code.svg";
-import workflow from "../../../assets/svgs/workflow.svg";
-import software from "../../../assets/svgs/software.svg";
-import blend from "../../../assets/svgs/blend.svg";
-import analytics from "../../../assets/svgs/analytics.svg";
 import { MoveRight } from "lucide-react";
 import { Link } from "react-router";
 const cardData = [
@@ -10,31 +5,31 @@ const cardData = [
 		header: "Custom Healthcare Software Development",
 		subtext:
 			"Tailored solutions designed to meet the specific needs of healthcare providers, enhancing operational efficiency and patient care.",
-		image: code,
+		image: "/svgs/code.svg",
 	},
 	{
 		header: "Healthcare Workflow Automation",
 		subtext:
 			"Automating routine tasks to reduce errors, save time, and allow healthcare professionals to focus more on patient care.",
-		image: workflow,
+		image: "/svgs/workflow.svg",
 	},
 	{
 		header: "Telehealth Platforms",
 		subtext:
 			"Developing secure and user-friendly telemedicine solutions to facilitate remote patient consultations and care.",
-		image: software,
+		image: "/svgs/software.svg",
 	},
 	{
 		header: "Electronic Health Record (EHR) Integration",
 		subtext:
 			"Seamlessly integrating EHR systems to provide a unified view of patient information, improving decision-making and care coordination.",
-		image: blend,
+		image: "/svgs/blend.svg",
 	},
 	{
 		header: "Healthcare Analytics Solutions",
 		subtext:
 			"Implementing data analytics tools to provide actionable insights, aiding in population health management and operational improvements.",
-		image: analytics,
+		image: "/svgs/analytics.svg",
 	},
 ];
 

@@ -37,7 +37,7 @@ const Hero = () => {
 
 		<section
 			style={{
-				background: `url(${bgSrc})`,
+				background: `url(/imgs/home-hero-2.png)`,
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
 				backgroundPosition: "center",

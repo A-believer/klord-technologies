@@ -1,6 +1,5 @@
 import HeroComp from "../../common/hero-comp";
 import Seo from "../../common/seo";
-import bgSrc from "../../assets/imgs/healthcare-software-bg.png";
 import CardSwitch from "../../common/card-switch";
 import {
 	addressSectionData,
@@ -12,8 +11,6 @@ import CardGrey from "../../common/card-grey";
 import SlidingCards from "../../common/sliding-cards";
 import UseCases from "../../components/solutions/healthcare-software/use-cases";
 import Testimonials from "../../components/home/testimonials";
-import jolene from "../../assets/imgs/jolene.png";
-import ruben from "../../assets/imgs/ruben.png";
 import Cta from "../../components/solutions/cta";
 
 const testimonials = [
@@ -22,14 +19,14 @@ const testimonials = [
 		position: "Medical Director",
 		quote:
 			"K-Lord Technologies transformed our patient management with their custom software, enhancing efficiency and compliance.",
-		image: jolene,
+		image: "/imgs/jolene.png",
 	},
 	{
 		name: "Ruben Daniels",
 		position: "CEO, HealthFirst Clinic",
 		quote:
 			"Their telehealth platform allowed us to expand our services and improve patient engagement significantly.",
-		image: ruben,
+		image: "/imgs/ruben.png",
 	},
 ];
 
@@ -48,7 +45,7 @@ const HealthcareSoftware = () => {
 				header='Innovative Healthcare Software Solutions for Enhanced Patient Care '
 				paragraphWidth='max-w-[773px] w-full'
 				paragraph='At K-Lord Technologies, we specialize in developing custom healthcare software solutions that streamline operations, ensure compliance, and improve patient outcomes.'
-				bgSrc={bgSrc}
+				bgSrc="/imgs/healthcare-software-bg.png"
 				ctaTextI='Request a Consultation'
 			/>
 			<CardSwitch
