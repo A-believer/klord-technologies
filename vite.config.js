@@ -11,6 +11,7 @@ export default defineConfig({
 		jpeg: { quality: 75 },
 		webp: { quality: 80 },
 		avif: { quality: 70 },
+		gif: { quality: 80 },
 		svg: {
 			plugins: [
 				{ name: 'removeViewBox', active: false },
