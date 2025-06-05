@@ -1,5 +1,3 @@
-import img from "../../assets/imgs/career-values.jpg";
-
 const values = [
 	{
 		title: "Integrity & Accountability",
@@ -56,7 +54,7 @@ const Values = () => {
 					</ul>
 					<img
 						loading='lazy'
-						src={img}
+						src="/imgs/career-values.jpg"
 						alt='a picture'
 						className='object-cover xl:max-h-[580px] max-h-[350px] xl:max-w-[624px] lg:max-w-[400px] w-full rounded-[18px] overflow-hidden'
 					/>

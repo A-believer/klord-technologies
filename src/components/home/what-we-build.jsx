@@ -2,9 +2,6 @@ import { Link } from "react-router";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import nexalifecarePreview from "../../assets/lottiefiles/home-nexalifecare.gif";
-import urcallsPreview from "../../assets/lottiefiles/home-urcalls.gif";
-import shareworkflowPreview from "../../assets/lottiefiles/home-shareworkflow.gif";
 import LazyLottie from "../../common/LazyLottie";
 
 const ourSolutions = [
@@ -13,7 +10,7 @@ const ourSolutions = [
         des: "Every patient deserves access. Every provider needs reach.",
         text: "NexaLife Care bridges the gap between underserved communities and healthcare providers. Designed to simplify referrals, coordinate care, and expand provider networks, it empowers clinics, NGOs, and health systems to connect with more patients faster and more efficiently.",
         gif: "/lotties/home-nexalifecare.json",
-        preview: nexalifecarePreview,
+        preview: "/lottiefiles/home-nexalifecare.gif",
         link: "/products#nexalifecare",
         url: "https://nexalifecare.com",
     },
@@ -22,7 +19,7 @@ const ourSolutions = [
         des: "What if your meetings actually moved work forward?",
         text: "UrCalls isn’t just another video platform. It’s built for teams that value clarity, control, and real-time collaboration without the clunky interfaces or connectivity issues. From internal standups to livestreamed events, UrCalls keeps communication sharp, sessions productive, and your entire team in sync.",
         gif: "/lotties/home-urcalls.json",
-        preview: urcallsPreview,
+        preview: "/lottiefiles/home-urcalls.gif",
         link: "/products#urcalls",
         url: "https://urcalls.com",
     },
@@ -31,7 +28,7 @@ const ourSolutions = [
         des: "When off-the-shelf doesn’t fit, we build what does.",
         text: "Your operations are unique; and your software should be too. We design and develop custom tools tailored to your workflows, regulatory needs, and growth goals. From healthcare and enterprise solutions to public service products, we create applications that work exactly the way you do.",
         gif: "/lotties/home-shareworkflow.json",
-        preview: shareworkflowPreview,
+        preview: "/lottiefiles/home-shareworkflow.gif",
         link: "/custom-software-development",
         url: "/get-started",
     },

@@ -1,6 +1,5 @@
 import HeroComp from "../common/hero-comp";
 import Seo from "../common/seo";
-import bgSrc from "../assets/imgs/products-bg-2.png";
 import ProductsView from "../components/products/products-view";
 import StandOut from "../common/stand-out";
 import { whyChooseData } from "../lib/product-data";
@@ -18,7 +17,7 @@ const Products = () => {
 				header='Smart, Scalable, and Secure Software Built for Growth'
 				paragraphWidth='max-w-[827px] w-full'
 				paragraph='At K-Lord Technologies, we design and deliver intelligent digital platforms that solve real-world challenges. From healthcare to enterprise collaboration and business operations, our products are built to help you scale fast, stay compliant, and drive meaningful results.'
-				bgSrc={bgSrc}
+				bgSrc="/imgs/products-bg-2.png"
 			/>
 			<ProductsView />
 			<StandOut

@@ -1,27 +1,24 @@
-import imgI from "../../../assets/imgs/ps-icon-1.png";
-import imgII from "../../../assets/imgs/ps-icon-2.png";
-import imgIII from "../../../assets/imgs/ps-icon-3.png";
-import imgIV from "../../../assets/imgs/ps-icon-4.png";
+
 const cardData = [
 	{
 		id: 1,
 		text: "Expertise across healthcare, education, and civic services",
-		icon: imgI,
+		icon: "/imgs/ps-icon-1.png",
 	},
 	{
 		id: 2,
 		text: "Custom-built workflows that reflect your institutional logic",
-		icon: imgII,
+		icon: "/imgs/ps-icon-2.png",
 	},
 	{
 		id: 3,
 		text: "Long-term support from deployment through maintenance",
-		icon: imgIII,
+		icon: "/imgs/ps-icon-3.png",
 	},
 	{
 		id: 4,
 		text: "Design systems built for accessibility, clarity, and scale",
-		icon: imgIV,
+		icon: "/imgs/ps-icon-4.png",
 	},
 ];
 const WhyChooseKlord = () => {

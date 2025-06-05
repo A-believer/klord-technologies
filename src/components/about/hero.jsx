@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import hero from "../../assets/imgs/about-hero.png";
 import NumberSpring from "../home/number-spring";
 
 const aboutMetricsData = [
@@ -64,7 +63,7 @@ const Hero = () => {
 				<div className='lg:max-w-[600px] w-full'>
 					<img
 						loading='lazy'
-						src={hero}
+						src="/imgs/about-hero.png"
 						alt='Hero Image'
 						className='lg:max-w-[600px] w-full md:rounded-[30px] rounded-[18px]'
 					/>

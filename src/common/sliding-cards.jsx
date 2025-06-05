@@ -1,5 +1,3 @@
-import { useRef, useState, useEffect } from "react";
-
 const SlidingCards = ({ header, data }) => {
 	return (
 		<section className='contain py-10 space-y-14'>

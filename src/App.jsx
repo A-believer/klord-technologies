@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import Layout from "./components/layout/layout";
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 
 const Home = lazy(() => import("./pages/home"));
 const About = lazy(() => import("./pages/about"));
@@ -31,27 +31,13 @@ const JobForm = lazy(() => import("./pages/career/job-form"));
 
 // A better fallback component with spinner and message
 const FallbackLoader = () => (
-    <div
-        style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            minHeight: "60vh",
-            fontFamily: "inherit",
-        }}
-    >
-        <div
-            style={{
-                border: "4px solid #f3f3f3",
-                borderTop: "4px solid #3498db",
-                borderRadius: "50%",
-                width: 48,
-                height: 48,
-                animation: "spin 1s linear infinite",
-            }}
+	<div
+		className="flex flex-col items-center justify-center min-h-[60vh] font-sans"
+	>
+		<div
+			className="border-4 border-t-4 border-gray-300 rounded-full animate-spin"
         />
-        <p style={{ marginTop: 16, color: "#555" }}>Loading, please wait...</p>
+        <p style={{ marginTop: 16, color: "#555" }} className="mt-4 text-[#555]">Loading, please wait...</p>
         <style>
             {`@keyframes spin {
                 0% { transform: rotate(0deg); }

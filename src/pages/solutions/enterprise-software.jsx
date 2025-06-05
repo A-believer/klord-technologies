@@ -1,22 +1,10 @@
 import HeroComp from "../../common/hero-comp";
 import Seo from "../../common/seo";
-import bgSrc from "../../assets/imgs/enterprise-software-bg.png";
 import ChallengeSolutions from "../../components/solutions/challenge-solutions";
-import imgI from "../../assets/imgs/es-1.png";
-import imgII from "../../assets/imgs/es-2.png";
-import imgIII from "../../assets/imgs/es-3.png";
-import imgIV from "../../assets/imgs/es-4.png";
-import imgV from "../../assets/imgs/es-5.png";
-import imgVI from "../../assets/imgs/es-6.png";
-import imgVII from "../../assets/imgs/es-7.png";
-import imgVIII from "../../assets/imgs/es-8.png";
-import imgIX from "../../assets/imgs/es-9.png";
 import CardGrey from "../../common/card-grey";
 import UseCases from "../../components/solutions/enterprise-software/use-cases";
 import CardSwitch from "../../common/card-switch";
 import Cta from "../../components/solutions/cta";
-import ramana from "../../assets/imgs/ramana.png";
-import mahesh from "../../assets/imgs/mahesh.png";
 import Testimonials from "../../components/home/testimonials";
 
 const c_s_data = {
@@ -46,31 +34,31 @@ const what_we_deliver = [
 		id: 1,
 		header: "Custom Enterprise Software",
 		desc: "Fully tailored platforms aligned with your operations built to integrate smoothly with your current tools and evolve as your business grows.",
-		img: imgI,
+		img: "/imgs/es-1.png",
 	},
 	{
 		id: 2,
 		header: "Sharework Flow – Modular ERP System ",
 		desc: "Our in-house ERP solution includes CRM, HR, finance, inventory, procurement, and project management. Everything you need in one secure, unified platform. ",
-		img: imgII,
+		img: "/imgs/es-2.png",
 	},
 	{
 		id: 3,
 		header: "System Integration & Data Interoperability ",
 		desc: "We connect scattered systems across departments into one intelligent ecosystem. Real-time data flow replaces silos and powers up operational clarity. ",
-		img: imgIII,
+		img: "/imgs/es-3.png",
 	},
 	{
 		id: 4,
 		header: "AI-Powered Automation",
 		desc: "We embed AI to handle repetitive tasks, trigger smart workflows, and surface insights that increase efficiency and reduce human error. ",
-		img: imgIV,
+		img: "/imgs/es-4.png",
 	},
 	{
 		id: 5,
 		header: "Cloud-Native Scalability ",
 		desc: "Our architecture supports global expansion, heavy workloads, and rapid growth without compromising performance or security. ",
-		img: imgV,
+		img: "/imgs/es-5.png",
 	},
 ];
 
@@ -79,25 +67,25 @@ const whyChooseData = [
 		id: 1,
 		title: "Cross-Industry Experience",
 		desc: "We've delivered enterprise-grade platforms across healthcare, logistics, finance, and more. This broad expertise brings proven best practices to your project.",
-		image: imgVI,
+		image: "/imgs/es-6.png",
 	},
 	{
 		id: 2,
 		title: "Built for Growth",
 		desc: "Our infrastructure supports large data volumes, distributed teams, and high concurrency. You can trust your systems will scale efficiently as you grow.",
-		image: imgVII,
+		image: "/imgs/es-7.png",
 	},
 	{
 		id: 3,
 		title: "Long-Term Partnership",
 		desc: "Our commitment extends beyond launch. We provide ongoing support, maintenance, and strategic updates to keep your software aligned with your evolving needs.",
-		image: imgVIII,
+		image: "/imgs/es-8.png",
 	},
 	{
 		id: 4,
 		title: "Software That Fits Your Process",
 		desc: "We tailor our solutions to match your workflows and business logic, reducing disruption and improving adoption across your teams.",
-		image: imgIX,
+		image: "/imgs/es-9.png",
 	},
 ];
 
@@ -107,14 +95,14 @@ const testimonials = [
 		position: "COO, Goodwood Inc.",
 		quote:
 			"The software K-Lord delivered became the backbone of our operations. HR, finance, and project teams now collaborate inside one intuitive system no extra training, no extra tools.",
-		image: ramana,
+		image: "/imgs/ramana.png",
 	},
 	{
 		name: "Crown Enterprise Solutions ",
 		position: "IT Director, Crown Enterprise Solutions",
 		quote:
 			"Their ERP platform scaled effortlessly as we opened new branches. K-Lord’s team nailed the balance between flexibility and control.",
-		image: mahesh,
+		image: "/imgs/mahesh.png",
 	},
 ];
 
@@ -131,7 +119,7 @@ const EnterpriseSoftware = () => {
 				header='Software That Powers Growth and Scale'
 				paragraphWidth='max-w-[773px] w-full'
 				paragraph='At K-Lord Technologies, we design robust enterprise software built to handle complexity, automate workflows, and fuel sustainable growth. From ERP platforms to custom data systems, our solutions help you eliminate bottlenecks and lead with confidence.'
-				bgSrc={bgSrc}
+				bgSrc="/imgs/enterprise-software-bg.png"
 				ctaTextI='Transform Your Operations'
 				ctaTextII='Explore Our Work'
 			/>

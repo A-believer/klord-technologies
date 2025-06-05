@@ -1,20 +1,18 @@
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router";
 import { useRef } from "react";
-import nexalifecarePreview from "../../assets/lottiefiles/home-nexalifecare.gif";
-import urcallsPreview from "../../assets/lottiefiles/home-urcalls.gif";
 import LazyLottie from "../../common/LazyLottie";
 
 const data = [
     {
         title: "UrCalls in action",
         gif: "/lotties/home-urcalls.json",
-        preview: urcallsPreview,
+        preview: "/lottiefiles/home-urcalls.gif",
     },
     {
         title: "NexaLife in action",
         gif: "/lotties/home-nexalifecare.json",
-        preview: nexalifecarePreview,
+        preview: "/lottiefiles/home-nexalifecare.gif",
     },
 ];
 

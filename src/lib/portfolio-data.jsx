@@ -1,40 +1,23 @@
-import secure from "../assets/imgs/portfolio-results.png";
-import solutions from "../assets/imgs/purpose.png";
-import scalable from "../assets/imgs/design.png";
-import security from "../assets/imgs/security.png";
-import imgI from "../assets/imgs/portfolio-urcalls.png";
-import imgN from "../assets/imgs/portfolio-nexalifecare.png";
-import imgS from "../assets/imgs/portfolio-shareworkflow.png";
-import icon1 from "../assets/imgs/icon-1.png";
-import icon2 from "../assets/imgs/icon-2.png";
-import icon3 from "../assets/imgs/icon-3.png";
-import icon4 from "../assets/imgs/icon-4.png";
-import icon5 from "../assets/imgs/icon-5.png";
-import icon9 from "../assets/imgs/icon-9.png";
-import icon10 from "../assets/imgs/icon-10.png";
-import icon11 from "../assets/imgs/icon-11.png";
-import icon12 from "../assets/imgs/icon-12.png";
-
 const whyChooseKlordData = [
 	{
 		header: "Precisely Tailored Solutions",
 		des: "Our platforms fit your exact industry workflows. From patient referral management to enterprise resource planning, we deliver solutions that work seamlessly.",
-		image: solutions,
+		image: "/imgs/purpose.png",
 	},
 	{
 		header: "Compliance Built-In",
 		des: "Regulatory requirements like HIPAA, FOIA, and accessibility standards are core to our development process, ensuring audit readiness and trust.",
-		image: security,
+		image: "/imgs/security.png",
 	},
 	{
 		header: "Scalable Architecture",
 		des: "You can expand your solution from pilot programs to enterprise-wide deployments without costly downtime or rewrites.",
-		image: scalable,
+		image: "/imgs/design.png",
 	},
 	{
 		header: "Proven Results",
 		des: "Our clients enjoy improved workflows, greater accuracy, and measurable operational gains. We deliver software that drives business value.",
-		image: secure,
+		image: "/imgs/portfolio-results.png",
 	},
 ];
 
@@ -43,7 +26,7 @@ const portfolioData = [
 		id: 1,
 		name: "UrCalls",
 		header: "Transforming Team Collaboration Across Industries",
-		img: imgI,
+		img: "/imgs/portfolio-urcalls.png",
 		overview:
 			"UrCalls is a high-performance video conferencing solution that addresses the needs of SMEs, enterprises, telehealth providers, and more. It offers HD video andaudio quality, real-time screen sharing, and cross-platform livestreaming for seamless collaboration and communication.",
 		challenge:
@@ -52,27 +35,27 @@ const portfolioData = [
 			"Many teams face high costs and limited features in video calls slowing down productivity, especially in telehealth and remote collaboration.",
 		keyFeatures: [
 			{
-				icon: icon1,
+				icon: "/imgs/icon-1.png",
 				title: "Competitive Pricing",
 				desc: "Affordable plans for startups with scalable features for larger teams.",
 			},
 			{
-				icon: icon2,
+				icon: "/imgs/icon-2.png",
 				title: "HD Audio & Video",
 				desc: "Crystal-clear sound and high-definition visuals.",
 			},
 			{
-				icon: icon3,
+				icon: "/imgs/icon-3.png",
 				title: "Real-Time Collaboration Tools",
 				desc: "Screen sharing, whiteboarding, and in-session chat.",
 			},
 			{
-				icon: icon4,
+				icon: "/imgs/icon-4.png",
 				title: "Webinars & Events",
 				desc: "Host large events with full presenter controls.",
 			},
 			{
-				icon: icon5,
+				icon: "/imgs/icon-5.png",
 				title: "Cross-Platform Livestreaming",
 				desc: "Simultaneously stream to platforms like YouTube and Facebook.",
 			},
@@ -90,7 +73,7 @@ const portfolioData = [
 		id: 2,
 		name: "Nexalife Care",
 		header: "Bridging Gaps in Healthcare with Smart Patient Referral",
-		img: imgN,
+		img: "/imgs/portfolio-nexalifecare.png",
 		overview:
 			"NexaLife Care is a HIPAA-compliant platform designed to streamline patient referral workflows, connecting underserved populations to healthcare providers and social benefits. It’s ideal for clinics, NGOs, and public health organizations.",
 		challenge:
@@ -99,22 +82,22 @@ const portfolioData = [
 			"NexaLife Care automates the referral process with real-time scheduling, secure document workflows, and an intuitive interface designed for both patients and healthcare providers.",
 		keyFeatures: [
 			{
-				icon: icon9,
+				icon: "/imgs/icon-9.png",
 				title: "Automated Referral Workflows",
 				desc: "Simplify patient intake, routing, and appointment tracking.",
 			},
 			{
-				icon: icon10,
+				icon: "/imgs/icon-10.png",
 				title: "Scheduling Engine",
 				desc: "Easily book, confirm, and follow up on appointments.",
 			},
 			{
-				icon: icon11,
+				icon: "/imgs/icon-11.png",
 				title: "HIPAA Compliance",
 				desc: "Secure handling of patient data.",
 			},
 			{
-				icon: icon12,
+				icon: "/imgs/icon-12.png",
 				title: "Affiliate Advocacy",
 				desc: "Extensive network of patient advocates for broader outreach.",
 			},
@@ -132,7 +115,7 @@ const portfolioData = [
 		id: 3,
 		name: "Sharework Flow",
 		header: "Simplifying Operations for Growing Businesses",
-		img: imgS,
+		img: "/imgs/portfolio-sharework.png",
 		overview:
 			"Sharework Flow is a modular ERP system designed for growing businesses. With its intuitive design, no-fluff features, and easy-to-implement modules, it helps SMEs and agencies streamline business operations and scale efficiently.",
 		challenge:
@@ -141,27 +124,27 @@ const portfolioData = [
 			"Sharework Flow provides a flexible, scalable solution that simplifies everything from HR management to accounting, allowing businesses to adopt the features they need without unnecessary complexity.",
 		keyFeatures: [
 			{
-				icon: icon1,
+				icon: "/imgs/icon-1.png",
 				title: "Simple Workflows",
 				desc: "Clear, straightforward processes that improve user adoption.",
 			},
 			{
-				icon: icon2,
+				icon: "/imgs/icon-2.png",
 				title: "Customizable Modules",
 				desc: "Choose from HR, CRM, inventory management, and more.",
 			},
 			{
-				icon: icon3,
+				icon: "/imgs/icon-3.png",
 				title: "Human Resources & Payroll",
 				desc: "Easily manage employee data, attendance, and payroll.",
 			},
 			{
-				icon: icon4,
+				icon: "/imgs/icon-4.png",
 				title: "Project & Task Management",
 				desc: "Use Kanban boards and Gantt charts to stay organized.",
 			},
 			{
-				icon: icon5,
+				icon: "/imgs/icon-5.png",
 				title: "Inventory & Procurement",
 				desc: "Track vendors, orders, and stock levels.",
 			},
