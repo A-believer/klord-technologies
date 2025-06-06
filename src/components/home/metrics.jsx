@@ -49,7 +49,7 @@ const Metrics = () => {
 		<section
 			ref={sectionRef}
 			className='py-16 max-w-[1440px] mx-auto w-[90%] md:space-y-16 space-y-10 font-sora'>
-			<h1 className='max-w-[850px] w-full mx-auto heading'>
+			<h1 className='max-w-[850px] w-full mx-auto heading text-primary'>
 				Trusted by{" "}
 				<span className='text-[#F15533]'>Leading Healthcare Providers</span> and{" "}
 				<span className='text-[#F15533]'>Enterprises</span>
@@ -59,12 +59,12 @@ const Metrics = () => {
 					<div
 						className='space-y-2.5 md:w-1/3 w-full h-fit font-sora'
 						key={index}>
-						<div className='rounded-[30px] border border-dashed border-spacing-2 border-[#69696966] bg-[#FAFAFA] w-full h-[207px] sm:pl-5 pl-3 sm:pb-5 pb-3 space-y-[11px] flex flex-col justify-end'>
+						<div className='rounded-[30px] border border-dashed border-spacing-2 border-[#69696966] bg-[#FAFAFA] dark:bg-[#0F0F0F] w-full h-[207px] sm:pl-5 pl-3 sm:pb-5 pb-3 space-y-[11px] flex flex-col justify-end'>
 							<div>
-								<p className='text-lg/7 font-medium tracking-[-0.6px]'>
+								<p className='text-lg/7 font-medium tracking-[-0.6px] text-primary'>
 									{item.title}
 								</p>
-								<h3 className='sm:text-[74px]/[79px] text-[60px]/[65px] tracking-[-6.66px] flex items-center gap-x-2'>
+								<h3 className='sm:text-[74px]/[79px] text-[60px]/[65px] text-primary tracking-[-6.66px] flex items-center gap-x-2'>
 									{isVisible ? (
 										<NumberSpring n={Number(item.num)} isVisible={isVisible} />
 									) : (

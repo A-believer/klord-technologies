@@ -33,13 +33,13 @@ const Experience = () => {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, ease: "easeOut" }}
-                    className={` font-sora lg:text-5xl/[64px] text-[32px]/[44px] font-semibold tracking-[-2.4px] max-w-[788px]`}>
+                    className={` font-sora lg:text-5xl/[64px] text-[32px]/[44px] font-semibold tracking-[-2.4px] max-w-[788px] text-primary`}>
                     Experience How K-Lord’s Products Can Help Your Business Scale
                 </motion.h1>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+                    transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
                     className='md:w-fit w-full'>
                     <Link
                         to='/get-started'
@@ -59,7 +59,7 @@ const Experience = () => {
                                 className='aspect-video block'
                             />
                         </div>
-                        <p className='font-sora text-[26px]/8 font-semibold tracking-[1.04px] mt-[22px]'>
+                        <p className='font-sora text-[26px]/8 font-semibold tracking-[1.04px] mt-[22px] text-primary'>
                             {item.title}
                         </p>
                     </div>
