@@ -21,7 +21,7 @@ const iconVariants = {
     rotate: direction > 0 ? 90 : -90,
     y: direction > 0 ? -40 : 40,
     scale: 0.9,
-    transition: { duration: 0.4 },
+    transition: { duration: 0.3 },
   }),
 };
 

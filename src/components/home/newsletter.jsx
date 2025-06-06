@@ -60,7 +60,7 @@ const Newsletter = () => {
 		<section className='py-[55px] md:space-y-[84px] space-y-24'>
 			<div className='contain border-[2.5px] border-[#FF5F0F] rounded-[30px] shadow-[0px_36px_24.9px_0px_rgba(0,0,0,0.10)] flex lg:justify-between lg:items-start lg:flex-row flex-col gap-y-[55px] md:px-10 px-[46px] md:py-24 py-16'>
 				<div className='space-y-5'>
-					<h2 className='text-[#101828] text-[28px]/[42px] font-semibold tracking-[-0.56px]'>
+					<h2 className='text-[#101828] dark:text-[#FFFEF5] text-[28px]/[42px] font-semibold tracking-[-0.56px]'>
 						Ready to Build Something Great?
 					</h2>
 					<p className='text-[#667085] text-xl/8 font-medium tracking-[-0.64px]'>
