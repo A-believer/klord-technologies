@@ -58,7 +58,7 @@ const Contact = () => {
 			<CardSwitch header={"Why Choose K-Lord Technologies?"} data={cardData} />
 			<Cta />
 			<div className='my-10 text-center text-xl/normal font-semibold font-inter contain space-y-2 text-[#667085]'>
-				<h4 className='font-sora text-3xl/10 text-[#0f0f0f]'>
+				<h4 className='font-sora text-3xl/10 text-primary'>
 					Have questions?
 				</h4>
 				Check out our{" "}

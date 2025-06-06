@@ -50,7 +50,7 @@ const Hero = () => {
 			ref={sectionRef}
 			className='contain md:pt-[150px] pt-[100px] md:pb-10 pb-8 md:space-y-[30px] space-y-[26px] text-[#0f0f0f] font-inter'>
 			<div className='space-y-5 max-w-[845px]'>
-				<h1 className='lg:text-[65px]/[74px] text-[32px]/10 font-sora font-semibold tracking-[-3px]'>
+				<h1 className='lg:text-[65px]/[74px] text-[32px]/10 font-sora font-semibold tracking-[-3px] text-primary'>
 					About K-Lord Technologies
 				</h1>
 				<p className='text-lg/9 tracking-[-0.18px] font-medium opacity-80'>
@@ -72,12 +72,12 @@ const Hero = () => {
 				<div className='grid md:grid-cols-2 grid-cols-1 gap-4 shrink-0 lg:w-1/2 w-full'>
 					{aboutMetricsData.map((item, index) => (
 						<div
-							className='font-sora rounded-[30px] border border-dashed border-spacing-2 border-[#69696966] bg-[#FAFAFA] w-full pl-5 pt-[23px] pb-[30px] xl:space-y-[117px] space-y-9'
+							className='font-sora rounded-[30px] border border-dashed border-spacing-2 border-[#69696966] bg-[#FAFAFA] dark:bg-[#0f0f0f] w-full pl-5 pt-[23px] pb-[30px] xl:space-y-[117px] space-y-9'
 							key={index}>
-							<p className='text-xl/7 font-medium tracking-[-0.6px]'>
+							<p className='text-xl/7 font-medium tracking-[-0.6px] text-primary'>
 								{item.title}
 							</p>
-							<h3 className='text-[74px]/[74px] tracking-[-6.66px] flex items-center gap-x-2 font-inter'>
+							<h3 className='text-[74px]/[74px] tracking-[-6.66px] flex items-center gap-x-2 font-inter text-primary'>
 								{isVisible ? (
 									<NumberSpring n={Number(item.num)} isVisible={isVisible} />
 								) : (

@@ -28,10 +28,10 @@ const ReachOut = () => {
 	return (
 		<section className='contain  py-10 lg:space-y-11 space-y-8'>
 			<div className='max-w-[862px] w-full space-y-4'>
-				<h1 className='font-sora lg:text-5xl/[64px] text-[32px]/normal font-semibold tracking-[-2.4px] text-[#0f0f0f]'>
+				<h1 className='font-sora lg:text-5xl/[64px] text-[32px]/normal font-semibold tracking-[-2.4px] text-primary'>
 					Reach Out to Us
 				</h1>
-				<p className='text-black/80 font-inter text-xl/normal tracking-[-0.18px]'>
+				<p className='text-secondary font-inter text-xl/normal tracking-[-0.18px]'>
 					For inquiries, demos, or support, get in touch with our team. We’re
 					ready to help you get started with solutions that drive growth and
 					efficiency in your organization.
@@ -40,13 +40,13 @@ const ReachOut = () => {
 
 			<div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6'>
 				{data.map((item) => (
-					<div key={item.id} className='p-6 bg-[#F7F7F7] space-y-16'>
+					<div key={item.id} className='p-6 bg-[#F7F7F7] dark:bg-[#1c1c1c] space-y-16'>
 						<span className='h-12 w-12 flex-center bg-[#FF5F0F] rounded-[10px]'>
 							{item.icon}
 						</span>
 						<div>
-							<p className='text-[#101828] text-xl/[30px]'>{item.header}</p>
-							<p className='mt-2 mb-5 font-inter text-[#8D8D8D] text-base/6'>
+							<p className='text-primary text-xl/[30px]'>{item.header}</p>
+							<p className='mt-2 mb-5 font-inter text-secondary text-base/6'>
 								{item.desc}
 							</p>
 							<p className='text-[#FF5F0F] text-lg/6'>{item.dets}</p>

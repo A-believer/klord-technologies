@@ -60,7 +60,7 @@ const ThemeToggle = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="flex items-center justify-center text-yellow-600 my-auto"
+            className="flex items-center justify-center text-yellow-600 my-auto cursor-pointer"
           >
             <Sun />
           </motion.span>
@@ -72,7 +72,7 @@ const ThemeToggle = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="flex items-center justify-center text-gray-800 dark:text-gray-200"
+            className="flex items-center justify-center text-gray-800 dark:text-gray-200 cursor-pointer"
           >
             <Moon />
           </motion.span>

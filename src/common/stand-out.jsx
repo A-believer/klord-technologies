@@ -31,7 +31,7 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 						</Link>
 					)}
 				</div>
-				{desc && <>{desc}</>}
+				{desc && <p className="text-secondary">{desc}</p>}
 				{/* <div className='md:flex hidden items-center justify-end gap-x-2.5'>
 					<button
 						className='bg-[#F15533] rounded-[14px] w-[45px] h-[45px] flex items-center justify-center cursor-pointer'

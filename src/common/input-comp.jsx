@@ -1,11 +1,11 @@
 const InputComp = ({ name, label, type, placeholder, error }) => {
 	return (
 		<div className='flex flex-col gap-y-[6px] text-sm/5 w-full'>
-			<label htmlFor={name} className='font-medium text-[#344054] font-inter'>
+			<label htmlFor={name} className='font-medium text-[#344054] dark:text-[#D0D5DD] font-inter'>
 				{label} <span className='text-red-500'>*</span>
 			</label>
 			<input
-				className='border border-[#D0D5DD] rounded-[8px] px-3.5 py-2.5 w-full'
+				className='border border-[#D0D5DD] rounded-[8px] px-3.5 py-2.5 w-full text-primary'
 				type={type}
 				name={name}
 				id={name}

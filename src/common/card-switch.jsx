@@ -7,11 +7,11 @@ const CardSwitch = ({ header, data, subtext }) => {
 	return (
 		<section className='contain md:space-y-16 space-y-10 md:py-10 py-6'>
 			<div className='space-y-4'>
-				<h2 className='text-[#0F0F0F] font-inter font-semibold lg:tracking-[-2.4px] tracking-[-1px] lg:text-5xl/[64px] text-[32px]/[44px]'>
+				<h2 className='text-primary font-inter font-semibold lg:tracking-[-2.4px] tracking-[-1px] lg:text-5xl/[64px] text-[32px]/[44px]'>
 					{header}
 				</h2>
 				{subtext && (
-					<p className='max-w-[922px] text-lg/8 tracking-[-0.18px] font-medium font-inter opacity-80'>
+					<p className='max-w-[922px] text-lg/8 tracking-[-0.18px] font-medium font-inter text-secondary'>
 						{subtext}
 					</p>
 				)}
@@ -34,7 +34,7 @@ const CardSwitch = ({ header, data, subtext }) => {
 								onClick={() => setCurrentCard(index)}
 								className='cursor-pointer text-left text-[#0F0F0F] space-y-3'>
 								<h3
-									className={`transition-all duration-500 font-sora text-2xl/[30px] font-semibold tracking-[-1.04px] ${
+									className={`transition-all duration-500 font-sora text-2xl/[30px] font-semibold tracking-[-1.04px] text-primary ${
 										index !== currentCard &&
 										"opacity-40 hover:opacity-100 text-[26px]/8"
 									}`}>
@@ -43,7 +43,7 @@ const CardSwitch = ({ header, data, subtext }) => {
 								<AnimatePresence initial={false}>
 									{index === currentCard && (
 										<motion.p
-											className='text-base/8 font-medium tracking-[-0.45px] opacity-80'
+											className='text-base/8 font-medium tracking-[-0.45px] opacity-80 text-secondary'
 											key={card.title}
 											initial='collapsed'
 											animate='open'

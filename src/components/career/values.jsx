@@ -25,17 +25,17 @@ const Values = () => {
 	return (
 		<section className='contain  py-8 md:space-y-14 space-y-8'>
 			<div className='space-y-4'>
-				<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px]'>
+				<h2 className='font-sora text-primary lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px]'>
 					Our Culture & Values
 				</h2>
-				<p className='textlg/8 font-medium font-inter text-black/[0.8] tracking-[-0.18px]'>
+				<p className='textlg/8 font-medium font-inter text-secondary tracking-[-0.18px]'>
 					We are not just a workplace; we build meaningful careers. At K-Lord,
 					you’ll find a culture that respects talent, rewards innovation, and
 					nurtures professional growth.
 				</p>
 			</div>
 			<div className='md:space-y-14 space-y-8'>
-				<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px]'>
+				<h2 className='font-sora text-primary lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px]'>
 					What We Stand For
 				</h2>
 
@@ -43,10 +43,10 @@ const Values = () => {
 					<ul className='space-y-[34px] lg:max-w-[493px] w-full shrink-0'>
 						{values.map((item, idx) => (
 							<li key={idx} className='space-y-3'>
-								<h5 className='font-sora text-[#0F0F0F] text-2xl/[29.76px]  font-semibold tracking-[-1.04px]'>
+								<h5 className='font-sora text-primary text-2xl/[29.76px]  font-semibold tracking-[-1.04px]'>
 									{item.title}
 								</h5>
-								<p className='textlg/8 font-medium font-inter text-black/[0.8] tracking-[-0.18px]'>
+								<p className='textlg/8 font-medium font-inter text-secondary tracking-[-0.18px]'>
 									{item.description}
 								</p>
 							</li>

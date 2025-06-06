@@ -12,7 +12,7 @@ const UploadBox = ({ label, extralabel, name, required, onChange }) => {
 	};
 	return (
 		<div className='space-y-2 w-full text-sm/5 font-inter'>
-			<label htmlFor={name} className=' text-[#344054] font-inter font-medium'>
+			<label htmlFor={name} className=' text-[#344054] dark:text-[#D0D5DD] font-inter font-medium'>
 				{label} <span className='text-[#8E8E8E]'>{extralabel}</span>
 			</label>
 			<div

@@ -11,7 +11,7 @@ const Cards = ({ data }) => {
 				className='rounded-[20px] object-cover object-center w-full md:aspect-auto aspect-video'
 			/>
 			<div className='flex items-start justify-between gap-x-4 mt-8 mb-3'>
-				<h3 className='text-[#101828] font-sora font-semibold text-xl/[30px]'>
+				<h3 className='text-primary font-sora font-semibold text-xl/[30px]'>
 					{data.title}
 				</h3>
 				<Link to={data.link}>
@@ -19,7 +19,7 @@ const Cards = ({ data }) => {
 				</Link>
 			</div>
 
-			<p className='text-base/6 font-normal font-inter text-[#696969]'>
+			<p className='text-base/6 font-normal font-inter text-secondary'>
 				{data.description}
 			</p>
 		</div>
