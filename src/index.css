@@ -22,7 +22,17 @@ body {
 }
 
 .heading {
-  @apply font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-center
+  @apply font-sora lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-center
+}
+
+.text-primary {
+  @apply text-[#0F0F0F] dark:text-[#FFFEF5];
+
+}
+
+.text-secondary {
+  @apply text-[#0F0F0F] dark:text-[#FFFEF5] opacity-60;
+
 }
 
 .flex-center {

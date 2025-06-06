@@ -20,7 +20,7 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 		<section className='contain py-16 space-y-16'>
 			<div className='space-y-[42px]'>
 				<div className='flex items-center justify-between md:flex-row flex-col gap-y-10'>
-					<h3 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-left'>
+					<h3 className='font-sora text-primary lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-left'>
 						Why K-Lord Stands Out
 					</h3>
 					{ctaText && (
@@ -51,7 +51,7 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 				{data.map((item, index) => (
 					<div
 						key={index}
-						className='lg:py-9 py-5 xl:px-[88px] sm:px-7 px-5 bg-[#F5F7F9] rounded-[30px] text-[#0F0F0F] w-full flex flex-col items-center justify-between gap-y-5 h-full'>
+						className='lg:py-9 py-5 xl:px-[88px] sm:px-7 px-5 bg-[#F5F7F9] dark:bg-[#0F0F0F] rounded-[30px] text-primary w-full flex flex-col items-center justify-between gap-y-5 h-full'>
 						<img
 							loading='lazy'
 							src={item.image}
@@ -62,7 +62,7 @@ const StandOut = ({ data, ctaLink, ctaText, desc }) => {
 							<h5 className=' font-sora text-[26px]/8 font-semibold text-center'>
 								{item.header}
 							</h5>
-							<p className='text-[#0F0F0F] text-[15px]/normal tracking-[-0.45px] font-inter font-medium text-center'>
+							<p className='text-secondary text-[15px]/normal tracking-[-0.45px] font-inter font-medium text-center'>
 								{item.des}
 							</p>
 						</div>

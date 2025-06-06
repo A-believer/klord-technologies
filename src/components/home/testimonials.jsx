@@ -3,7 +3,7 @@ const clientImages = ["/imgs/1.png", "/imgs/2.png", "/imgs/3.png", "/imgs/4.png"
 const Testimonials = ({ testimonials }) => {
 	return (
 		<section className='contain  py-8 md:space-y-16 space-y-10 text-[#0F0F0F]'>
-			<h3 className='font-sora  lg:text-5xl/[50px] text-[32px]/10  font-semibold tracking-[-3px] text-center max-w-[800px] w-full mx-auto'>
+			<h3 className='font-sora  lg:text-5xl/[60px] text-[32px]/10 text-primary  font-semibold tracking-[-3px] text-center max-w-[800px] w-full mx-auto'>
 				Hear Stories
 				<span className='inline-block align-middle mx-2'>
 					<div className='flex items-center justify-center -space-x-4'>
@@ -13,7 +13,7 @@ const Testimonials = ({ testimonials }) => {
 								key={idx}
 								src={img}
 								alt={`client ${idx + 1}`}
-								className='w-[52px] h-[52px] rounded-[20px] border-4 border-white object-cover'
+								className='w-[52px] h-[52px] rounded-[20px] border-4 border-white dark:border-[#00060A] object-cover'
 							/>
 						))}
 					</div>
@@ -45,10 +45,10 @@ const Testimonials = ({ testimonials }) => {
 								className='w-[61px] h-[61px]'
 							/>
 							<div className='font-inter gap-2'>
-								<p className='text-lg/[25.2px] tracking-[-0.18px]'>
+								<p className='text-lg/[25.2px] tracking-[-0.18px] text-primary font-medium'>
 									{testimonial.name}
 								</p>
-								<p className='opacity-70 text-sm/4 font-bold tracking-[-0.55px] uppercase text-wrap'>
+								<p className='text-secondary text-sm/4 font-bold tracking-[-0.55px] uppercase text-wrap'>
 									{testimonial.position}
 								</p>
 							</div>

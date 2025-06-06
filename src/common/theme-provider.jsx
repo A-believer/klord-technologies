@@ -48,7 +48,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={handleToggle}
-      className="text-black transition-colors duration-300 relative w-8 h-8 flex items-center justify-center overflow-hidden"
+      className="transition-colors duration-300 relative w-8 h-8 flex items-center justify-center overflow-hidden"
       aria-label="Toggle theme"
     >
       <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -60,7 +60,7 @@ const ThemeToggle = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute"
+            className="flex items-center justify-center text-yellow-600 my-auto"
           >
             <Sun />
           </motion.span>
@@ -72,7 +72,7 @@ const ThemeToggle = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute"
+            className="flex items-center justify-center text-gray-800 dark:text-gray-200"
           >
             <Moon />
           </motion.span>

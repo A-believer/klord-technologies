@@ -66,7 +66,7 @@ const Navbar = () => {
 						)}
 					</ul>
 				</div>
-				<div className='flex gap-x-2 justify-end'>
+				<div className='flex gap-x-2 items-center justify-end'>
 				<ThemeToggle/>
 					<div className='lg:flex hidden items-center gap-x-3 '>
 						<Link
