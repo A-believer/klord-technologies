@@ -1,6 +1,7 @@
 import { useRef, useContext, useState, useEffect } from "react";
 import { GetStartedContext } from "../../pages/get-started";
 import toast from "react-hot-toast";
+import { Link } from "react-router";
 
 const GsFormFour = () => {
 	const formRef = useRef(null);
@@ -160,9 +161,9 @@ const GsFormFour = () => {
 						<label htmlFor='consent' className='text-sm text-[#344054]'>
 							I consent to being contacted by K-Lord Technologies regarding my
 							inquiry and agree to the terms outlined in the{" "}
-							<a href='/privacy-policy' className='text-[#01588E] underline'>
+							<Link to='/privacy-policy' className='text-[#01588E] underline'>
 								Privacy Policy
-							</a>
+							</Link>
 						</label>
 					</div>
 					{formErrors.consent && (

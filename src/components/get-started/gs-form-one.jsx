@@ -61,13 +61,6 @@ const GsFormOne = () => {
 			errors.email = "Please enter a valid email address";
 		}
 
-		// Validate phone number
-		// const phoneRegex = /^\d{11}$/;
-		// if (!form.phone_number.value.trim()) {
-		// 	errors.phone_number = "Phone number is required";
-		// } else if (!phoneRegex.test(form.phone_number.value.trim())) {
-		// 	errors.phone_number = "Please enter a valid phone number: +1 (555) 000-0000";
-		// }
 
 		setFormErrors(errors);
 		return Object.keys(errors).length === 0;
@@ -155,12 +148,8 @@ const GsFormOne = () => {
 					Phone number <span className='text-red-500'>*</span>
 				</label>
 				<div className='relative h-11 overflow-hidden'>
-					<span className='flex items-center justify-center gap-x- absolute left-0 p-3 border-r border-[#D0D5DD]'>
-						US
-						<ChevronDown />
-					</span>
 					<input
-						className='border border-[#D0D5DD] rounded-[8px] px-3.5 pl-20 pr-2.5 w-full h-11'
+						className='border border-[#D0D5DD] rounded-[8px] px-2.5 w-full h-11'
 						type='text'
 						name='phone_number'
 						id='phone_number'
