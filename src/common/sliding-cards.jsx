@@ -1,15 +1,15 @@
 const SlidingCards = ({ header, data }) => {
 	return (
 		<section className='contain py-10 space-y-14'>
-			<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px] text-center'>
+			<h2 className='font-sora text-primary lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px] text-center'>
 				{header}
 			</h2>
 			<div
-				className='w-full rounded-[26px] flex flex-row items-stretch gap-2.5 overflow-x-auto scrollbar-hide md:scrollbar-default scroll-smooth scrollbar-hide md:pb-10 pb-7'
+				className='w-full rounded-[26px] flex flex-row items-stretch gap-2.5 overflow-x-auto scrollbar-hide md:scrollbar-default scroll-smooth scrollbar-hide md:pb-10 pb-7 scrollbar-thumb-[#FF5F0F] scrollbar-track-[#afa0a042] scrollbar-thin'
 				style={{
-					scrollbarColor: "#FF5F0F #FAFAFA",
+					scrollbarColor: "#FF5F0F #afa0a0",
 					scrollbarWidth: "thin",
-					scrollbarArrowColor: "#FAFAFA !important",
+					scrollbarArrowColor: "#afa0a0",
 				}}>
 				{data.map((item) => (
 					<div

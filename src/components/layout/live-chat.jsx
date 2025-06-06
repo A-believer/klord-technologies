@@ -149,7 +149,7 @@ const LiveChat = () => {
 						animate={{ y: 0, opacity: 1 }}
 						exit={{ y: 100, opacity: 0 }}
 						transition={{ type: "spring", damping: 25, stiffness: 300 }}
-						className='fixed bottom-6 right-6 bg-white z-[99999] rounded-[20px] py-7 px-4 max-w-[404px] lg:w-full w-[80%] shadow-lg shadown-[0px_12px_16px_-4px_rgba(16,24,40,0.08),_0px_4px_6px_-2px_rgba(16,24,40,0.03)] font-inter text-[#727272] text-sm/6'>
+						className='fixed bottom-6 right-6 bg-white dark:bg-[#1c1c1c] z-[99999] rounded-[20px] py-7 px-4 max-w-[404px] lg:w-full w-[80%] shadow-lg shadown-[0px_12px_16px_-4px_rgba(16,24,40,0.08),_0px_4px_6px_-2px_rgba(16,24,40,0.03)] font-inter text-[#727272] dark:text-[#D0D5DD] text-sm/6'>
 						<button
 							onClick={() => setShowLiveChat(false)}
 							className='cursor-pointer absolute md:top-2 top-4 md:right-2 right-3'>

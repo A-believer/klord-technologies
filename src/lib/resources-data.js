@@ -105,7 +105,7 @@ const webinars = [
 			"Upcoming Webinar: Unlocking the Potential of Telehealth with UrCalls",
 		description:
 			"Learn how to enhance patient engagement and streamline communication with UrCalls for telehealth services.",
-		img: "/imgs/resources-11.png",
+		img: "/imgs/resources-13.png",
 		link: "",
 	},
 ];

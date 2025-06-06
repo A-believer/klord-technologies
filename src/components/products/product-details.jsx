@@ -5,16 +5,16 @@ import Card from "../../common/card";
 const ProductDetails = ({ product }) => {
 	return (
 		<div className='space-y-10'>
-			<h3 className='text-[#0F0F0F] lg:text-5xl/[64px] text-[32px]/[42px] tracking-[-2.4px] font-semibold text-center font-inter'>
+			<h3 className='text-primary lg:text-5xl/[64px] text-[32px]/[42px] tracking-[-2.4px] font-semibold text-center font-inter'>
 				{product.header}
 			</h3>
 			<>{product.imgSection}</>
-			<p className='md:my-[51px] my-7 text-lg/10 font-medium font-inter tracking-[-0.18px]'>
+			<p className='md:my-[51px] my-7 text-lg/10 font-medium font-inter tracking-[-0.18px] text-secondary'>
 				{product.desc}
 			</p>
 
 			<div className="space-y-[34px]">
-				<h4 className="font-inter text-4xl/normal font-semibold">Key Features</h4>
+				<h4 className="font-inter text-4xl/normal font-semibold text-primary">Key Features</h4>
 			<div
 				className={`flex w-full flex-wrap justify-center  ${
 					product.name === "NexaLife Care"
@@ -27,7 +27,7 @@ const ProductDetails = ({ product }) => {
 			</div>	
 			</div>
 			
-			<p className='text-lg/10 font-bold font-inter tracking-[-0.18px]'>
+			<p className='text-lg/10 font-bold font-inter tracking-[-0.18px] text-secondary'>
 				{product.highlight}
 			</p>
 			<div className='flex items-center sm:justify-start sm:flex-row flex-col gap-x-5 gap-y-5'>

@@ -4,7 +4,7 @@ const PortfolioCTA = () => {
 	return (
 		<section className='contain  py-10 flex justify-between lg:flex-row flex-col gap-y-10'>
 			<div className='max-w-[662px] w-full space-y-5'>
-				<h3 className='font-sora text-[28px]/[42px] font-semibold tracking-[-0.56px] text-[#101828]'>
+				<h3 className='font-sora text-[28px]/[42px] font-semibold tracking-[-0.56px] text-primary'>
 					Ready to Take the Next Step?
 				</h3>
 				<p className='text-[#667085] font-inter text-xl/normal'>
@@ -22,7 +22,7 @@ const PortfolioCTA = () => {
 
 				<Link
 					to='/get-started'
-					className='bg-transparent py-2.5 lg:w-fit h-fit w-full px-[30px] rounded-[40px] border border-[#01588E]  text-black hover:bg-gray-200  text-center transition-all duration-500 text-nowrap'>
+					className='bg-transparent py-2.5 lg:w-fit h-fit w-full px-[30px] rounded-[40px] border border-[#01588E]  text-primary hover:bg-gray-200  text-center transition-all duration-500 text-nowrap'>
 					Request a Demo
 				</Link>
 			</div>

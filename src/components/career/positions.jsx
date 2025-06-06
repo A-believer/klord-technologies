@@ -8,10 +8,10 @@ const Positions = ({ jobData }) => {
 				<p className='text-[#FF5F0F] font-inter text-base/6 font-medium'>
 					Open positions
 				</p>
-				<h2 className='font-sora text-[#0F0F0F] lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px] mt-3 mb-5'>
+				<h2 className='font-sora text-primary lg:text-5xl/[50px] text-[32px]/10 font-semibold tracking-[-2.4px] mt-3 mb-5'>
 					Current Openings
 				</h2>
-				<p className='mt-3 text-xl/9 font-medium font-inter text-[#696969]'>
+				<p className='mt-3 text-xl/9 font-medium font-inter text-secondary'>
 					Want to work with global talent and help build software that
 					transforms care delivery, operations, and digital engagement? Apply
 					today.
@@ -22,21 +22,21 @@ const Positions = ({ jobData }) => {
 					<div
 						key={idx}
 						className='border-t border-[#EAECF0] pt-6 text-[#696969] font-inter text-base/6'>
-						<h3 className='font-sora text-lg/7 font-semibold text-[#101828]'>
+						<h3 className='font-sora text-lg/7 font-semibold text-primary'>
 							{job.title}
 						</h3>
 						<p className='mt-2 mb-6'>{job.description}</p>
-						<div className='flex flex-wrap gap-6 mt-2 font-semibold mb-5'>
+						<div className='flex flex-wrap gap-6 mt-2 font-semibold mb-5 text-primary'>
 							<span className='flex items-center gap-x-2  '>
-								<MapPin color='#696969' size={20} />
+								<MapPin size={20} />
 								{job.location}
 							</span>
 							<span className='flex items-center gap-x-2'>
-								<Clock color='#696969' size={20} />
+								<Clock size={20} />
 								{job.employmentType}
 							</span>
 							<span className='flex items-center gap-x-2'>
-								<Building2 color='#696969' size={20} />
+								<Building2 size={20} />
 								{job.department}
 							</span>
 						</div>

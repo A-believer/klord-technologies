@@ -4,7 +4,7 @@ import Card from "../../common/card";
 const PortfolioDetails = ({ portfolio }) => {
 	return (
 		<div className='space-y-10 text-xl/[38.2px] font-inter font-medium tracking-[-0.18px] text-black/80'>
-			<h3 className='text-[#0F0F0F] lg:text-5xl/[64px] text-[32px]/[42px] tracking-[-2.4px] font-semibold text-center font-inter'>
+			<h3 className='text-primary lg:text-5xl/[64px] text-[32px]/[42px] tracking-[-2.4px] font-semibold text-center font-inter'>
 				{portfolio?.header}
 			</h3>
 			<img
@@ -14,7 +14,7 @@ const PortfolioDetails = ({ portfolio }) => {
 				className='rounded-[18px] mx-auto w-full'
 			/>
 			<div>
-				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
+				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1 text-primary'>
 					Overview
 				</h4>
 				<h4>{portfolio?.overview}</h4>
@@ -51,10 +51,10 @@ const PortfolioDetails = ({ portfolio }) => {
 			</div>
 
 			<div>
-				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
+				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1 text-primary'>
 					Impact
 				</h4>
-				<ul className='list-disc md:ml-8 ml-5'>
+				<ul className='list-disc md:ml-8 ml-5 text-secondary'>
 					{portfolio?.impact.map((item, idx) => (
 						<li key={idx}>
 							<p dangerouslySetInnerHTML={{ __html: item }} />
@@ -63,22 +63,22 @@ const PortfolioDetails = ({ portfolio }) => {
 				</ul>
 			</div>
 			<div>
-				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
+				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1 text-primary'>
 					Results
 				</h4>
-				<p>{portfolio?.results}</p>
+				<p className="text-secondary">{portfolio?.results}</p>
 			</div>
 			<div className='flex lg:flex-row flex-col gap-5 w-full'>
 				<Link
 					to={portfolio?.url}
-					className='bg-[#01588E] py-2.5 lg:w-fit w-full px-[30px] rounded-[40px] shadow-[0px_1.344px_0.537px_-0.625px_rgba(0,0,0,0.09),0px_3.185px_1.274px_-1.25px_rgba(0,0,0,0.09),0px_5.809px_2.324px_-1.875px_rgba(0,0,0,0.08),0px_9.658px_3.863px_-2.5px_rgba(0,0,0,0.08),0px_15.597px_6.239px_-3.125px_rgba(0,0,0,0.07),0px_25.531px_10.212px_-3.75px_rgba(0,0,0,0.06),0px_43.962px_17.585px_-4.375px_rgba(0,0,0,0.04)] border border-[#01588E] hover:bg-transparent text-white hover:text-black text-center transition-all duration-500 text-nowrap'>
+					className='bg-[#01588E] py-2.5 lg:w-fit w-full px-[30px] rounded-[40px] shadow-[0px_1.344px_0.537px_-0.625px_rgba(0,0,0,0.09),0px_3.185px_1.274px_-1.25px_rgba(0,0,0,0.09),0px_5.809px_2.324px_-1.875px_rgba(0,0,0,0.08),0px_9.658px_3.863px_-2.5px_rgba(0,0,0,0.08),0px_15.597px_6.239px_-3.125px_rgba(0,0,0,0.07),0px_25.531px_10.212px_-3.75px_rgba(0,0,0,0.06),0px_43.962px_17.585px_-4.375px_rgba(0,0,0,0.04)] border border-[#01588E] hover:bg-transparent text-white hover:text-black hover:dark:text-gray-200 text-center transition-all duration-500 text-nowrap'>
 					{portfolio?.ctaText}
 				</Link>
 
 				{portfolio?.name !== "Sharework Flow" && (
 					<Link
 						to='/get-started'
-						className='bg-transparent py-2.5 lg:w-fit w-full px-[30px] rounded-[40px] border border-[#01588E]  text-black hover:bg-gray-200  text-center transition-all duration-500 text-nowrap'>
+						className='bg-transparent py-2.5 lg:w-fit w-full px-[30px] rounded-[40px] border border-[#01588E]  text-primary hover:bg-gray-200 hover:dark:text-gray-800  text-center transition-all duration-500 text-nowrap'>
 						Request a Demo
 					</Link>
 				)}

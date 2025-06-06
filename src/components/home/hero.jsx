@@ -59,7 +59,7 @@ const Hero = () => {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
 							className={` opacity-80 font-medium text-lg/8 mt-5 mb-6`}>
-							Smart, Scalable, Secure and Made for Growth
+							We Help You Build Smart, Secure, And Scalable Software Tailored To Your Unique Workflow
 						</motion.p>
 						<motion.div
 							initial={{ opacity: 0, y: 30 }}

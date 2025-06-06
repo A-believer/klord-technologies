@@ -2,10 +2,10 @@ const AboutUs = () => {
   return (
 		<div className='grid lg:grid-cols-2 grid-cols-1 gap-8 text-lg/8 font-inter font-medium tracking-[-0.18px] text-black/80 py-16 contain'>
 			<div className=''>
-				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
+				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1 text-primary'>
 					Who We Are
 				</h4>
-				<p>
+				<p className="text-secondary">
 					At K-Lord Technologies, we are a trusted partner in digital
 					transformation. We specialize in providing scalable, secure, and
 					innovative software solutions tailored for healthcare, public sector
@@ -15,10 +15,10 @@ const AboutUs = () => {
 				</p>
 			</div>
 			<div>
-				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1'>
+				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1 text-primary'>
 					Our Expertise
 				</h4>
-				<p>
+				<p className="text-secondary">
 					We focus on delivering custom-built solutions that address the unique
 					needs of our clients. With deep expertise in healthcare technology,
 					public sector systems, enterprise resource planning (ERP), and more,
