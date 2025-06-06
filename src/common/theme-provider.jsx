@@ -1,8 +1,33 @@
 import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const iconVariants = {
+  initial: (direction) => ({
+    opacity: 0,
+    rotate: direction > 0 ? -90 : 90,
+    y: direction > 0 ? 40 : -40,
+    scale: 0.8,
+  }),
+  animate: {
+    opacity: 1,
+    rotate: 0,
+    y: 0,
+    scale: 1,
+    transition: { type: 'spring', stiffness: 300, damping: 20 },
+  },
+  exit: (direction) => ({
+    opacity: 0,
+    rotate: direction > 0 ? 90 : -90,
+    y: direction > 0 ? -40 : 40,
+    scale: 0.9,
+    transition: { duration: 0.4 },
+  }),
+};
 
 const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark');
+  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -15,12 +40,44 @@ const ThemeToggle = () => {
     }
   }, [isDark]);
 
+  const handleToggle = () => {
+    setDirection(isDark ? -1 : 1);
+    setIsDark(!isDark);
+  };
+
   return (
     <button
-      onClick={() => setIsDark(!isDark)}
-      className="text-white dark:text-black transition-colors duration-300 "
+      onClick={handleToggle}
+      className="text-black transition-colors duration-300 relative w-8 h-8 flex items-center justify-center overflow-hidden"
+      aria-label="Toggle theme"
     >
-      {isDark ? <Sun /> : <Moon/>}
+      <AnimatePresence initial={false} custom={direction} mode="wait">
+        {isDark ? (
+          <motion.span
+            key="sun"
+            custom={direction}
+            variants={iconVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="absolute"
+          >
+            <Sun />
+          </motion.span>
+        ) : (
+          <motion.span
+            key="moon"
+            custom={direction}
+            variants={iconVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="absolute"
+          >
+            <Moon />
+          </motion.span>
+        )}
+      </AnimatePresence>
     </button>
   );
 };
