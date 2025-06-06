@@ -53,7 +53,7 @@ const WhatWeBuild = () => {
                 }
                 transition={{ duration: 0.7, ease: "easeOut" }}
                 className='py-16 max-w-[1440px] mx-auto w-[90%] md:space-y-16 space-y-10 font-sora'>
-                <h1 className='heading'>What We Build</h1>
+                <h1 className='heading text-primary'>What We Build</h1>
                 <div className='font-inter flex items-start justify-between gap-x-[62px]'>
                     <div
                         className='space-y-2.5 md:flex hidden flex-col items-start sticky top-[120px] z-30 h-fit shrink-0'
@@ -62,7 +62,7 @@ const WhatWeBuild = () => {
                             <button
                                 key={index + 1}
                                 className={`transition-all duration-700 px-2 py-1 rounded-lg flex items-center text-left text-xl/[25.2px] font-semibold ${
-                                    currentInViewIndex === index ? "text-[#0f0f0f]" : "text-[#0f0f0f]/60"
+                                    currentInViewIndex === index ? "text-primary" : "text-secondary"
                                 }`}
                                 tabIndex={-1}
                                 style={{ pointerEvents: "none" }}
@@ -79,7 +79,7 @@ const WhatWeBuild = () => {
                             <motion.div
                                 ref={cardRefs[index]}
                                 key={index + 1}
-                                className='p-2.5 bg-[#F5F7F9] w-full rounded-[34px] space-y-[22px]'>
+                                className='sm:p-2.5 p-2 bg-[#F5F7F9] dark:bg-[#0F0F0F] w-full rounded-[34px] space-y-[22px]'>
                                 <div className='flex xl:flex-row flex-col items-start md:gap-[30px] gap-5'>
                                     <div className='rounded-[24.732px] max-w-[492px] w-fit overflow-hidden aspect-video'>
                                         <LazyLottie
@@ -90,16 +90,16 @@ const WhatWeBuild = () => {
                                         />
                                     </div>
                                     <div className='space-y-4 pt-5 w-full'>
-                                        <h4 className='font-sora text-[26px]/tight font-semibold text-[#F95607]'>
+                                        <h4 className='font-sora text-[26px]/tight font-semibold text-[#F95607] dark:text-[#FFFEF5]'>
                                             {sol.name}
                                         </h4>
-                                        <p className='text-[15px]/[22px] text-[#0f0f0f] font-semibold font-inter mb-2 mt-4'>{sol.des}</p>
-                                        <p className='text-[15px]/[22px] text-[#0f0f0f]/80 font-inter'>{sol.text}</p>
+                                        <p className='text-[15px]/[22px] text-primary font-semibold font-inter mb-2 mt-4'>{sol.des}</p>
+                                        <p className='text-[15px]/[22px] text-secondary font-inter'>{sol.text}</p>
                                     </div>
                                 </div>
-                                <div className='font-inter lg:text-xl/7 text-lg/6 tracking-[-0.6px] flex items-center justify-between bg-white rounded-[30px] py-7 px-5  text-[#01588E] font-medium'>
-                                    <Link to={sol.link} className="hover:underline flex items-center gap-x-2 hover:scale-[96%] transition-all duration-300">Learn More <ArrowRight/></Link>
-                                    <Link to={sol.url} className="hover:underline flex items-center gap-x-2 hover:scale-[96%] transition-all duration-300">{sol.name === 'Custom Software Solutions' ? 'Get Started' : 'See in it Action'} <ArrowRight/></Link>
+                                <div className='font-inter lg:text-xl/7 text-sm/5 tracking-[-0.6px] flex items-center justify-between  bg-white dark:bg-[#00060A] rounded-[30px] sm:py-7 py-5 sm:px-5 px-3  text-[#01588E] font-medium'>
+                                    <Link to={sol.link} className="hover:underline flex items-center sm:gap-x-2 gap-x-1 hover:scale-[96%] transition-all duration-300">Learn More <ArrowRight className="text-[8px]/3"/></Link>
+                                    <Link to={sol.url} className="hover:underline flex items-center sm:gap-x-2 gap-x-1 hover:scale-[96%] transition-all duration-300">{sol.name === 'Custom Software Solutions' ? 'Get Started' : 'See in it Action'} <ArrowRight/></Link>
                                 </div>
                             </motion.div>
                         ))}

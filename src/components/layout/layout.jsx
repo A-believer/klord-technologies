@@ -7,7 +7,7 @@ import ScrollToTop from "./ScrollToTop"; // <-- Add this import
 
 const Layout = () => {
 	return (
-		<main className='relative w-full h-full bg-white'>
+		<main className='relative w-full h-full bg-white dark:bg-[#00060A]'>
 			<Toaster />
 			<LiveChat />
 			<ScrollToTop />
