@@ -4,6 +4,7 @@ import { navlinks } from "../../lib/link-data";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { DropDownMenu, MobileMenu } from "./nav-menu-dropdown";
+import ThemeToggle from "../../common/theme-provider";
 
 const Navbar = () => {
 	const { pathname } = useLocation();
@@ -66,6 +67,7 @@ const Navbar = () => {
 					</ul>
 				</div>
 				<div className='flex gap-x-2 justify-end'>
+				<ThemeToggle/>
 					<div className='lg:flex hidden items-center gap-x-3 '>
 						<Link
 							className={`${

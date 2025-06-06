@@ -5,18 +5,16 @@ import LiveChat from "./live-chat";
 import { Toaster } from "react-hot-toast";
 import ScrollToTop from "./ScrollToTop"; // <-- Add this import
 
-const  Layout = () => {
+const Layout = () => {
 	return (
-		
 		<main className='relative w-full h-full bg-white'>
-			<Toaster/>
+			<Toaster />
 			<LiveChat />
-			<ScrollToTop /> 
-				<Navbar />
-				<Outlet />
-				<Footer />
-			</main>
-		
+			<ScrollToTop />
+			<Navbar />
+			<Outlet />
+			<Footer />
+		</main>
 	);
 };
 export default Layout;
