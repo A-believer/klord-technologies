@@ -17,7 +17,7 @@ const PortfolioDetails = ({ portfolio }) => {
 				<h4 className='md:text-4xl/[64px] text-[28px]/normal font-sora tracking-[-0.6px] font-semibold mb-1 text-primary'>
 					Overview
 				</h4>
-				<h4>{portfolio?.overview}</h4>
+				<h4 className="text-secondary">{portfolio?.overview}</h4>
 			</div>
 			<div className='grid lg:grid-cols-2 grid-cols-1 gap-x-8'>
 				<div className='bg-[#1C1C1C] rounded-[26px] text-[#F5F7F9]/60 py-8 pl-8 pr-12'>
