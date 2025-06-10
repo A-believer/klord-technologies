@@ -27,10 +27,10 @@ our services, products, and expertise."
 			/>
 			<div className='text-black max-w-[1440px] w-[90%] mx-auto lg:pt-[206px] pt-[136px] lg:pb-[75px] pb-[59px] font-inter flex lg:flex-row flex-col justify-between gap-x-20 gap-y-16'>
 				<div className='space-y-4 max-w-[457px] w-full'>
-					<h1 className='lg:text-5xl/[135%] text-[32px]/[45px] font-semibold text-[#0F0F0F] tracking-[-2.4px]'>
+					<h1 className='lg:text-5xl/[135%] text-[32px]/[45px] font-semibold text-primary tracking-[-2.4px]'>
 						Frequently Asked Questions (FAQ)
 					</h1>
-					<p className='text-lg/[32px] font-medium tracking-[-0.18px] opacity-80'>
+					<p className='text-lg/[32px] font-medium tracking-[-0.18px] text-secondary'>
 						Welcome to the K-Lord Technologies FAQ page. Here, you’ll find
 						answers to some of the most common questions about our services,
 						products, and solutions. If you need more information or assistance,
@@ -41,16 +41,16 @@ our services, products, and expertise."
 					{faqs.map((faq, index) => (
 						<li key={index} className='space-y-2'>
 							<div className='flex-between gap-x-10'>
-								<p className='font-sora text-lg/7 font-semibold'>
+								<p className='font-sora text-lg/7 font-semibold text-primary'>
 									{faq.question}
 								</p>
 								<button
 									onClick={() => toggleAnswer(faq.id)}
 									className='cursor-pointer'>
 									{currentAnswer === faq.id ? (
-										<CircleMinus color='#98A2B3' size={24} />
+										<CircleMinus size={24} className="text-primary"/>
 									) : (
-										<CirclePlus color='#98A2B3' size={24} />
+										<CirclePlus size={24} className="text-primary"/>
 									)}
 								</button>
 							</div>
@@ -69,7 +69,7 @@ our services, products, and expertise."
 										className='space-y-4 overflow-hidden'>
 										<p
 											dangerouslySetInnerHTML={{ __html: faq.answer }}
-											className='text-[#696969] text-base/7 pr-7'
+											className='text-[#696969] dark:text-[#B0B0B0] text-base/7 pr-7'	
 										/>
 									</motion.div>
 								)}

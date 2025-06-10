@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
 				description='Learn how K-Lord Technologies protects your personal data. Read our comprehensive Privacy Policy to understand how we handle and secure your information across our digital solutions.'
 				content=''
 			/>
-			<div className='font-inter space-y-[30px] text-[#0F0F0F] text-lg/8'>
+			<div className='font-inter space-y-10 text-secondary text-lg/8'>
 				<div>
 					<h1 className='lg:text-5xl/[64px] text-[32px]/10 tracking-[-2.4px]  font-semibold'>
 						{privacypolicy.title}
@@ -22,8 +22,8 @@ const PrivacyPolicy = () => {
 				<p className=''>{privacypolicy.introduction}</p>
 
 				{privacypolicy.sections.map((section) => (
-					<section key={section.id} id={section.id} className='space-y-3'>
-						<h2 className='font-sora text-2xl/8 font-semibold tracking-[-1.04px]'>
+					<section key={section.id} id={section.id} className='space-y-6'>
+						<h2 className='font-sora text-2xl/8 font-semibold tracking-[-1.04px] text-primary'>
 							{section.title}
 						</h2>
 						{section.content.map((item, index) => {
