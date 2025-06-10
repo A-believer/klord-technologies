@@ -57,3 +57,7 @@ body {
   scrollbar-width: none;     
 }
 
+.cm-scrollbar {
+  @apply scrollbar-thin scrollbar-track-black dark:scrollbar-track-[#0c0c13] scrollbar-thumb-white dark:scrollbar-thumb-[#10162b];
+}
+

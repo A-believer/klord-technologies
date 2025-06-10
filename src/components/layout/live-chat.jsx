@@ -167,7 +167,7 @@ const LiveChat = () => {
 							</div>
 
 							<hr className='border-none h-[1px] bg-[#D6D6D6]' />
-							<div className='md:max-h-[50vh] max-h-[43vh] overflow-y-scroll space-y-4 pb-5'>
+							<div className='md:max-h-[50vh] max-h-[43vh] overflow-y-scroll space-y-4 pb-5 cm-scrollbar pr-5'>
 								<div className='space-y-4'>
 									<p className='font-semibold text-[#727272]'>
 										Quick Prompts (Select all that apply):

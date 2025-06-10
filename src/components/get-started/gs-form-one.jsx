@@ -61,6 +61,15 @@ const GsFormOne = () => {
 			errors.email = "Please enter a valid email address";
 		}
 
+		// Validate phone number (US or Nigeria)
+		const phone = form.phone_number.value.trim();
+		const usRegex = /^(\+1)?\s?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
+		const ngRegex = /^(\+234|0)?[789][01]\d{8}$/;
+		if (!phone) {
+			errors.phone_number = "Phone number is required";
+		} else if (!usRegex.test(phone) && !ngRegex.test(phone)) {
+			errors.phone_number = "Enter a valid US or Nigerian phone number";
+		}
 
 		setFormErrors(errors);
 		return Object.keys(errors).length === 0;
@@ -110,6 +119,14 @@ const GsFormOne = () => {
 		}
 	}, []);
 
+	// Handler to restrict input to numbers and plus sign
+	const handlePhoneInput = (e) => {
+		let value = e.target.value.replace(/[^\d+]/g, "");
+		// Only allow one leading '+'
+		if (value.startsWith("++")) value = value.replace(/^\++/, "+");
+		e.target.value = value;
+	};
+
 	return (
 		<form ref={formRef} className='space-y-6 font-inter'>
 			<div className='flex justify-between sm:flex-row flex-col gap-y-6 items-center gap-x-8'>
@@ -154,6 +171,7 @@ const GsFormOne = () => {
 						name='phone_number'
 						id='phone_number'
 						placeholder='+1 (555) 000-0000'
+						onInput={handlePhoneInput}
 					/>
 				</div>
 

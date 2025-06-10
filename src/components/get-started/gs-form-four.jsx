@@ -83,6 +83,7 @@ const GsFormFour = () => {
 				}
 
 				toast.success("Form submitted successfully!");
+				setIsSubmitting(false);
 				setCurrentLevel(5);
 			} catch (error) {
 				console.error("Error submitting form:", error);

@@ -172,7 +172,7 @@ const GsFormThree = () => {
 			</div>
 
 			{/* Other Help Needed Input (conditional) */}
-			{showOtherInput && (
+			<div style={{ display: showOtherInput ? "block" : "none" }}>
 				<InputComp
 					name={"other_help_needed"}
 					label={"Please specify"}
@@ -180,7 +180,7 @@ const GsFormThree = () => {
 					placeholder={"enter details..."}
 					error={formErrors.other_help_needed}
 				/>
-			)}
+			</div>
 
 			{/* Project Description Textarea */}
 			<div className='flex flex-col gap-y-[6px] text-xs/5 w-full'>
