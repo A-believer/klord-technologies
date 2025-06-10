@@ -140,6 +140,7 @@ const footerlinks = {
 		{ name: "LinkedIn", path: "https://www.linkedin.com/company/klord-technologies/" },
 		{ name: "Facebook", path: "" },
 		{ name: "Instagram", path: "" },
+		{ name: "YouTube", path: "https://youtube.com/@klordtechnologies?si=HLVi4L4YomumRSdc" },
 	],
 	legal: [
 		{ name: "Privacy Policy", path: "/privacy-policy" },
