@@ -9,9 +9,9 @@ const TermsOfService = () => {
         description='Read the K-Lord Technologies Terms of Service to understand the terms of use for our digital solutions. By accessing our platform, you agree to our service terms and conditions.'
         content=''
       />
-      <div className='font-inter space-y-[30px] text-[#0F0F0F] text-lg/8'>
+      <div className='font-inter space-y-10 text-secondary text-lg/8'>
         <div>
-          <h1 className='lg:text-5xl/[64px] text-[32px]/10 tracking-[-2.4px]  font-semibold'>
+          <h1 className='lg:text-5xl/[64px] text-[32px]/10 tracking-[-2.4px]  font-semibold text-primary'>
             {termsOfService.title}
           </h1>
           <p className='text-lg/8 font-medium text-[#999999]'>
@@ -22,7 +22,7 @@ const TermsOfService = () => {
         <p dangerouslySetInnerHTML={{ __html: termsOfService.introduction }} />
 
         {termsOfService.sections.map((section) => (
-          <section key={section.id} id={section.id} className='space-y-3'>
+          <section key={section.id} id={section.id} className='space-y-6'>
             <h2 className='font-sora text-2xl/8 font-semibold tracking-[-1.04px]'>
               {section.title}
             </h2>

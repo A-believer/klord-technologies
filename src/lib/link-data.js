@@ -137,7 +137,7 @@ const footerlinks = {
 		{ name: "FAQ", path: "/faqs" },
 	],
 	socials: [
-		{ name: "LinkedIn", path: "" },
+		{ name: "LinkedIn", path: "https://www.linkedin.com/company/klord-technologies/" },
 		{ name: "Facebook", path: "" },
 		{ name: "Instagram", path: "" },
 	],
