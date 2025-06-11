@@ -10,7 +10,6 @@ const LiveChat = () => {
 	const [showCustomQuestion, setShowCustomQuestion] = useState(false);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	let PORT = import.meta.env.PORT || "http://localhost:3000";
 
 	const formRef = useRef(null);
 	const customQuestionRef = useRef(null);
@@ -89,16 +88,24 @@ const LiveChat = () => {
 
 			// Add selected prompts to formData
 			formData.selectedPrompts = selectedPrompts;
+			const updatedData = {
+				full_name: formData.full_name,
+				email: formData.email,
+				company_name: formData.company_name,
+				position: formData.position,
+
+				quick_prompts: [...selectedPrompts],
+			}
 
 			try {
-				const response = await fetch(`${PORT}/api/live-chat`, {
+				const response = await fetch(`http://api.klordtechnologies.com/api/live-chat`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
 					},
-					body: JSON.stringify(formData),
+					body: JSON.stringify(updatedData),
 				});
-				console.log(formData);
+				console.log(updatedData);
 
 				if (!response.ok) {
 					throw new Error(`Server responded with error: ${response.status}`);
@@ -106,7 +113,7 @@ const LiveChat = () => {
 
 				const result = await response.json();
 
-				if (result.success) {
+				if (result.status === "success") {
 					// Reset form
 					formRef.current.reset();
 					setShowCustomQuestion(false);
@@ -121,7 +128,7 @@ const LiveChat = () => {
 					throw new Error(result.message || "Failed to submit form");
 				}
 			} catch (error) {
-				console.error("Error submitting form:", error);
+				console.error("Error submitting form:", error.message);
 				toast.error("Failed to submit your message. Please try again.");
 			} finally {
 				setIsSubmitting(false);
@@ -176,7 +183,7 @@ const LiveChat = () => {
 									{quickPrompts.map((prompt) => (
 										<div key={prompt.id} className='flex items-start gap-x-3'>
 											<input
-												className='mt-1 appearance-none border border-[#D0D5DD] h-5 w-5 rounded-[6px] checked:bg-[#01588E]'
+												className='mt-1 appearance-none border shrink-0 border-[#D0D5DD] h-5 w-5 rounded-[6px] checked:bg-[#01588E]'
 												name={`prompt-${prompt.id}`}
 												type='checkbox'
 												id={prompt.id}
@@ -243,7 +250,7 @@ const LiveChat = () => {
 									error={formErrors.companyName}
 								/>
 								<InputComp
-									name={"postion"}
+									name={"position"}
 									label={"Position"}
 									type={"text"}
 									placeholder={"Enter position at company..."}
