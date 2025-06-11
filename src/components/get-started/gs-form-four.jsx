@@ -13,7 +13,6 @@ const GsFormFour = () => {
 	});
 	const [isFormValid, setIsFormValid] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	let PORT = import.meta.env.PORT || "http://localhost:3000";
 
 	// Initialize form with existing data
 	useEffect(() => {
@@ -59,8 +58,9 @@ const GsFormFour = () => {
 			const updatedData = {
 				...data,
 				referral_source: form.referral_source.value,
-				consent: form.consent.checked,
 			};
+
+			console.log(updatedData)
 
 			try {
 				// Update the data state first
@@ -70,7 +70,7 @@ const GsFormFour = () => {
 				toggleCurrentLevelCompletion();
 
 				// Use the updated data for the API call
-				const response = await fetch(`${PORT}/api/get-started`, {
+				const response = await fetch(`http://api.klordtechnologies.com/api/get-started`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
@@ -79,7 +79,7 @@ const GsFormFour = () => {
 				});
 
 				if (!response.ok) {
-					throw new Error(`HTTP error! status: ${response.status}`);
+					throw new Error(`HTTP error! status: ${response.status}, ${response.message}`);
 				}
 
 				toast.success("Form submitted successfully!");

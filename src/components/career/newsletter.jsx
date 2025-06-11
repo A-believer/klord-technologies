@@ -5,7 +5,6 @@ const Newsletter = () => {
 	const formRef = useRef();
 	const [submitting, setSubmitting] = useState(false);
 	const [error, setError] = useState("");
-	let PORT = import.meta.env.PORT || "http://localhost:3000";
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -25,15 +24,16 @@ const Newsletter = () => {
 			name: formData.get("name"),
 			email: formData.get("email"),
 		};
-
+console.log(submitData);
 		try {
-			const res = await fetch(`${PORT}/api/newsletter-signup`, {
+			const res = await fetch(`http://api.klordtechnologies.com/api/subscribe-to-newsletters`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify(submitData),
 			});
+			
 
 			if (!res.ok) {
 				const errorText = await res.text();

@@ -3,6 +3,7 @@ import { Navigate, useParams } from "react-router";
 import { jobData } from "../../lib/job-data";
 import InputComp from "../../common/input-comp";
 import UploadBox from "../../common/upload-box";
+import toast from "react-hot-toast";
 
 const JobForm = () => {
 	const { id } = useParams();
@@ -11,7 +12,6 @@ const JobForm = () => {
 	const [submitting, setSubmitting] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
 	const [error, setError] = useState("");
-	let PORT = import.meta.env.PORT || "http://localhost:3000";
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -22,7 +22,7 @@ const JobForm = () => {
 		if (
 			!formData.get("name") ||
 			!formData.get("email") ||
-			!formData.get("phone") ||
+			!formData.get("phone_number") ||
 			!formData.get("reason") ||
 			!formData.get("resume")
 		) {
@@ -32,7 +32,7 @@ const JobForm = () => {
 		}
 		formData.append("job", job.title); // add job title to FormData
 		try {
-			const res = await fetch(`${PORT}/api/job-application`, {
+			const res = await fetch(`http://api.klordtechnologies.com/api/apply-for-job`, {
 				method: "POST",
 				body: formData, // send FormData directly
 			});
@@ -42,8 +42,8 @@ const JobForm = () => {
 				throw new Error(`Server responded with error: ${errorText}`);
 			}
 
-			const result = await res.json();
-			if (result.success) alert("Submitted!");
+			toast.success("Form submitted successfully! We will get back to you soon.");
+			formRef.current.reset(); // reset the form
 			setSubmitting(false);
 			setSubmitted(true);
 		} catch (error) {
@@ -92,12 +92,12 @@ const JobForm = () => {
 					}
 				/>
 				<InputComp
-					name='phone'
+					name='phone_number'
 					label='Phone Number'
 					type='tel'
 					placeholder='+1 (555) 000-0000'
 					error={
-						error && !formRef.current?.elements["phone"]?.value
+						error && !formRef.current?.elements["phone_number"]?.value
 							? "Required"
 							: ""
 					}
