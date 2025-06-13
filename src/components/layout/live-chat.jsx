@@ -10,6 +10,7 @@ const LiveChat = () => {
 	const [showCustomQuestion, setShowCustomQuestion] = useState(false);
 	const [formErrors, setFormErrors] = useState({});
 	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const formRef = useRef(null);
 	const customQuestionRef = useRef(null);
@@ -66,12 +67,15 @@ const LiveChat = () => {
 
 	// Form submission handler
 	const handleSubmit = async (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
+		setIsSubmitting(true);
 		setIsSubmitting(true);
 
 		if (validateForm()) {
 			const form = new FormData(formRef.current);
 			let formData = {};
+
 
 			// Convert FormData to a regular object
 			for (let [key, value] of form.entries()) {
@@ -79,12 +83,18 @@ const LiveChat = () => {
 				if (!key.startsWith("prompt-")) {
 					formData[key] = value;
 				}
+				// Skip prompt-* keys as we'll handle them separately
+				if (!key.startsWith("prompt-")) {
+					formData[key] = value;
+				}
 			}
+
 
 			// Extract selected prompts
 			const selectedPrompts = quickPrompts
 				.filter((prompt) => formRef.current[`prompt-${prompt.id}`]?.checked)
 				.map((prompt) => prompt.label);
+
 
 			// Add selected prompts to formData
 			formData.selectedPrompts = selectedPrompts;
@@ -157,6 +167,7 @@ const LiveChat = () => {
 						exit={{ y: 100, opacity: 0 }}
 						transition={{ type: "spring", damping: 25, stiffness: 300 }}
 						className='fixed bottom-6 right-6 bg-white dark:bg-[#1c1c1c] z-[99999] rounded-[20px] py-7 px-4 max-w-[404px] lg:w-full w-[80%] shadow-lg shadown-[0px_12px_16px_-4px_rgba(16,24,40,0.08),_0px_4px_6px_-2px_rgba(16,24,40,0.03)] font-inter text-[#727272] dark:text-[#D0D5DD] text-sm/6'>
+						className='fixed bottom-6 right-6 bg-white dark:bg-[#1c1c1c] z-[99999] rounded-[20px] py-7 px-4 max-w-[404px] lg:w-full w-[80%] shadow-lg shadown-[0px_12px_16px_-4px_rgba(16,24,40,0.08),_0px_4px_6px_-2px_rgba(16,24,40,0.03)] font-inter text-[#727272] dark:text-[#D0D5DD] text-sm/6'>
 						<button
 							onClick={() => setShowLiveChat(false)}
 							className='cursor-pointer absolute md:top-2 top-4 md:right-2 right-3'>
@@ -164,6 +175,7 @@ const LiveChat = () => {
 						</button>
 						<form ref={formRef} onSubmit={handleSubmit} className='space-y-4'>
 							<div className='space-y-2'>
+								<h4 className='font-sora text-[#FF5F0F] text-2xl/8 font-semibold'>
 								<h4 className='font-sora text-[#FF5F0F] text-2xl/8 font-semibold'>
 									Welcome to K-Lord Technologies
 								</h4>
@@ -175,6 +187,7 @@ const LiveChat = () => {
 
 							<hr className='border-none h-[1px] bg-[#D6D6D6]' />
 							<div className='md:max-h-[50vh] max-h-[43vh] overflow-y-scroll space-y-4 pb-5 cm-scrollbar pr-5'>
+							<div className='md:max-h-[50vh] max-h-[43vh] overflow-y-scroll space-y-4 pb-5 cm-scrollbar pr-5'>
 								<div className='space-y-4'>
 									<p className='font-semibold text-[#727272]'>
 										Quick Prompts (Select all that apply):
@@ -183,6 +196,7 @@ const LiveChat = () => {
 									{quickPrompts.map((prompt) => (
 										<div key={prompt.id} className='flex items-start gap-x-3'>
 											<input
+												className='mt-1 appearance-none border shrink-0 border-[#D0D5DD] h-5 w-5 rounded-[6px] checked:bg-[#01588E]'
 												className='mt-1 appearance-none border shrink-0 border-[#D0D5DD] h-5 w-5 rounded-[6px] checked:bg-[#01588E]'
 												name={`prompt-${prompt.id}`}
 												type='checkbox'
@@ -251,6 +265,7 @@ const LiveChat = () => {
 								/>
 								<InputComp
 									name={"position"}
+									name={"position"}
 									label={"Position"}
 									type={"text"}
 									placeholder={"Enter position at company..."}
@@ -259,6 +274,32 @@ const LiveChat = () => {
 							</div>
 							<button
 								type='submit'
+								disabled={isSubmitting}
+								className='bg-[#01588E] rounded-[55px] text-white py-3 text-center w-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] disabled:opacity-50 disabled:cursor-not-allowed'>
+								{isSubmitting ? (
+									<>
+										<svg
+											className='animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block'
+											xmlns='http://www.w3.org/2000/svg'
+											fill='none'
+											viewBox='0 0 24 24'>
+											<circle
+												className='opacity-25'
+												cx='12'
+												cy='12'
+												r='10'
+												stroke='currentColor'
+												strokeWidth='4'></circle>
+											<path
+												className='opacity-75'
+												fill='currentColor'
+												d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'></path>
+										</svg>
+										Submitting...
+									</>
+								) : (
+									"Submit Message"
+								)}
 								disabled={isSubmitting}
 								className='bg-[#01588E] rounded-[55px] text-white py-3 text-center w-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] disabled:opacity-50 disabled:cursor-not-allowed'>
 								{isSubmitting ? (

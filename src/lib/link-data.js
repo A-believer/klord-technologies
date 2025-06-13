@@ -1,4 +1,4 @@
-import health from "../assets/svgs/health.svg";
+
 import briefcase from "../assets/svgs/briefcase.svg";
 import call from "../assets/svgs/call.svg";
 import gridView from "../assets/svgs/grid-view.svg";
@@ -26,11 +26,13 @@ const navlinks = [
 				title: "NexaLife Care",
 				des: "Smart Healthcare Referral & Clinic Management",
 				path: "/products#nexalifecare",
-				icon: health,
+				path: "/products#nexalifecare",
+				icon: "/assets/svgs/health.svg",
 			},
 			{
 				title: "Sharework Flow",
 				des: "Modular ERP for Agile, Growing Businesses",
+				path: "/products#shareworkflow",
 				path: "/products#shareworkflow",
 				icon: briefcase,
 			},
@@ -39,24 +41,29 @@ const navlinks = [
 	{
 		title: "Solutions",
 
+
 		dropdownMenu: [
 			{
 				title: "Healthcare",
 				path: "/solutions/healthcare-software",
-				icon: health,
+				path: "/solutions/healthcare-software",
+				icon: "/assets/svgs/health.svg",
 			},
 			{
 				title: "Enterprise",
+				path: "/solutions/enterprise-software",
 				path: "/solutions/enterprise-software",
 				icon: briefcase,
 			},
 			{
 				title: "Public Sector",
 				path: "/solutions/public-software-technology",
+				path: "/solutions/public-software-technology",
 				icon: workHistory,
 			},
 			{
 				title: "Custom Software Solutions",
+				path: "/solutions/custom-software-development",
 				path: "/solutions/custom-software-development",
 				icon: gridView,
 			},
@@ -69,6 +76,10 @@ const navlinks = [
 	{
 		title: "Resources",
 		path: "/resources",
+	},
+	{
+		title: "Careers",
+		path: "/careers",
 	},
 	{
 		title: "Careers",
@@ -96,7 +107,7 @@ const footerlinks = {
 					title: "NexaLife Care",
 					des: "Smart Healthcare Referral & Clinic Management",
 					path: "/products#nexacare",
-					icon: health,
+					icon: "/assets/svgs/health.svg",
 				},
 				{
 					title: "Sharework Flow",
@@ -112,7 +123,7 @@ const footerlinks = {
 				{
 					title: "Healthcare",
 					path: "/healthcare-software",
-					icon: health,
+					icon: "/assets/svgs/health.svg",
 				},
 				{
 					title: "Enterprise",
@@ -131,6 +142,7 @@ const footerlinks = {
 				},
 			],
 		},
+		{ name: "Careers", path: "/careers" },
 		{ name: "Careers", path: "/careers" },
 		{ name: "About", path: "/about" },
 		{ name: "Contact", path: "/contact" },

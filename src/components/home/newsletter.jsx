@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router";
+import toast from "react-hot-toast";
 import toast from "react-hot-toast";
 
 const Newsletter = () => {
@@ -59,6 +61,7 @@ const Newsletter = () => {
 			<div className='contain border-[2.5px] border-[#FF5F0F] rounded-[30px] shadow-[0px_36px_24.9px_0px_rgba(0,0,0,0.10)] flex lg:justify-between lg:items-start lg:flex-row flex-col gap-y-[55px] md:px-10 px-[46px] md:py-24 py-16'>
 				<div className='space-y-5'>
 					<h2 className='text-[#101828] dark:text-[#FFFEF5] text-[28px]/[42px] font-semibold tracking-[-0.56px]'>
+					<h2 className='text-[#101828] dark:text-[#FFFEF5] text-[28px]/[42px] font-semibold tracking-[-0.56px]'>
 						Ready to Build Something Great?
 					</h2>
 					<p className='text-[#667085] text-xl/8 font-medium tracking-[-0.64px]'>
@@ -75,7 +78,9 @@ const Newsletter = () => {
 				<div className='max-w-[508px] w-full space-y-4'>
 					<h3 className='text-[#F5F7F9] text-[32px]/[52.8px] font-semibold font-sora tracking-[-2.4px]'>
 						Stay Ahead with <span className='text-nowrap'>K-Lord</span> Insights
+						Stay Ahead with <span className='text-nowrap'>K-Lord</span> Insights
 					</h3>
+					<p className='font-inter text-[#F5F7F9] text-2xl/8 tracking-[-0.96px] font-normal'>
 					<p className='font-inter text-[#F5F7F9] text-2xl/8 tracking-[-0.96px] font-normal'>
 						Sign up for tips, insights, and updates on tech, innovation, and
 						digital transformation.
@@ -85,8 +90,13 @@ const Newsletter = () => {
 					ref={formRef}
 					className='max-w-[585px] w-full p-5 space-y-4 bg-[#0A0A0A] shadow-[0px_4px_40.4px_16px_rgba(0,0,0,0.25)] text-base rounded-[30px]'
 					onSubmit={handleSubmit}>
+				<form
+					ref={formRef}
+					className='max-w-[585px] w-full p-5 space-y-4 bg-[#0A0A0A] shadow-[0px_4px_40.4px_16px_rgba(0,0,0,0.25)] text-base rounded-[30px]'
+					onSubmit={handleSubmit}>
 					<div>
 						<input
+							className='border border-[#888888]/10 rounded-[20px] placeholder:text-[#999999] px-3 py-4 text-white w-full bg-[#888888]/10'
 							className='border border-[#888888]/10 rounded-[20px] placeholder:text-[#999999] px-3 py-4 text-white w-full bg-[#888888]/10'
 							type='text'
 							name='name'
@@ -96,9 +106,13 @@ const Newsletter = () => {
 						{error && !formRef.current?.elements["name"]?.value && (
 							<p className='text-red-500 text-xs'>error</p>
 						)}
+						{error && !formRef.current?.elements["name"]?.value && (
+							<p className='text-red-500 text-xs'>error</p>
+						)}
 					</div>
 					<div>
 						<input
+							className='border border-[#888888]/10 rounded-[20px] placeholder:text-[#999999] px-3 py-4 text-white w-full bg-[#888888]/10'
 							className='border border-[#888888]/10 rounded-[20px] placeholder:text-[#999999] px-3 py-4 text-white w-full bg-[#888888]/10'
 							type='email'
 							name='email'
@@ -108,14 +122,20 @@ const Newsletter = () => {
 						{error && !formRef.current?.elements["email"]?.value && (
 							<p className='text-red-500 text-xs'>error</p>
 						)}
+						{error && !formRef.current?.elements["email"]?.value && (
+							<p className='text-red-500 text-xs'>error</p>
+						)}
 					</div>
 					<>
 						<div className='flex md:items-center items-start gap-x-3'>
+						<div className='flex md:items-center items-start gap-x-3'>
 							<input
+								className='border border-[#D0D5DD] h-5 w-5  text-white md:mt-0 mt-1'
 								className='border border-[#D0D5DD] h-5 w-5  text-white md:mt-0 mt-1'
 								name='consent'
 								id='consent'
 								type='checkbox'
+								defaultChecked={true}
 								defaultChecked={true}
 							/>
 							<label htmlFor='consent' className='font-medium text-[#344054]'>
@@ -125,11 +145,15 @@ const Newsletter = () => {
 						{error && !formRef.current?.elements["consent"]?.checked && (
 							<p className='text-red-500 text-xs'>error</p>
 						)}
+						{error && !formRef.current?.elements["consent"]?.checked && (
+							<p className='text-red-500 text-xs'>error</p>
+						)}
 					</>
 
 					<button
 						type='submit'
 						className='bg-[#01588E] rounded-[55px] text-white py-3 text-center w-full shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]'>
+						{submitting ? "Submitting..." : "Submit"}
 						{submitting ? "Submitting..." : "Submit"}
 					</button>
 				</form>
