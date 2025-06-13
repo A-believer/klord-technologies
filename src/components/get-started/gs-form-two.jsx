@@ -41,9 +41,9 @@ const GsFormTwo = () => {
 	// Team size options array
 	const teamSizeOptions = [
 		{ id: "team_1_10", value: "1-10", label: "1 - 10" },
-		{ id: "team_11_50", value: "11-50", label: "11-50" },
-		{ id: "team_51_200", value: "51-200", label: "51-200" },
-		{ id: "team_201_500", value: "201-500", label: "201-500" },
+		{ id: "team_11_50", value: "11-50", label: "11 - 50" },
+		{ id: "team_51_200", value: "51-200", label: "51 - 200" },
+		{ id: "team_201_500", value: "201-500", label: "201 - 500" },
 		{ id: "team_500_plus", value: "500+", label: "500+" },
 	];
 
@@ -74,6 +74,14 @@ const GsFormTwo = () => {
 		return Object.keys(errors).length === 0;
 	};
 
+	// Example function to ensure "https://" is present
+	function formatWebsiteUrl(website_url) {
+		if (!website_url.startsWith("http://") && !website_url.startsWith("https://")) {
+			return "https://" + website_url;
+		}
+		return website_url;
+	}
+
 	const handleNext = () => {
 		if (validateForm()) {
 			setIsFormValid(true);
@@ -82,7 +90,7 @@ const GsFormTwo = () => {
 			const updatedData = {
 				...data,
 				company_name: form.company_name.value.trim(),
-				website_url: form.website_url.value.trim(),
+				website_url: formatWebsiteUrl(form.website_url.value.trim()),
 				industry: form.industry.value,
 				team_size:
 					form.querySelector('input[name="team_size"]:checked')?.value || "",
