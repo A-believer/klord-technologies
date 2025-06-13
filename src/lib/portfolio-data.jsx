@@ -28,7 +28,7 @@ const portfolioData = [
 		header: "Transforming Team Collaboration Across Industries",
 		img: "/imgs/portfolio-urcalls.png",
 		overview:
-			"UrCalls is a high-performance video conferencing solution that addresses the needs of SMEs, enterprises, telehealth providers, and more. It offers HD video andaudio quality, real-time screen sharing, and cross-platform livestreaming for seamless collaboration and communication.",
+			"UrCalls is a high-performance, video conferencing solution that addresses the needs of SMEs, enterprises, telehealth providers, and more. It offers HD video andaudio quality, real-time screen sharing, and cross-platform livestreaming for seamless collaboration and communication.",
 		challenge:
 			"Many teams face high costs and limited features in video calls slowing down productivity, especially in telehealth and remote collaboration.",
 		solution:

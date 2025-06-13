@@ -9,7 +9,7 @@ const products = [
 		name: "UrCalls",
 		header: "Connect Instantly, Anywhere",
 		imgSection: <UrcallsImg />,
-		desc: "UrCalls is a secure, high-performance video conferencing platform built for modern teams in need of reliable communication and effortless collaboration. It brings structure and clarity to every meeting, from internal syncs to large-scale virtual events, without the technical headaches. Packed with powerful collaboration tools, UrCalls helps teams stay connected, aligned, and productive, all in one place.",
+		desc: "UrCalls is a secure, high-performance video conferencing platform, built for modern teams in need of reliable communication and effortless collaboration. It brings structure and clarity to every meeting, from internal syncs to large-scale virtual events, without the technical headaches. Packed with powerful collaboration tools, UrCalls helps teams stay connected, aligned, and productive, all in one place.",
 		cardContent: [
 			{
 				icon: "/imgs/icon-1.png",

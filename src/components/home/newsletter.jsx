@@ -27,7 +27,7 @@ const Newsletter = () => {
 		};
 		// console.log(submitData);
 		try {
-			const res = await fetch(`http://api.klordtechnologies.com/api/subscribe-to-newsletters`, {
+			const res = await fetch(`https://api.klordtechnologies.com/api/subscribe-to-newsletters`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

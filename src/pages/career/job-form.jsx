@@ -32,7 +32,7 @@ const JobForm = () => {
 		}
 		formData.append("job", job.title); // add job title to FormData
 		try {
-			const res = await fetch(`http://api.klordtechnologies.com/api/apply-for-job`, {
+			const res = await fetch(`https://api.klordtechnologies.com/api/apply-for-job`, {
 				method: "POST",
 				body: formData, // send FormData directly
 			});

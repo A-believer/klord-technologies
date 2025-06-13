@@ -9,7 +9,7 @@ const ProductDetails = ({ product }) => {
 				{product.header}
 			</h3>
 			<>{product.imgSection}</>
-			<p className='md:my-[51px] my-7 text-lg/10 font-medium font-inter tracking-[-0.18px] text-secondary'>
+			<p className='md:my-[51px] my-7 text-lg/8 font-medium font-inter tracking-[-0.18px] text-secondary'>
 				{product.desc}
 			</p>
 

@@ -98,7 +98,7 @@ const LiveChat = () => {
 			}
 
 			try {
-				const response = await fetch(`http://api.klordtechnologies.com/api/live-chat`, {
+				const response = await fetch(`https://api.klordtechnologies.com/api/live-chat`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",

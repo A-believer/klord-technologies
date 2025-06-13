@@ -70,7 +70,7 @@ const GsFormFour = () => {
 				toggleCurrentLevelCompletion();
 
 				// Use the updated data for the API call
-				const response = await fetch(`http://api.klordtechnologies.com/api/get-started`, {
+				const response = await fetch(`https://api.klordtechnologies.com/api/get-started`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
