@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router";
-import logo from "../../assets/svgs/klord-nav-logo.svg";
 import { navlinks } from "../../lib/link-data";
 import { ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -20,7 +19,7 @@ const Navbar = () => {
 			<div className=' md:py-4 py-3 flex-between font-sora text-[#667085] text-sm/6 sm:w-[95%] w-[90%] mx-auto'>
 				<div className='flex item-center gap-x-10'>
 					<Link to='/'>
-						<img loading='lazy' src={logo} alt='K-lord Logo' />
+						<img loading='lazy' src="/imgs/klord-nav-logo.png" alt='K-lord Logo' className="md:h-14 h-11 object-fill"/>
 					</Link>
 
 					<ul className='xl:flex hidden items-center gap-x-8'>

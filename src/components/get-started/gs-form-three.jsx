@@ -19,6 +19,26 @@ const GsFormThree = () => {
 	});
 	const [isFormValid, setIsFormValid] = useState(false);
 	const [showOtherInput, setShowOtherInput] = useState(false);
+	const [estimatedBudget, setEstimatedBudget] = useState(
+		data.estimated_budget || ""
+	);
+
+	// Format number as USD currency
+	const formatCurrency = (value) => {
+		if (!value) return "";
+		const number = Number(value.toString().replace(/[^0-9]/g, ""));
+		if (isNaN(number) || number === 0) return "";
+		return number.toLocaleString("en-US", {
+			style: "currency",
+			currency: "USD",
+			maximumFractionDigits: 0,
+		});
+	};
+
+	const handleBudgetChange = (e) => {
+		const rawValue = e.target.value.replace(/[^0-9]/g, "");
+		setEstimatedBudget(rawValue);
+	};
 
 	// Initialize form with existing data
 	useEffect(() => {
@@ -27,14 +47,15 @@ const GsFormThree = () => {
 			formRef.current.project_description.value =
 				data.project_description || "";
 			formRef.current.project_timeline.value = data.project_timeline || "";
-			formRef.current.estimated_budget.value = data.estimated_budget || "";
+			// Remove direct assignment for estimated_budget
+			// formRef.current.estimated_budget.value = data.estimated_budget || "";
 
-			// Handle other help needed input
 			if (data.help_needed === "Other") {
 				setShowOtherInput(true);
 				formRef.current.other_help_needed.value = data.other_help_needed || "";
 			}
 		}
+		setEstimatedBudget(data.estimated_budget || "");
 	}, [data]);
 
 	// Form validation function
@@ -76,7 +97,6 @@ const GsFormThree = () => {
 	const handleNext = () => {
 		if (validateForm()) {
 			setIsFormValid(true);
-			// Get form data and update context
 			const form = formRef.current;
 			const updatedData = {
 				...data,
@@ -87,16 +107,12 @@ const GsFormThree = () => {
 						: "",
 				project_description: form.project_description.value.trim(),
 				project_timeline: form.project_timeline.value,
-				estimated_budget: form.estimated_budget.value.trim(),
+				estimated_budget: estimatedBudget, // Use state value
 			};
 
-			// Update the data state first
 			setData(updatedData);
-
-			// Mark level as completed
 			toggleCurrentLevelCompletion();
 
-			// Then proceed to next level
 			const nextLevel = levels.find((level) => level.id === currentLevel + 1);
 			if (nextLevel) {
 				setCurrentLevel(nextLevel.id);
@@ -246,13 +262,43 @@ const GsFormThree = () => {
 			</div>
 
 			{/* Estimated Budget Input */}
-			<InputComp
-				name={"estimated_budget"}
-				label={"Estimated Budget (optional)"}
-				type={"text"}
-				placeholder={"enter your estimated budget..."}
-				error={""}
-			/>
+
+			<div className='flex flex-col gap-y-[6px] text-sm/5 w-full'>
+				<label
+					htmlFor={name}
+					className='font-medium text-[#344054] dark:text-[#D0D5DD] font-inter'>
+					Estimated Budget (optional) <span className='text-red-500'>*</span>
+				</label>
+				<input
+					name='estimated_budget'
+					type='text'
+					placeholder='enter your estimated budget...'
+					className='border border-[#D0D5DD] rounded-[8px] px-3.5 py-2.5 w-full text-primary'
+					id='estimated_budget'
+					inputMode='numeric'
+					pattern='[0-9]*' // <-- Only allow numbers on mobile keyboards
+					value={formatCurrency(estimatedBudget)}
+					onChange={handleBudgetChange}
+					onKeyDown={(e) => {
+						// Only allow number keys, backspace, delete, arrows, tab
+						if (
+							!/[0-9]/.test(e.key) &&
+							![
+								"Backspace",
+								"Delete",
+								"ArrowLeft",
+								"ArrowRight",
+								"Tab",
+							].includes(e.key)
+						) {
+							e.preventDefault();
+						}
+					}}
+				/>
+				{formErrors.estimated_budget && (
+					<p className='text-red-500 text-xs'>{formErrors.estimated_budget}</p>
+				)}
+			</div>
 
 			{/* Form Navigation Buttons */}
 			<div className='flex md:flex-row flex-col w-full gap-4'>
